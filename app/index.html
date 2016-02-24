@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="PlayTech">
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+    <title>PLayTech</title>
+    <link href="/bower_components/animate.css/animate.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/style.css" rel="stylesheet"/>
+
+
+</head>
+<body>
+<div ui-view="logo"></div>
+<div ui-view="banner"></div>
+<div ui-view="menu"></div>
+
+<div id="main">
+    <div ui-view></div>
+</div>
+
+
+<!-- SCRIPT -->
+<script src="bower_components/angular/angular.js"></script>
+<script src="app.js"></script>
+<script src="route.js"></script>
+
+<!-- Service -->
+<script src="components/arcadegames/arcadegamesService.js"></script>
+<script src="components/banner/bannerService.js"></script>
+<script src="components/games/gamesService.js"></script>
+<script src="components/logo/logoService.js"></script>
+<script src="components/menu/menuService.js"></script>
+<script src="components/scratchcard/scratchcardService.js"></script>
+<script src="components/scratchgames/scratchgamesService.js"></script>
+<script src="components/slotmachine/slotmachineService.js"></script>
+<script src="components/tablecardgames/tablecardgamesService.js"></script>
+
+<!-- controller -->
+<script src="components/arcadegames/arcadegamesController.js"></script>
+<script src="components/banner/bannerController.js"></script>
+<script src="components/games/gamesController.js"></script>
+<script src="components/logo/logoController.js"></script>
+<script src="components/menu/menuController.js"></script>
+<script src="components/scratchcard/scratchcardController.js"></script>
+<script src="components/scratchgames/scratchgamesController.js"></script>
+<script src="components/slotmachine/slotmachineController.js"></script>
+<script src="components/tablecardgames/tablecardgamesController.js"></script>
+
+<!-- Components -->
+<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="/bower_components/angular-resource/angular-resource.js"></script>
+<script src="/bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+<script src="/bower_components/angular-carousel/dist/angular-carousel.js"></script>
+<script src="/bower_components/angular-touch/angular-touch.js"></script>
+<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+
+</body>
+</html>
+
+

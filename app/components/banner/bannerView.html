@@ -1,0 +1,5 @@
+<div ng-controller="BannerController">
+    <div  class="animated fadeIn" ng-repeat=" (key, value ) in data.banner | filter:searchText">
+        <img ng-src="{{value.image_path}}/{{value.banner_image.filename}}" />
+    </div>
+</div>
