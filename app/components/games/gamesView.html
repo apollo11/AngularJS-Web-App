@@ -1,7 +1,49 @@
 <div ng-controller="GamesController">
-    <div  ng-repeat=" (key, value) in data.allGames | filter:searchText" class="animated fadeIn">
-        <a ng-href="{{value.field_games_link}}?language={{value.language}}&game={{value.game}}">
-            <img class="animated slideInRight"  ng-src="{{value.image_path}}/{{value.thumbnail_image.filename}}" />
-        </a>
-    </div>
+    <!--<div  ng-repeat=" (key, value) in data.allGames | filter:searchText" class="animated fadeIn">-->
+        <!--<a ng-href="{{value.field_games_link}}?language={{value.language}}&game={{value.game}}">-->
+            <!--<img class="animated slideInRight"  ng-src="{{value.image_path}}/{{value.thumbnail_image.filename}}" />-->
+        <!--</a>-->
+    <!--</div>-->
+
+    <div class="container">
+        <div class="custom-width">
+            <div class="panel-og">
+                <div class="col-md-3">
+                    <p>Live Games</p>
+                </div>
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="row">
+                        <a href="#" class="thumbnails-icon"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span></a>
+                        <a href="#" class="list-icon"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a>
+                        <div class="right-inner-addon ">
+                            <i class="glyphicon glyphicon-search"></i>
+                            <input type="search" class="form-control" placeholder="Game search" ng-model="searchText" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-holder" ng-repeat=" (key, value) in data.allGames | filter:searchText" class="animated fadeIn">
+                <div class=" animated slideInRight col-md-3">
+                    <div class="thumb">
+                        <div class="hover">
+                            <a class="play-btn wow animated flipInY" ng-href="{{value.field_games_link}}?language={{value.language}}&game={{value.game}}">
+                            <p>PLAY NOW</p>
+                            </a>
+                        </div>
+                        <img ng-src="{{value.image_path}}/{{value.thumbnail_image.filename}}" />
+                        <section>
+                            <p class="jackpot">￥139050972.65</p>
+                            <p class="game-type">{{value.node_title}}</p>
+                            <p class="game-category">{{value.game_category}}</p>
+                        </section>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div><!-- /.container -->
+
+
 </div>

@@ -1,7 +1,7 @@
 name = Content Type
-description = Content Type Backup 
+description = Content Type Backup
 core = 7.x
-package = backup 
+package = backup
 dependencies[] = features
 dependencies[] = image
 dependencies[] = media

@@ -1,5 +1,5 @@
-name = API Views backup 
-description = View 
+name = API Views backup
+description = View
 core = 7.x
 package = backup
 dependencies[] = services_views

@@ -172,7 +172,7 @@ function api_views_backup__views_default_views() {
   $handler->display->display_options['fields']['field_games_category']['id'] = 'field_games_category';
   $handler->display->display_options['fields']['field_games_category']['table'] = 'field_data_field_games_category';
   $handler->display->display_options['fields']['field_games_category']['field'] = 'field_games_category';
-  $handler->display->display_options['fields']['field_games_category']['label'] = '';
+  $handler->display->display_options['fields']['field_games_category']['label'] = 'game_category';
   $handler->display->display_options['fields']['field_games_category']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_games_category']['type'] = 'taxonomy_term_reference_plain';
   /* Field: Content: Games Country Code */
@@ -497,6 +497,7 @@ function api_views_backup__views_default_views() {
     t('Desc'),
     t('thumbnail_image'),
     t('game'),
+    t('game_category'),
     t('language'),
     t('image_path'),
     t('http://cmsplaytech.local/sites/default/files'),

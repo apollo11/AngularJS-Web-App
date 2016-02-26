@@ -1,5 +1,11 @@
 <div ng-controller="MenuController">
-    <ul ng-repeat="(key, value ) in data.menu">
-        <li><a ui-sref="{{value.path}}">{{value.title}}</a></li>
-    </ul>
+    <!--<ul ng-repeat="(key, value ) in data.menu">-->
+        <!--<li><a ui-sref="{{value.path}}">{{value.title}}</a></li>-->
+    <!--</ul>-->
+
+    <div class="container tab-menu">
+        <ul ng-repeat="(key, value ) in data.menu" class="nav nav-tabs">
+                <li><a ui-sref="{{value.path}}">{{value.title}}</a></li>
+        </ul>
+    </div>
 </div>
