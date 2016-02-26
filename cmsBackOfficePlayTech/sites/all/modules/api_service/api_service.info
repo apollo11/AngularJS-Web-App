@@ -1,0 +1,8 @@
+name = Api Service
+core = 7.x
+package = backup
+dependencies[] = ctools
+dependencies[] = services
+features[ctools][] = services:services:3
+features[features_api][] = api:2
+features[services_endpoint][] = admin
