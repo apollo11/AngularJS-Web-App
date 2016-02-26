@@ -1,5 +1,5 @@
 <div ng-controller="MenuController">
     <ul ng-repeat="(key, value ) in data.menu">
-        <li><a ng-href="{{value.path}}">{{value.title}}</a></li>
+        <li><a ui-sref="{{value.path}}">{{value.title}}</a></li>
     </ul>
 </div>

@@ -1,6 +1,6 @@
-<div ng-controller="TableCardController">
+<div ng-controller="TableGamesController">
     <h1>{{title}}</h1>
-    <div  ng-repeat=" (key, value) in data.TableCardGames | filter:searchText" class="animated fadeIn">
+    <div  ng-repeat=" (key, value) in data.TableGames | filter:searchText" class="animated fadeIn">
         <a ng-href="{{value.field_games_link}}?language={{value.language}}&game={{value.game}}">
             <img class="animated slideInRight"  ng-src="{{value.image_path}}/{{value.thumbnail_image.filename}}" />
         </a>

@@ -1,7 +1,7 @@
 'use strict';
 
-app.factory('Logo',[ '$resource', function($resource) {
-    var endPoint = $resource('http://cmsplaytech.local/api/v1/logo');
+app.factory('Logo',[ '$resource', 'BaseUrl', function($resource, BaseUrl) {
+    var endPoint = $resource(BaseUrl + 'api/v1/logo');
 
     return endPoint;
 }]);
