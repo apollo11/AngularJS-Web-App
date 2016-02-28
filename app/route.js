@@ -10,8 +10,7 @@ app.config(['$stateProvider'
     , function ($stateProvider
         , $urlRouterProvider
         , $locationProvider
-        , $resourceProvider
-        , routePath) {
+        , $resourceProvider) {
 
         //use the HTML5 History API
         $locationProvider.html5Mode(true);
@@ -27,16 +26,16 @@ app.config(['$stateProvider'
                 abstract: true,
                 views: {
                     'banner': {
-                        templateUrl: routePath + 'banner/bannerView.html',
+                        templateUrl: 'banner/bannerView.html',
                         controller: 'BannerController'
                     },
 
                     'menu': {
                         controller: 'MenuController',
-                        templateUrl: routePath + 'menu/menuView.html'
+                        templateUrl: 'PT/app/components/menu/menuView.html'
                     },
                     'logo': {
-                        templateUrl: routePath + 'logo/logoView.html',
+                        templateUrl: 'PT/app/components/logo/logoView.html',
                         controller: 'LogoController'
                     }
                 }
@@ -47,7 +46,7 @@ app.config(['$stateProvider'
                 parent: 'root',
                 views: {
                     '@': {
-                        templateUrl: routePath + 'games/gamesView.html',
+                        templateUrl: 'PT/app/components/games/gamesView.html',
                         controller: 'GamesController'
                     }
                 }
@@ -58,7 +57,7 @@ app.config(['$stateProvider'
                 parent: 'root',
                 views: {
                     '@': {
-                        templateUrl: routePath + 'arcadegames/arcadegamesView.html',
+                        templateUrl: 'PT/app/components/arcadegames/arcadegamesView.html',
                         controller: 'ArcadeController'
                     }
                 }
@@ -69,7 +68,7 @@ app.config(['$stateProvider'
                 parent: 'root',
                 views: {
                     '@': {
-                        templateUrl: routePath + 'scratchcard/scratchcardView.html',
+                        templateUrl: 'PT/app/components/scratchcard/scratchcardView.html',
                         controller: 'ScratchCardController'
                     }
                 }
@@ -80,7 +79,7 @@ app.config(['$stateProvider'
                 parent: 'root',
                 views: {
                     '@': {
-                        templateUrl: routePath + 'scratchgames/scratchgamesView.html',
+                        templateUrl: 'PT/app/components/scratchgames/scratchgamesView.html',
                         controller: 'ScratchGamesController'
                     }
                 }
@@ -91,7 +90,7 @@ app.config(['$stateProvider'
                 parent: 'root',
                 views: {
                     '@': {
-                        templateUrl: routePath + 'slotmachine/slotmachineView.html',
+                        templateUrl: 'PT/app/components/slotmachine/slotmachineView.html',
                         controller: 'SlotMachineController'
                     }
                 }
@@ -102,7 +101,7 @@ app.config(['$stateProvider'
                 parent: 'root',
                 views: {
                     '@': {
-                        templateUrl: routePath + 'tablecardgames/tablecardgamesView.html',
+                        templateUrl: 'PT/app/components/tablecardgames/tablecardgamesView.html',
                         controller: 'TableCardController'
                     }
                 }
@@ -113,7 +112,7 @@ app.config(['$stateProvider'
                 parent: 'root',
                 views: {
                     '@': {
-                        templateUrl: routePath + 'tablegames/tablegamesView.html',
+                        templateUrl: 'PT/app/components/tablegames/tablegamesView.html',
                         controller: 'TableGamesController'
                     }
                 }
@@ -124,7 +123,7 @@ app.config(['$stateProvider'
                 parent: 'root',
                 views: {
                     '@': {
-                        templateUrl: routePath + 'videopoker/videopokerView.html',
+                        templateUrl: 'PT/app/components/videopoker/videopokerView.html',
                         controller: 'VideoPokerController'
                     }
                 }
@@ -135,7 +134,7 @@ app.config(['$stateProvider'
                 parent: 'root',
                 views: {
                     '@': {
-                        templateUrl: routePath + 'livegames/livegamesView.html',
+                        templateUrl: 'PT/app/components/livegames/livegamesView.html',
                         controller: 'LiveController'
                     }
                 }
