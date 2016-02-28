@@ -8,3 +8,4 @@ var app = angular.module('PlayTech', [
 ]);
 
 app.constant('BaseUrl', 'http://playtech.orientalgame.com:8080/PT/cmsBackOfficePlayTech/');
+app.constant('routePath', 'PT/app/components/');
