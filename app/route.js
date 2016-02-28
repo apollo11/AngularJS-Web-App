@@ -19,7 +19,7 @@ app.config(['$stateProvider'
         $resourceProvider.defaults.stripTrailingSlashes = false;
 
         //For unmatched url, redirect to /state1
-        $urlRouterProvider.otherwise('/games');
+        $urlRouterProvider.otherwise('PT/app/games');
         $stateProvider
         //Set up the navigation
             .state('root', {
@@ -42,7 +42,7 @@ app.config(['$stateProvider'
             })
 
             .state('games', {
-                url: '/games',
+                url: 'PT/app/games',
                 parent: 'root',
                 views: {
                     '@': {
