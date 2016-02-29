@@ -1,0 +1,120 @@
+header{ height: 147px; background: #ffffff; }
+header img{ margin-top: 20px; }
+.custom-width{ width: 965px; margin:0 auto; display: block;}
+.header-section{ position: relative;}
+.support-section{ position:absolute; top: 9px; right: 0;}
+.open-btn{ background: #51cd55; padding: 10px 17px; color: #ffffff; font:bold 16px/39px Calibri;}
+.open-btn:hover{ color: #ffffff; background: #f58821; text-decoration: none;  transition: background-color 0.5s ease; }
+.support-section span{ margin: 0px 7px; color: #424242; position: relative; top: -10px;}
+.support-section img{ position: relative; top: -20px;}
+.login-section{ background: #e5e5e5; position: absolute; bottom: -20px; right: 0; height: 80px; padding: 6px 6px 0px 6px;}
+
+.form-control{ border-radius:0 !important;}
+.form-inline{ background: #fafafa; padding: 5px 5px;}
+.login-section label{ font-weight: normal; }
+.btn-login{ background: #ff9000; border-radius: 0; color: #ffffff;}
+.btn-login:hover{ background: #51cd55; transition: background-color 0.5s ease; color: #ffffff; }
+.login-section p{ text-align:right; font:14px/30px Calibri; padding-right: 3px; background: #efefef; height: 30px;}
+.login-section p a{ color: #ff9000; }
+
+.banner{ height: 499px; border-top:7px solid #f58a25; position: relative; z-index: 10; background: #000000;}
+.banner img{ margin:0 auto; display: block; max-width: 1903px;}
+
+.featured-section{ height: 205px; background: #f58821; border-top: 6px solid #ffffff; padding: 5px;}
+.ftd-container{ width: 965px; margin:0 auto; background:rgba(253, 253, 253, 0.5); padding: 4px; border-radius: 10px; position: relative; z-index: 15;}
+.ftd-container img{ display: block; margin:0 auto; border-radius: 10px;}
+.ftd-container a { position: absolute; font: 17px/1 Calibri; left: 0; top: 22px; padding: 9px 23px; background: #dd2429; color: #ffffff;}
+.tab-menu{ position: relative; z-index: 15;}
+.nav-tabs{ /*position: absolute; top: -34px;*/ z-index: 10; width: 965px; margin:0 auto; margin-top: -36px; display: block; border-bottom: 0;}
+.nav-tabs a{ background: rgba(175,175,175, 0.8);}
+.nav-tabs a:hover{ transition: background-color 0.5s ease; }
+.nav-tabs > li > a{ border-radius: 12px 12px 0 0; color: #424242; padding: 8px 23px; margin-left: 3px;}
+.panel-og{ height: 51px; margin-bottom: 20px; background-color: #ffffff; border: 1px solid transparent; -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05); box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05); background: #dad9d4;  margin-top: 15px;}
+.panel-og p{ padding: 15px; margin:0; display: inline-block; font:20px/1 Calibri;}
+.panel-og a { float: right; height: 50px; width: 50px; font: 23px/50px Calibri; text-align: center;}
+a.list-icon{ color: #ffffff; background: #d1cfc8;}
+a.list-icon:hover, a.list-icon span:hover{ color: #d1cfc8; background: #949187;}
+a.thumbnails-icon{ color: #d1cfc8; background: #adaaa0;}
+a.thumbnails-icon:hover, a.thumbnails-icon span:hover{ color: #ffffff; background: #bfbdb6;}
+.right-inner-addon { position: relative; top: 7px; width: 74%;}
+.right-inner-addon input { padding-right: 30px; width: 355px;}
+.right-inner-addon i { position: absolute; right: 0px; padding: 10px 12px; pointer-events: none;}
+
+.thumb{ height: 254px; margin:0 auto; border: 3px solid rgb(255, 255, 255); border-radius: 10px;
+background-image: -moz-linear-gradient( 90deg, rgb(230,230,230) 0%, rgb(243,243,243) 7%, rgb(255,255,255) 99%);
+background-image: -webkit-linear-gradient( 90deg, rgb(230,230,230) 0%, rgb(243,243,243) 7%, rgb(255,255,255) 99%);
+background-image: -ms-linear-gradient( 90deg, rgb(230,230,230) 0%, rgb(243,243,243) 7%, rgb(255,255,255) 99%);
+box-shadow: 0px 0px 10px #8B8B8B; margin-bottom: 30px;}
+.thumb img { display: block; margin: 0 auto; border-radius: 5px; margin-top: 4px;}
+.thumb:hover .play-btn, .thumb:hover .hover{ display: block; }
+.jackpot { padding: 7px 5px; margin: 0; color: #424242; font: 16px/1 Calibri;}
+.game-type, .game-category{ margin:0; padding: 0px 10px;}
+.game-type{ font:bold 16px/1 Calibri; color: #424242;}
+.game-category{color:#ffba78; font:16px/1 Calibri;}
+.play-btn p{ margin:0; background: #00a308; padding: 18px;}
+.play-btn { display: none; position: absolute; font: bold 18px/1 Calibri; color: #ffffff; border: 5px solid rgba(255,255,255,0.5); border-radius: 5px; top: 60px; left: 37px; box-shadow: 0px 0px 67px #ADADAD;}
+.play-btn:hover{color: #ffffff; text-decoration: none;}
+.hover { display: none; height: 173px; position: absolute; background: rgba(0,0,0,0.8); width: 201px; border-radius: 5px; top: 7px; left: 20px;}
+
+footer{ margin-top: 22px; font:14px/1 Calibri; background: #f58821; height: 172px; }
+.mostfooter p{ font:14px/1.5 Calibri; color: #ffffff; text-align: center; margin-top:20px;}
+.subfooter p{ text-align: center; margin:0;}
+.subfooter p a{ color:#424242; margin:0px 10px;}
+.subfooter{ background: #fde7d3; padding: 15px 0px;}
+
+.close-btn{ float: right; font-size: 12px; line-height: 1; color: #ffffff !important; text-shadow: 0 1px 0 #ffffff; /* opacity: 0.2; */ filter: alpha(opacity=20); margin-top: -20px !important;}
+.modal-header{ border-bottom: none; padding: 0;}
+.modal-content{ border-radius: 0px; width: 627px;}
+.banner-ads { padding: 10px; background: #eaeae7; box-shadow: 0px 0px 10px #959595; margin-bottom: 15px;}
+.content-container { padding: 10px 30px;}
+.content-container input{ width: 212px !important; margin-left: 10px; margin-right: 10px;}
+.content-container p { padding-left: 15px; padding-top: 10px;}
+.content-container p a{ color:#F58821;}
+.content-container p span { float: right; margin-right: 18px;}
+
+.modal-top{ padding: 15px 10px; background: #eaeae7; box-shadow: 0px 0px 10px #959595; }
+.modal-top h3{ font:19px/1 Calibri; margin:0; color: #424242;}
+.about-pop{ width: 100%;}
+.content-holder{ padding: 20px 30px;}
+.content-holder p{font:14px/1.5 Calibri;}
+.content-holder p span{ font-weight: bold; }
+/*
+.nav1 {
+	padding-left: 0;
+	list-style: none;
+}
+.nav-tabs1 > li {
+	float: left;
+	margin-bottom: -1px;
+}
+
+.nav1 > li {
+	position: relative;
+	display: block;
+}
+
+.nav1 {
+	list-style: none;
+}
+
+.nav-tabs1 > li > a {
+	margin-right: 2px;
+	line-height: 1.42857143;
+	border: 1px solid transparent;
+}
+.nav1 > li > a {
+	position: relative;
+	display: block;
+	padding: 10px 15px;
+}*/
+
+
+
+
+
+
+
+
+
+
+*/
