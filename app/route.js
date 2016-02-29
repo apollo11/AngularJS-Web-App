@@ -14,131 +14,131 @@ app.config(['$stateProvider'
 
         //use the HTML5 History API
         $locationProvider.html5Mode(true);
+        $locationProvider.hashPrefix('!');
 
         // Don't strip trailing slashes from calculated URLs
         $resourceProvider.defaults.stripTrailingSlashes = false;
 
         //For unmatched url, redirect to /state1
-        $urlRouterProvider.otherwise('app/games');
+        $urlRouterProvider.otherwise('/games');
         $stateProvider
         //Set up the navigation
             .state('root', {
                 abstract: true,
                 views: {
                     'banner': {
-                        templateUrl: 'banner/bannerView.html',
+                        templateUrl: 'components/banner/bannerView.html',
                         controller: 'BannerController'
                     },
 
                     'menu': {
                         controller: 'MenuController',
-                        templateUrl: 'app/components/menu/menuView.html'
+                        templateUrl: 'components/menu/menuView.html'
                     },
                     'logo': {
-                        templateUrl: 'app/components/logo/logoView.html',
+                        templateUrl: 'components/logo/logoView.html',
                         controller: 'LogoController'
                     }
                 }
             })
 
             .state('games', {
-                url: 'app/games',
+                url: '/games',
                 parent: 'root',
                 views: {
                     '@': {
-                        templateUrl: 'app/components/games/gamesView.html',
+                        templateUrl: 'components/games/gamesView.html',
                         controller: 'GamesController'
                     }
                 }
             })
 
             .state('arcade', {
-                url: 'app/arcade',
+                url: '/arcade',
                 parent: 'root',
                 views: {
                     '@': {
-                        templateUrl: 'app/components/arcadegames/arcadegamesView.html',
+                        templateUrl: 'components/arcadegames/arcadegamesView.html',
                         controller: 'ArcadeController'
                     }
                 }
             })
 
             .state('scratchcard', {
-                url: 'app/scratchcard',
+                url: '/scratchcard',
                 parent: 'root',
                 views: {
                     '@': {
-                        templateUrl: 'app/components/scratchcard/scratchcardView.html',
+                        templateUrl: 'components/scratchcard/scratchcardView.html',
                         controller: 'ScratchCardController'
                     }
                 }
             })
 
             .state('scratchgames', {
-                url: 'app/scratch',
+                url: '/scratch',
                 parent: 'root',
                 views: {
                     '@': {
-                        templateUrl: 'app/components/scratchgames/scratchgamesView.html',
+                        templateUrl: 'components/scratchgames/scratchgamesView.html',
                         controller: 'ScratchGamesController'
                     }
                 }
             })
 
             .state('slotmachine', {
-                url: 'app/slotmachine',
+                url: '/slotmachine',
                 parent: 'root',
                 views: {
                     '@': {
-                        templateUrl: 'app/components/slotmachine/slotmachineView.html',
+                        templateUrl: 'components/slotmachine/slotmachineView.html',
                         controller: 'SlotMachineController'
                     }
                 }
             })
 
             .state('tablecard', {
-                url: 'app/tablecard',
+                url: '/tablecard',
                 parent: 'root',
                 views: {
                     '@': {
-                        templateUrl: 'app/components/tablecardgames/tablecardgamesView.html',
+                        templateUrl: 'components/tablecardgames/tablecardgamesView.html',
                         controller: 'TableCardController'
                     }
                 }
             })
 
             .state('table', {
-                url: 'app/table',
+                url: '/table',
                 parent: 'root',
                 views: {
                     '@': {
-                        templateUrl: 'app/components/tablegames/tablegamesView.html',
+                        templateUrl: 'components/tablegames/tablegamesView.html',
                         controller: 'TableGamesController'
                     }
                 }
             })
 
             .state('videopoker', {
-                url: 'app/videopoker',
+                url: '/videopoker',
                 parent: 'root',
                 views: {
                     '@': {
-                        templateUrl: 'app/components/videopoker/videopokerView.html',
+                        templateUrl: 'components/videopoker/videopokerView.html',
                         controller: 'VideoPokerController'
                     }
                 }
             })
 
             .state('live', {
-                url: 'app/live',
+                url: '/live',
                 parent: 'root',
                 views: {
                     '@': {
-                        templateUrl: 'app/components/livegames/livegamesView.html',
+                        templateUrl: 'components/livegames/livegamesView.html',
                         controller: 'LiveController'
                     }
                 }
             })
-
 
     }]);

@@ -3,9 +3,11 @@
         <!--<li><a ui-sref="{{value.path}}">{{value.title}}</a></li>-->
     <!--</ul>-->
 
-    <div class="container tab-menu">
-        <ul ng-repeat="(key, value ) in data.menu" class="nav nav-tabs">
-                <li><a ui-sref="{{value.path}}">{{value.title}}</a></li>
+    <div class="container tab-menu" >
+        <ul class="nav nav-tabs">
+                <li ui-sref-active="active" class="animate-repeat" ng-repeat="(key, value ) in data.menu">
+                    <a ui-sref="{{value.path}}" name="menu">{{value.title}}</a>
+                </li>
         </ul>
     </div>
 </div>

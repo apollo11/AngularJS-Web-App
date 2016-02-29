@@ -1,22 +1,9 @@
 <div ng-controller="BannerController">
-    <uib-carousel interval="3000" no-wrap="noWrapSlides">
-        <uib-slide ng-repeat="(key, value ) in data.banner">
-            <img class="animated fadeIn" ng-src="{{value.image_path}}/{{value.banner_image.filename}}" />
-        </uib-slide>
-    </uib-carousel>
-
-
-    <!--<div carousel interval="3000">-->
-        <!--<div slide ng-repeat="(key, value ) in data.banner">-->
-            <!--&lt;!&ndash;<img ng-src="{{slide.image}}" style="margin: auto;">&ndash;&gt;-->
-            <!--<img ng-src="{{value.image_path}}/{{value.banner_image.filename}}" />-->
-            <!--<div class="carousel-caption">-->
-                <!--<h4>Slide {{$index}}</h4>-->
-                <!--<p>{{slide.text}}</p>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
-    <!--<div  class="animated fadeIn" ng-repeat=" (key, value ) in data.banner | filter:searchText">-->
-        <!--<img ng-src="{{value.image_path}}/{{value.banner_image.filename}}" />-->
-    <!--</div>-->
+    <div class="banner">
+        <uib-carousel interval="3000" no-wrap="noWrapSlides">
+            <uib-slide ng-repeat="(key, value ) in data.banner">
+                <img class="animated fadeIn" ng-src="{{value.image_path}}/{{value.banner_image.filename}}"/>
+            </uib-slide>
+        </uib-carousel>
+    </div>
 </div>
