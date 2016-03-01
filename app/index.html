@@ -10,7 +10,14 @@
 
     <!-- Script -->
     <script type="text/javascript" src="http://cache.download.banner.greenjade88.com/integrationjs.php"></script>
+    <script language="JavaScript" type="text/javascript" src="http://tickers.playtech.com/jackpots/new_jackpotjs.js"></script>
     <script type="text/javascript" src="login.js"></script>
+    <script>
+        var ticker = new Ticker({	info: 1, local: 1, casino: 'playtech',
+            game: 'car',currency: 'eur'	});
+        ticker.attachToTextBox(	'text1');
+        ticker.tick();
+    </script>
 </head>
 <body>
 <header>
@@ -39,9 +46,8 @@
     </div>
 </div>
 </header>
-<div ng-class="banner">
-    <div ui-view="banner"></div>
-</div>
+
+ <div ui-view="banner"></div>
 
 <div ui-view="menu"></div>
 
@@ -52,9 +58,7 @@
     </div>
 </div>
 
-<div id="main">
-    <div ui-view></div>
-</div>
+<div ui-view></div>
 
 
 <!-- SCRIPT -->
