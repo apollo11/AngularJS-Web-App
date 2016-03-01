@@ -7,6 +7,10 @@
     <link href="/bower_components/animate.css/animate.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
     <link href="/assets/css/style.css" rel="stylesheet" type="text/css"/>
+
+    <!-- Script -->
+    <script type="text/javascript" src="http://cache.download.banner.greenjade88.com/integrationjs.php"></script>
+    <script type="text/javascript" src="login.js"></script>
 </head>
 <body>
 <header>
@@ -17,17 +21,20 @@
         ACCOUNT</a>
     </div>
     <div class="login-section">
-        <form class="form-inline">
+
+        <form class="form-inline" id="loginform">
             <div class="form-group">
                 <label for="exampleInputName2">Username</label>
-                <input type="text" class="form-control" id="exampleInputName2" placeholder="username">
+                <input type="text" class="form-control" id="exampleInputName2" placeholder="username" name="username">
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail2">Password</label>
-                <input type="password" class="form-control" id="exampleInputEmail2" placeholder="password">
+                <input type="password" class="form-control" id="exampleInputEmail2" placeholder="password" name="password">
             </div>
-            <button type="submit" class="btn btn-login">LOGIN</button>
+            <button type="submit" class="btn btn-login" onclick="login(1)">LOGIN</button>
+            <button class="btn btn-login" onclick="logout(1,1)">LOGOUT</button>
         </form>
+
         <p><a href="#">Register NOW!</a> Forgot username or password?</p>
     </div>
 </div>
