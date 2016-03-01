@@ -7,4 +7,4 @@ var app = angular.module('PlayTech', [
     ,'ngAnimate'
 ]);
 
-app.constant('BaseUrl', 'http://playtechcms.orientalgame.com:8080/');
+app.constant('BaseUrl', 'http://playtechcms.orientalgame.com:8081/');
