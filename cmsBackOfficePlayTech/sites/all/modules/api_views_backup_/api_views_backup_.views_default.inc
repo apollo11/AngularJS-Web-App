@@ -70,6 +70,7 @@ function api_views_backup__views_default_views() {
   $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
   $handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing_1']['label'] = 'image_path';
+  $handler->display->display_options['fields']['nothing_1']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nothing_1']['alter']['text'] = 'http://cmsplaytech.local/sites/default/files';
   $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Post date */
