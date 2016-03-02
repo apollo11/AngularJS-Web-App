@@ -27,14 +27,25 @@
                         </div>
                         <img ng-src="{{value.image_path}}/{{value.thumbnail_image.filename}}" />
                         <section>
-                            <p class="jackpot">￥139050972.65</p>
+                            <p>
+                                <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"  codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/sw flash.cab#version=7,0,0,0" width=120 height=20>
+                                    <param name=movie value="{{picker(value.game)}}">
+                                    <param name=quality value=high>
+                                    <param name=bgcolor value=blue>
+                                    <embed ng-src="{{picker(value.game)}}" quality=high bgcolor=#000000 width=120 height=20
+                                           type="application/x-shockwave-flash"
+                                           pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod _Version=ShockwaveFlash">
+                                    </embed>
+                                </object>
+                            </p>
+                            <!--<p class="jackpot">￥139050972.65</p>-->
                             <p class="game-type">{{value.node_title}}</p>
                             <p class="game-category">{{value.game_category}}</p>
+
                         </section>
                     </div>
                 </div>
             </div>
-
         </div>
     </div><!-- /.container -->
 </div>
