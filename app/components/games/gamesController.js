@@ -8,8 +8,8 @@ app.controller('GamesController', ['$scope','Games','$sce', function($scope, Gam
         $scope.data.allGames = data;
     });
 
-   $scope.picker = function (code) {
-        return $sce.trustAsResourceUrl('http://tickers.playtech.com/jackpots/new_jackpot.swf?info=1&casino=playtech&game='+ code +'&font_face=arial&bold=true');
+   $scope.picker = function () {
+        return $sce.trustAsResourceUrl('http://tickers.playtech.com/jackpots/new_jackpotjs.js');
     }
 
 }]);

@@ -11,7 +11,14 @@
     <!-- Script -->
     <script type="text/javascript" src="http://cache.download.banner.greenjade88.com/integrationjs.php"></script>
     <script type="text/javascript" src="login.js"></script>
-    <script type="text/javascript" src="ptticker.js"></script>
+    <script ng-src="ptticker.js"></script>
+    <script>
+        var ticker = new Ticker({	info: 1, local: 1, casino: 'playtech',
+            game: 'car',currency: 'eur'	});
+        ticker.attachToTextBox(	'text1');
+        ticker.tick();
+    </script>
+    <!--<script type="text/javascript" src="ptticker.js"></script>-->
 </head>
 <body>
 <header>
@@ -50,11 +57,7 @@
         <img src="assets/images/ftrd-img.jpg" alt="featured image" />
     </div>
     <div><span id="text1"> </span><br/></div>
-    <div><span id="text2"> </span><br/></div>
-    <div><span id="text3"> </span><br/></div>
-    <div><span id="text4"> </span><br/></div>
-    <div><span id="text5"> </span><br/></div>
-    <div><span id="text6"> </span><br/></div>
+
 </div>
 
 <div id="main">
