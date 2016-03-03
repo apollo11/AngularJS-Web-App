@@ -7,10 +7,12 @@ app.config(['$stateProvider'
     , '$urlRouterProvider'
     , '$locationProvider'
     , '$resourceProvider'
+    , '$compileProvider'
     , function ($stateProvider
         , $urlRouterProvider
         , $locationProvider
-        , $resourceProvider) {
+        , $resourceProvider
+    ) {
 
         //use the HTML5 History API
         $locationProvider.html5Mode(true);

@@ -5,11 +5,8 @@ var app = angular.module('PlayTech', [
     ,'ui.bootstrap'
     ,'ngTouch'
     ,'ngAnimate'
+    ,'ngSanitize'
+    ,'oc.lazyLoad'
 ]);
 
 app.constant('BaseUrl', 'http://playtechcms.orientalgame.com:8081/');
-app.filter('trusted', ['$sce', function ($sce) {
-    return function(url) {
-        return $sce.trustAsResourceUrl(url);
-    };
-}]);
