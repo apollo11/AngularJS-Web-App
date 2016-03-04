@@ -7,7 +7,6 @@ app.config(['$stateProvider'
     , '$urlRouterProvider'
     , '$locationProvider'
     , '$resourceProvider'
-    , '$compileProvider'
     , function ($stateProvider
         , $urlRouterProvider
         , $locationProvider

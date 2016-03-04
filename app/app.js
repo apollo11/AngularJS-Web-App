@@ -6,7 +6,7 @@ var app = angular.module('PlayTech', [
     ,'ngTouch'
     ,'ngAnimate'
     ,'ngSanitize'
-    ,'oc.lazyLoad'
+    ,'ngLodash'
 ]);
 
 app.constant('BaseUrl', 'http://playtechcms.orientalgame.com:8081/');
