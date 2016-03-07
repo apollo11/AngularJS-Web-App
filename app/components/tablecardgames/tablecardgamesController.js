@@ -1,6 +1,6 @@
 'use strict';
 
-app.controller('TableCardController', ['$scope','TableCard', function($scope, TableCard) {
+app.controller('TableCardController', ['$scope','TableCard','$window', function($scope, TableCard, $window) {
 
     $scope.title = 'Table and Card Games';
     $scope.getTableCardGames = TableCard.query();

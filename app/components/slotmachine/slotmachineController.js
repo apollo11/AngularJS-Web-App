@@ -1,5 +1,5 @@
 'use strict';
-app.controller('SlotMachineController', ['$scope','SlotMachine', function($scope, SlotMachine) {
+app.controller('SlotMachineController', ['$scope','SlotMachine','$window', function($scope, SlotMachine, $window) {
 
     $scope.title = 'Slot Machine';
     $scope.getAllSlotGames = SlotMachine.query();

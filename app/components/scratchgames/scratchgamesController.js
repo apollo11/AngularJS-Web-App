@@ -1,5 +1,6 @@
 'use strict';
-app.controller('ScratchGamesController', ['$scope','ScratchGames', function($scope, ScratchGames) {
+app.controller('ScratchGamesController',
+    ['$scope','ScratchGames','$window', function($scope, ScratchGames, $window) {
 
     $scope.title = 'Scratch Games';
     $scope.getScratchGames = ScratchGames.query();

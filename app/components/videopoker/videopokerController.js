@@ -1,6 +1,6 @@
 'use strict';
 
-app.controller('VideoPokerController', ['$scope','VideoPoker', function($scope, VideoPoker) {
+app.controller('VideoPokerController', ['$scope','VideoPoker','$window', function($scope, VideoPoker, $window) {
 
     $scope.title = 'Video Poker Games';
     $scope.getVideoPokerGames = VideoPoker.query();

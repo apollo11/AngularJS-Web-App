@@ -1,5 +1,5 @@
 'use strict';
-app.controller('ArcadeController', ['$scope','Arcade', function($scope, Arcade) {
+app.controller('ArcadeController', ['$scope','Arcade', '$window',  function($scope, Arcade, $window) {
 
     $scope.title = 'Arcade Games';
 
