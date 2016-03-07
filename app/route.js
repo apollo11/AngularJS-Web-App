@@ -31,10 +31,12 @@ app.config(['$stateProvider'
                         templateUrl: 'components/banner/bannerView.html',
                         controller: 'BannerController'
                     },
-
                     'menu': {
                         controller: 'MenuController',
                         templateUrl: 'components/menu/menuView.html'
+                    },
+                    'login': {
+                        templateUrl: 'components/login/loginView.html'
                     },
                     'logo': {
                         templateUrl: 'components/logo/logoView.html',
@@ -46,6 +48,15 @@ app.config(['$stateProvider'
             .state('games', {
                 url: '/',
                 parent: 'root',
+                views: {
+                    '@': {
+                        templateUrl: 'components/games/gamesView.html',
+                        controller: 'GamesController'
+                    }
+                }
+            })
+            .state('redirect', {
+                url: '/games',
                 views: {
                     '@': {
                         templateUrl: 'components/games/gamesView.html',
