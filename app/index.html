@@ -16,41 +16,43 @@
 <header>
     <div class="container header-section">
         <div ui-view="logo"></div>
-        <div class="support-section">
-            <img src="assets/images/am-icon.png"><span>| Customer Service</span><a href="#" class="open-btn">OPEN
-            ACCOUNT</a>
-        </div>
-        <div class="login-section">
+        <div ui-view="login"></div>
+        <!--<div class="support-section">-->
+            <!--<img src="assets/images/am-icon.png"><span>| Customer Service</span><a href="#" class="open-btn">OPEN-->
+            <!--ACCOUNT</a>-->
+        <!--</div>-->
+        <!--<div class="login-section">-->
 
-            <form class="form-inline" id="loginform">
-                <div class="form-group">
-                    <label for="exampleInputName2">Username</label>
-                    <input type="text" class="form-control" id="exampleInputName2" placeholder="username"
-                           name="username">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail2">Password</label>
-                    <input type="password" class="form-control" id="exampleInputEmail2" placeholder="password"
-                           name="password">
-                </div>
-                <input type="submit" class="btn btn-login" onclick="login(1)" Value="LOGIN">
-                <button class="btn btn-login" onclick="logout(1,1)">LOGOUT</button>
-            </form>
+            <!--<form class="form-inline" id="loginform">-->
+                <!--<div class="form-group">-->
+                    <!--<label for="exampleInputName2">Username</label>-->
+                    <!--<input type="text" class="form-control" id="exampleInputName2" placeholder="username"-->
+                           <!--name="username">-->
+                <!--</div>-->
+                <!--<div class="form-group">-->
+                    <!--<label for="exampleInputEmail2">Password</label>-->
+                    <!--<input type="password" class="form-control" id="exampleInputEmail2" placeholder="password"-->
+                           <!--name="password">-->
+                <!--</div>-->
+                <!--<input type="submit" class="btn btn-login" onclick="login(1)" Value="LOGIN">-->
+                <!--<button class="btn btn-login" onclick="logout(1,1)">LOGOUT</button>-->
+            <!--</form>-->
 
-            <p><a href="#">Register NOW!</a> Forgot username or password?</p>
-        </div>
+            <!--<p><a href="#">Register NOW!</a> Forgot username or password?</p>-->
+        <!--</div>-->
     </div>
 </header>
+
 <div ui-view="banner"></div>
 
 <div ui-view="menu"></div>
 
-<div class="featured-section">
-    <div class="ftd-container">
-        <a href="#">Featured Game</a>
-        <img src="assets/images/ftrd-img.jpg" alt="featured image"/>
-    </div>
-</div>
+<!--<div class="featured-section">-->
+    <!--<div class="ftd-container">-->
+        <!--<a href="#">Featured Game</a>-->
+        <!--<img src="assets/images/ftrd-img.jpg" alt="featured image"/>-->
+    <!--</div>-->
+<!--</div>-->
 
 <div id="main">
     <div ui-view></div>
@@ -79,6 +81,7 @@
 
 <!-- Directive -->
 <script src="shared/directive/ticker/tickerDirective.js"></script>
+<script src="shared/directive/featured/featuredDirective.js"></script>
 
 <!-- controller -->
 <script src="components/arcadegames/arcadegamesController.js"></script>
