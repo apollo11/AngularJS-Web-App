@@ -2,7 +2,7 @@
 
 app.controller('TableGamesController', ['$scope','Table', function($scope, Table) {
 
-    $scope.title = 'This is a Games Page';
+    $scope.title = 'Table Games';
     $scope.getTableGames = Table.query();
     $scope.getTableGames.$promise.then(function(data) {
         $scope.data = {};
