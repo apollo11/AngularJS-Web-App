@@ -15,11 +15,11 @@ app.directive('featuredBanner', [ function() {
             });
         },
         template:'<div class="featured-section">'+
-                        '<div class="ftd-container" ng-repeat="(key, value ) in data.menu" ng-if="$index < 1">'+
-                        '<img class="animated rubberBand" ng-if="value.path == menuType " ng-src="{{value.image_path}}/{{value.featured_banner.filename}}" />'+
+                    '<div class="ftd-container" ng-repeat="(key, value ) in data.menu" ng-hide="value.path !== menuType">'+
+                        '<img class="animated rubberBand" ng-src="{{value.image_path}}/{{value.featured_banner.filename}}" />'+
                     '</div>',
         link: function (scope, elem, attrs) {
-                scope.menuType = scope.type;
+                scope.menuType =  angular.copy(attrs.type);
         }
     }
 }]);
