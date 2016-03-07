@@ -9,4 +9,9 @@ app.controller('ArcadeController', ['$scope','Arcade', function($scope, Arcade) 
         $scope.data.arcade = data;
     });
 
+    $scope.onclickGameNewWindow = function (url, lang, file, title) {
+        $window.open(url+'?' + 'language='+ lang +'&game='+file, title, 'width=800, height=600');
+    }
+
+
 }]);
