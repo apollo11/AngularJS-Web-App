@@ -19,10 +19,10 @@
             </div>
 
             <div class="game-holder">
-                <div class="col-md-3">
+                <div class="col-md-3" ng-repeat="(key, value) in data.allGames | filter:searchText">
                     <div class="thumb animated fadeInRightBig">
                         <div class="hover">
-                            <a class="play-btn wow animated flipInY" ng-href="{{value.field_games_link}}?language={{value.language}}&game={{value.game}}">
+                            <a class="play-btn wow animated flipInY" ng-click="onclickGameNewWindow(value.field_games_link, value.language,value.game)">
                                 <p>PLAY NOW</p>
                             </a>
                         </div>
