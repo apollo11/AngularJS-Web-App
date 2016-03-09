@@ -1,0 +1,13 @@
+<footer ng-cotroller="FooterController">
+        <div class="subfooter">
+            <p>
+                <a ng-repeat=" (key, value) in data.footer" ui-sref="{{value.link}}" ui-sref-active="active">
+                    <span class="title">{{value.Title}}</span>
+                </a>
+            </p>
+        </div>
+        <div class="mostfooter">
+            <p>Copyright © 2016 Oriental Game.<br>All rights reserved</p>
+        </div>
+</footer>
+

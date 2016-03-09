@@ -41,7 +41,12 @@ app.config(['$stateProvider'
                     'logo': {
                         templateUrl: 'components/logo/logoView.html',
                         controller: 'LogoController'
+                    },
+                    'footer': {
+                        templateUrl: 'components/footer/footerView.html',
+                        controller: 'FooterController'
                     }
+
                 }
             })
 
@@ -149,6 +154,77 @@ app.config(['$stateProvider'
                     '@': {
                         templateUrl: 'components/livegames/livegamesView.html',
                         controller: 'LiveController'
+                    }
+                }
+            })
+
+            .state('cs', {
+                url: '/cs',
+                parent: 'root',
+                views: {
+                    '@': {
+                        templateUrl: 'components/footer/csView.html',
+                        controller: 'FooterController'
+                    }
+                }
+            })
+            .state('recommend', {
+                url: '/rec',
+                parent: 'root',
+                views: {
+                    '@': {
+                        templateUrl: 'components/footer/recommendView.html',
+                        controller: 'FooterController'
+                    }
+                }
+            })
+            .state('partners', {
+                url: '/partners',
+                parent: 'root',
+                views: {
+                    '@': {
+                        templateUrl: 'components/footer/partnersView.html',
+                        controller: 'FooterController'
+                    }
+                }
+            })
+            .state('terms', {
+                url: '/terms',
+                parent: 'root',
+                views: {
+                    '@': {
+                        templateUrl: 'components/footer/termsView.html',
+                        controller: 'FooterController'
+                    }
+                }
+            })
+            .state('contact', {
+                url: '/contact',
+                parent: 'root',
+                views: {
+                    '@': {
+                        templateUrl: 'components/footer/contactView.html',
+                        controller: 'FooterController'
+                    }
+                }
+            })
+            .state('faq', {
+                url: '/faq',
+                parent: 'root',
+                views: {
+                    '@': {
+                        templateUrl: 'components/footer/faqView.html',
+                        controller: 'FooterController'
+                    }
+                }
+            })
+            .state('about', {
+                url: '/about',
+                parent: 'root',
+                views: {
+                    '@': {
+                        templateUrl: 'components/footer/aboutView.html',
+                        controller: 'FooterController'
                     }
                 }
             })

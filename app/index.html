@@ -16,98 +16,30 @@
   <div class="top-container">   
     <div class="slim-header">
         <div class="container">
+            <!-- Logo -->
             <span ui-view="logo"></span>
-            <!--<img src="assets/images/og-logo-white.png" alt="logo" class="white-logo" />-->
+
+            <!-- Login -->
             <a href="#" class="login-link">LOGIN</a>
-            <!--<div ui-view="login"></div>-->
+
             <div ui-view="login" class="login-form"></div>
             <a href="#" data-toggle="modal" data-target="#support" class="customer_service">Customer Service</a>
             <a href="#" class="lang">CHI</a>
             <a href="#" class="lang">ENG</a>            
         </div>
+
+        <!-- Banner -->
+        <div ui-view="banner"></div>
     </div>
-    <header>
-        <div class="container header-section">
-            <img src="images/og-logo.png" alt="logo" class="logo" />
-            <div class="support-section">
-                <img src="images/am-icon.png"><span>| Customer Service</span><!--<a href="#" class="open-btn">OPEN ACCOUNT</a>-->
-            </div>
-            <div class="login-section">
-                <form class="form-inline">
-                  <div class="form-group">
-                    <label for="exampleInputName2">Username</label>
-                    <input type="text" class="form-control" id="exampleInputName2" placeholder="Enter username">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail2">Password</label>
-                    <input type="password" class="form-control" id="exampleInputEmail2" placeholder="Enter password">
-                  </div>
-                  <button type="submit" class="btn btn-login">LOGIN</button>
-                </form>
-                <p><!--<a href="#">Register NOW!</a>--> Forgot username or password?</p>
-            </div>
-        </div>
-    </header>
-    <header>
-        <div class="container header-section">
-            <div ui-view="logo"></div>
-            <div ui-view="login"></div>
-            <!--<div class="support-section">-->
-                <!--<img src="assets/images/am-icon.png"><span>| Customer Service</span><a href="#" class="open-btn">OPEN-->
-                <!--ACCOUNT</a>-->
-            <!--</div>-->
-            <!--<div class="login-section">-->
+</div><!-- End Top Cotainer-->
 
-                <!--<form class="form-inline" id="loginform">-->
-                    <!--<div class="form-group">-->
-                        <!--<label for="exampleInputName2">Username</label>-->
-                        <!--<input type="text" class="form-control" id="exampleInputName2" placeholder="username"-->
-                               <!--name="username">-->
-                    <!--</div>-->
-                    <!--<div class="form-group">-->
-                        <!--<label for="exampleInputEmail2">Password</label>-->
-                        <!--<input type="password" class="form-control" id="exampleInputEmail2" placeholder="password"-->
-                               <!--name="password">-->
-                    <!--</div>-->
-                    <!--<input type="submit" class="btn btn-login" onclick="login(1)" Value="LOGIN">-->
-                    <!--<button class="btn btn-login" onclick="logout(1,1)">LOGOUT</button>-->
-                <!--</form>-->
-
-                <!--<p><a href="#">Register NOW!</a> Forgot username or password?</p>-->
-            <!--</div>-->
-        </div>
-    </header>
-
-    <div ui-view="banner"></div>
-</div>  
 <div ui-view="menu"></div>
-
-<!--<div class="featured-section">-->
-    <!--<div class="ftd-container">-->
-        <!--<a href="#">Featured Game</a>-->
-        <!--<img src="assets/images/ftrd-img.jpg" alt="featured image"/>-->
-    <!--</div>-->
-<!--</div>-->
 
 <div id="main" class="master_container">
     <div ui-view></div>
 </div>
-<footer>
-    <div class="subfooter">
-        <p>
-            <a href="#" data-toggle="modal" data-target="#aboutUs"><span class="aboutIcon f-sprite"></span><span class="title">About us</span></a>
-            <a href="#" data-toggle="modal" data-target="#faqs"><span class="faqsIcon f-sprite"></span><span class="title">FAQs</span></a>          
-            <a href="#" data-toggle="modal" data-target="#contactus"><span class="contactIcon f-sprite"></span><span class="title">Contact us</span></a>          
-            <a href="#" data-toggle="modal" data-target="#terms"><span class="termsIcon f-sprite"></span><span class="title">Terms of service</span></a>          
-            <a href="#" data-toggle="modal" data-target="#partners"><span class="partnersaboutIcon f-sprite"></span><span class="title">Partners Agent</span></a>          
-            <a href="#" data-toggle="modal" data-target="#recommended"><span class="recommendedIcon f-sprite"></span><span class="title r">Recommended rebate</span></a>           
-            <a href="#" data-toggle="modal" data-target="#support"><span class="customerIcon f-sprite"></span><span class="title">Customer Service</span></a>
-        </p>
-    </div>
-    <div class="mostfooter">
-        <p>Copyright &copy; 2016 Oriental Game.<br/>All rights reserved</p>
-    </div>
-</footer>
+
+<div ui-view="footer"></div>
 
 
 <!-- SCRIPT -->
@@ -129,6 +61,7 @@
 <script src="components/tablegames/tablegamesService.js"></script>
 <script src="components/videopoker/videopokerService.js"></script>
 <script src="shared/directive/ticker/tickerService.js"></script>
+<script src="components/footer/footerService.js"></script>
 
 <!-- Directive -->
 <script src="shared/directive/ticker/tickerDirective.js"></script>
@@ -147,7 +80,7 @@
 <script src="components/tablecardgames/tablecardgamesController.js"></script>
 <script src="components/tablegames/tablegamesController.js"></script>
 <script src="components/videopoker/videopokerController.js"></script>
-
+<script src="components/footer/footerController.js"></script>
 
 <!-- Components -->
 <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
@@ -159,7 +92,6 @@
 <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
 <script src="bower_components/abdmob/x2js/xml2json.js"></script>
 <script src="bower_components/ng-lodash/build/ng-lodash.js"></script>
-
 <script>
   $(document).ready(function() {
     $(".login-link").click(function(){
@@ -171,6 +103,7 @@
     });       
   })
 </script>
+
 </body>
 </html>
 

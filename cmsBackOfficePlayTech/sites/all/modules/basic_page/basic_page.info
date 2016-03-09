@@ -1,0 +1,7 @@
+name = basic page
+core = 7.x
+package = backup
+dependencies[] = block
+dependencies[] = features
+features[features_api][] = api:2
+features[user_permission][] = administer blocks

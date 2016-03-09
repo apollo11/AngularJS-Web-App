@@ -41,8 +41,8 @@ a.list-icon{ color: #ffffff; /*background: #d1cfc8;*/ background: -webkit-linear
 a.list-icon:hover, a.list-icon span:hover{ color: #d1cfc8; /*background: #949187;*/}
 a.thumbnails-icon{ /*color: #d1cfc8;*/ color: #ffffff; /*background: #adaaa0;*/background: -webkit-linear-gradient(90deg, #000000 0%, #000000 50%, #1A1A1A 51%, #1A1A1A 100%); background: linear-gradient(0deg, #000000 0%, #000000 50%, #1A1A1A 51%, #1A1A1A 100%); /* w3c */ border-left: 1px solid #757575; line-height: 52px;}
 a.thumbnails-icon:hover, a.thumbnails-icon span:hover{ color: #bfbdb6; /*background: #bfbdb6;*/}
-.right-inner-addon { position: relative; top: 11px; width: 74%;}
-.right-inner-addon input { padding-right: 30px; width: 355px !important;}
+.right-inner-addon { position: relative; top: 11px; width: 96%;}
+.right-inner-addon input { padding-right: 30px; width: 460px !important;}
 .right-inner-addon i { position: absolute; right: 0px; padding: 10px 12px; pointer-events: none; top: -3px;}
 
 .thumb{ height: 254px; margin:0 auto; border: 3px solid rgb(255, 255, 255); border-radius: 10px;
@@ -56,10 +56,10 @@ box-shadow: 0px 0px 10px #8B8B8B; margin-bottom: 30px;}
 .game-type, .game-category{ margin:0; padding: 0px 10px;}
 .game-type{ font:bold 16px/1 Calibri; color: #424242;}
 .game-category{color:#ffba78; font:16px/1 Calibri;}
-.play-btn p{ margin:0; background: #00a308; padding: 18px;}
-.play-btn { display: none; position: absolute; font: bold 18px/1 Calibri; color: #ffffff; border: 2px solid rgba(255,255,255,1); border-radius: 5px; top: 60px; left: 32px; box-shadow: 0px 0px 67px #ADADAD;}
+.play-btn p{ margin:0; background: #00a308; padding: 18px; cursor: pointer; }
+.play-btn { display: none; position: absolute; font: bold 18px/1 Calibri; color: #ffffff; border: 2px solid rgba(255,255,255,1); border-radius: 5px; top: 60px; left: 40px; box-shadow: 0px 0px 67px #ADADAD;}
 .play-btn:hover{color: #ffffff; text-decoration: none;}
-.hover { display: none; height: 173px; position: absolute; background: rgba(0,0,0,0.8); width: 201px; border-radius: 5px; top: 7px; left: 20px;}
+.hover { display: none; height: 173px; position: absolute; background: rgba(0,0,0,0.8); width: 201px; border-radius: 5px; top: 7px; left: 20px; z-index: 2; }
 
 footer{ margin-top: 5px; font:14px/1 Calibri; background: #000000; height: 260px; border-top: 3px solid #b8b8b8;}
 .mostfooter p{ font:14px/1.5 Calibri; color: #ffffff; text-align: center; margin-top:20px;}
