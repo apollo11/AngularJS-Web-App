@@ -9,4 +9,4 @@ var app = angular.module('PlayTech', [
     ,'ngLodash'
 ]);
 
-app.constant('BaseUrl', 'http://http://playtechcms.orientalgame.com:8081/');
+app.constant('BaseUrl', 'http://playtechcms.orientalgame.com:8081/');
