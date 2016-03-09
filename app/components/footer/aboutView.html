@@ -2,7 +2,7 @@
     <div ng-repeat="(key, value) in data.footer" ng-if="value.link =='about'">
         <div class="container">
             <div class="custom-width">
-                <div class="panel-og">
+                <div class="panel-og animated slideInRight">
                     <div class="col-md-3">
                         <p>{{value.Title }}</p>
                     </div>
@@ -14,7 +14,7 @@
                     </div>
                 </div>
             </div>
-            <div ng-bind-html="value.Body">
+            <div class="animated fadeIn" ng-bind-html="value.Body">
 
             </div>
 

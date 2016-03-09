@@ -1,5 +1,5 @@
 <div ng-controller="LogoController">
     <div ng-repeat=" (key, value ) in data.menu | limitTo:1">
-        <img ng-src="{{value.image_path}}/{{value.field_logo.filename}}" />
+        <img class="animated shake" ng-src="{{value.image_path}}/{{value.field_logo.filename}}" />
     </div>
 </div>

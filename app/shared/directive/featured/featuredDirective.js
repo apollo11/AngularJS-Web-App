@@ -16,7 +16,7 @@ app.directive('featuredBanner', [ function() {
         },
         template:'<div class="featured-section">'+
                     '<div class="ftd-container" ng-repeat="(key, value ) in data.menu" ng-hide="value.path !== menuType">'+
-                        '<img class="animated fadeInDown" ng-src="{{value.image_path}}/{{value.featured_banner.filename}}" />'+
+                        '<img class="animated fadeIn" ng-src="{{value.image_path}}/{{value.featured_banner.filename}}" />'+
                     '</div>',
         link: function (scope, elem, attrs) {
                 scope.menuType =  scope.type;

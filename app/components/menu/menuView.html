@@ -1,6 +1,6 @@
 <div ng-controller="MenuController">
     <div class="container tab-menu" >
-        <ul class="nav nav-tabs">
+        <ul class="nav nav-tabs animated slideInLeft">
                 <li ui-sref-active="active" class="animate-repeat" ng-repeat="(key, value ) in data.menu">
                     <a ui-sref="{{value.path}} {{$event.preventDefault()}}" name="menu">{{value.title}}</a>
                 </li>

@@ -312,6 +312,7 @@ a.thumbnails-icon:hover, a.thumbnails-icon span:hover {
     border-radius: 5px;
     top: 7px;
     left: 20px;
+    z-index: 2;
 }
 
 footer {
