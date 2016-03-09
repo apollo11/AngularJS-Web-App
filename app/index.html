@@ -13,20 +13,32 @@
     <script type="text/javascript" src="login.js"></script>
 </head>
 <body>
-<header>
-    <div class="container header-section">
-        <div ui-view="logo"></div>
-        <div ui-view="login"></div>
-    </div>
-</header>
+  <div class="top-container">   
+    <div class="slim-header">
+        <div class="container">
+            <!-- Logo -->
+            <span ui-view="logo"></span>
 
-<div ui-view="banner"></div>
+            <!-- Login -->
+            <a href="#" class="login-link">LOGIN</a>
+
+            <div ui-view="login" class="login-form"></div>
+            <a href="#" data-toggle="modal" data-target="#support" class="customer_service">Customer Service</a>
+            <a href="#" class="lang">CHI</a>
+            <a href="#" class="lang">ENG</a>            
+        </div>
+
+        <!-- Banner -->
+        <div ui-view="banner"></div>
+    </div>
+</div><!-- End Top Cotainer-->
 
 <div ui-view="menu"></div>
 
-<div id="main">
+<div id="main" class="master_container">
     <div ui-view></div>
 </div>
+
 <div ui-view="footer"></div>
 
 
@@ -80,6 +92,18 @@
 <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
 <script src="bower_components/abdmob/x2js/xml2json.js"></script>
 <script src="bower_components/ng-lodash/build/ng-lodash.js"></script>
+<script>
+  $(document).ready(function() {
+    $(".login-link").click(function(){
+        if($(".login-form").hasClass("show")){
+          $(".login-form").removeClass("show");
+        }else{
+          $(".login-form").addClass("show");
+        }
+    });       
+  })
+</script>
+
 </body>
 </html>
 
