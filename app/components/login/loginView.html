@@ -24,18 +24,18 @@
     <!--<img src="assets/images/am-icon.png"><span>| Customer Service</span>--><!--<a href="#" class="open-btn">OPEN ACCOUNT</a>-->
 <!--</div>-->
 
-<form class="form-inline">
+<form class="form-inline" id="loginform">
   <label class="form-title">Login</label>   
   <div class="form-group">
     <label for="exampleInputName2">Username</label>
-    <input type="text" class="form-control" id="exampleInputName2" placeholder="Enter username">
+    <input type="text" class="form-control" id="exampleInputName2" placeholder="Enter username" name="username">
   </div>
   <div class="form-group">
     <label for="exampleInputEmail2">Password</label>
-    <input type="password" class="form-control" id="exampleInputEmail2" placeholder="Enter password">
+    <input type="password" class="form-control" id="exampleInputEmail2" placeholder="Enter password" name="password">
   </div>
-  <button type="submit" class="btn btn-login">LOGIN</button>
-  <label class="forgot">Forgot Password?</label>    
+  <button type="submit" class="btn btn-login" onclick="login(1)">LOGIN</button>
+ <!--  <label class="forgot">Forgot Password?</label>     -->
 </form>
 
 
