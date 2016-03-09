@@ -22,7 +22,7 @@ header img{ }
 .login-section p a{ color: #ff9000; }
 .popup-btn{ padding: 2.5px 14px !important;}
 
-.banner{ height: 553px; /*border-top:7px solid #000;*/ position: relative; z-index: 10; background: url('../cssslider_files/csss_images1/banner-bg-img.jpg') top center no-repeat, #000000; background-size:100% 100%;}
+.banner{ height: 553px; /*border-top:7px solid #000;*/ position: relative; z-index: 10; background: url('../images/banner-bg-img.jpg') top center no-repeat, #000000; background-size:100% 100%;}
 .banner img{ margin:0 auto; display: block; max-width: 1342px; width: 1342px; max-height: 553px; height: 553px;}
 
 .featured-section{ height: 175px; /*background: #f58821;*/ border-top: 6px solid #ffffff; padding: 5px; padding-top: 10px;}
