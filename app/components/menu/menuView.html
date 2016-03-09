@@ -2,7 +2,7 @@
     <div class="container tab-menu" >
         <ul class="nav nav-tabs">
                 <li ui-sref-active="active" class="animate-repeat" ng-repeat="(key, value ) in data.menu">
-                    <a ui-sref="{{value.path}}" name="menu">{{value.title}}</a>
+                    <a ui-sref="{{value.path}}" name="menu"><span class="left"></span>{{value.title}}<span class="right"></span></a>
                 </li>
         </ul>
     </div>

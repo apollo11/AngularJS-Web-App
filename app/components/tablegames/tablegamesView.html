@@ -19,7 +19,7 @@
             </div>
             <div class="game-holder">
                 <div class="col-md-3" ng-repeat=" (key, value) in data.TableGames | filter:searchText">
-                    <div class="thumb animated fadeInRightBig">
+                    <div class="thumb">
                         <div class="hover">
                             <a class="play-btn wow animated flipInY" ng-click="onclickGameNewWindow(value.field_games_link, value.language,value.game)">
                                 <p>PLAY NOW</p>
@@ -27,7 +27,7 @@
                         </div>
                         <img ng-src="{{value.image_path}}/{{value.thumbnail_image.filename}}" />
                         <section>
-                            <ticker code="{{value.game}}"></ticker>
+                            <p class="jackpot"><span class="count"><ticker code="{{value.game}}"></ticker></span></p>
                             <p class="game-type">{{value.node_title}}</p>
                             <p class="game-category">{{value.game_category}}</p>
                         </section>
