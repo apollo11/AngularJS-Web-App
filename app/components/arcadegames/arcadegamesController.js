@@ -13,5 +13,4 @@ app.controller('ArcadeController', ['$scope','Arcade', '$window',  function($sco
         $window.open(url+'?' + 'language='+ lang +'&game='+file, title, 'width=800, height=600');
     }
 
-
 }]);
