@@ -11,7 +11,6 @@ app.factory('Ticker', ['$resource', function($resource) {
                     var x2js = new X2JS();
                     var jasonData = x2js.xml_str2json(data);
                     return jasonData;
-
                 }
             }
         });

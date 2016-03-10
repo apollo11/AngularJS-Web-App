@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <base href="/">
-    <title>PLaytech</title>
+    <title>Playtech</title>
     <link href="/bower_components/animate.css/animate.css" rel="stylesheet" type="text/css"/>
     <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css"/>
     <link href="/assets/css/style.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +25,7 @@
             <div ui-view="login" class="login-form"></div>
             <a href="#" data-toggle="modal" data-target="#support" class="customer_service">Customer Service</a>
             <a href="#" class="lang">CHI</a>
-            <a href="#" class="lang">ENG</a>            
+            <a href="#" class="lang">ENG</a>
         </div>
 
         <!-- Banner -->
@@ -36,7 +36,9 @@
 <div ui-view="menu"></div>
 
 <div id="main" class="master_container">
-    <div ui-view></div>
+
+        <div ui-view></div>
+    </div>
 </div>
 
 <div ui-view="footer"></div>
@@ -92,6 +94,7 @@
 <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
 <script src="bower_components/abdmob/x2js/xml2json.js"></script>
 <script src="bower_components/ng-lodash/build/ng-lodash.js"></script>
+
 <script>
   $(document).ready(function() {
     $(".login-link").click(function(){

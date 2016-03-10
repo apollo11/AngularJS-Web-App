@@ -1,6 +1,5 @@
 'use strict';
-app.controller('FooterController', ['$scope','Footer', '$window',
-    function($scope, Footer, $window) {
+app.controller('FooterController', ['$scope','Footer', '$window', function($scope, Footer, $window) {
 
     $scope.title = 'Footer';
     $scope.getFooter = Footer.query();

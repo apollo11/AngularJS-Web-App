@@ -1,38 +1,43 @@
 <div ng-controller="TableCardController">
     <featured-banner type="tablecard"></featured-banner>
-    <div class="container">
-        <div class="custom-width">
-            <div class="panel-og">
-                <div class="col-md-3">
-                    <p>{{title}}</p>
-                </div>
-                <div class="col-md-6 col-md-offset-3">
-                    <div class="row">
-                        <!--<a href="#" class="thumbnails-icon"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span></a>-->
-                        <!--<a href="#" class="list-icon"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a>-->
-                        <div class="right-inner-addon ">
-                            <i class="glyphicon glyphicon-search"></i>
-                            <input type="search" class="form-control" placeholder="Game search" ng-model="searchText"/>
+    <div class="mcholder">
+        <div class="container">
+            <div class="custom-width">
+                <div class="panel-og">
+                    <div class="col-md-3">
+                        <p>{{title}}</p>
+                    </div>
+                    <div class="col-md-6 col-md-offset-3">
+                        <div class="row">
+                            <!--<a href="#" class="thumbnails-icon"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span></a>-->
+                            <!--<a href="#" class="list-icon"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a>-->
+                            <div class="right-inner-addon ">
+                                <i class="glyphicon glyphicon-search"></i>
+                                <input type="search" class="form-control" placeholder="Game search"
+                                       ng-model="searchText"/>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="game-holder">
-                <div class="col-md-3" ng-repeat=" (key, value) in data.TableCardGames | filter:searchText">
-                    <div class="thumb">
-                        <div class="hover">
-                            <a class="play-btn wow animated flipInY"
-                               ng-click="onclickGameNewWindow(value.field_games_link, value.language,value.game)">
-                                <p>PLAY NOW</p>
-                            </a>
+                <div class="game-holder">
+                    <div class="col-md-3 wow animated zoomIn"
+                         ng-repeat=" (key, value) in data.TableCardGames | filter:searchText track by $index">
+                        <div class="thumb">
+                            <div class="hover">
+                                <a class="play-btn wow animated flipInY"
+                                   ng-click="onclickGameNewWindow(value.field_games_link, value.language,value.game)">
+                                    <p>PLAY NOW</p>
+                                </a>
+                            </div>
+                            <img class="animated fadeIn"
+                                 ng-src="{{value.image_path}}/{{value.thumbnail_image.filename}}"/>
+                            <section>
+                                <p class="jackpot"><span class="count"><ticker code="{{value.game}}"></ticker></span>
+                                </p>
+                                <p class="game-type">{{value.node_title}}</p>
+                                <p class="game-category">{{value.game_category}}</p>
+                            </section>
                         </div>
-                        <img class="animated fadeInRight"
-                             ng-src="{{value.image_path}}/{{value.thumbnail_image.filename}}"/>
-                        <section>
-                            <p class="jackpot"><span class="count"><ticker code="{{value.game}}"></ticker></span></p>
-                            <p class="game-type">{{value.node_title}}</p>
-                            <p class="game-category">{{value.game_category}}</p>
-                        </section>
                     </div>
                 </div>
             </div>

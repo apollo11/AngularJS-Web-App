@@ -31,7 +31,8 @@ header img{ }
 .ftd-container a { position: absolute; font: 17px/1 Calibri; left: 0; top: 22px; padding: 9px 23px; background: #dd2429; color: #ffffff; pointer-events: none; cursor: default;}
 .tab-menu{ position: relative; z-index: 15;}
 .nav-tabs{ /*position: absolute; top: -34px;*/ z-index: 10; width: 965px; margin:0 auto; margin-top: -38px; display: block; border-bottom: 0;}
-.nav-tabs a{ background: rgba(0,0,0, 1);}
+.nav-tabs a{ background: rgba(0,0,0, 1);}.custom-width.animated.fadeIn.ng-binding p { padding: 20px 70px;}
+.custom-width.animated.fadeIn.ng-binding.pagecontent { min-height: 550px;}
 .nav-tabs a:hover{ /*transition: background-color 0.5s ease;*/ }
 .nav-tabs > li > a{ /*border-radius: 12px 12px 0 0;*/ color: #424242; padding: 8px 15px; margin-left: 27px; position: relative;}
 .panel-og{ height: 51px; margin-bottom: 20px; border: 1px solid transparent; -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05); box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05); /*background: #dad9d4;*/  margin-top: 15px; background: -webkit-linear-gradient(90deg, #000000 0%, #000000 50%, #1A1A1A 51%, #1A1A1A 100%); background: linear-gradient(0deg, #000000 0%, #000000 50%, #1A1A1A 51%, #1A1A1A 100%); /* w3c */ }
@@ -155,5 +156,7 @@ a.login-link:hover + .login-form{ display: block; position: absolute; top: 34px;
 .master_container{ background: url('../images/master_container_bg.png') top center no-repeat;}
 
 body{ font-family: Calibri;}
-@font-face { font-family: Calibri; src: local("Calibri"), url("../fonts/Calibri.ttf") format("truetype"); font-weight: normal; font-style: normal;} 
+@font-face { font-family: Calibri; src: local("Calibri"), url("../fonts/Calibri.ttf") format("truetype"); font-weight: normal; font-style: normal;}
+.custom-width.animated.fadeIn.ng-binding p { padding: 20px 70px;}
+.custom-width.animated.fadeIn.ng-binding.pagecontent { min-height: 550px;}
 

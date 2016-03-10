@@ -1,7 +1,7 @@
 <footer ng-cotroller="FooterController">
         <div class="subfooter">
             <p>
-                <a ng-repeat=" (key, value) in data.footer" ui-sref="{{value.link}}" ui-sref-active="active">
+                <a ng-repeat=" (key, value) in data.footer track by $index" ui-sref="{{value.link}}" ui-sref-active="active">
                     <span class="{{value.icon}} f-sprite"></span><span class="title">{{value.Title}}</span>
                 </a>
             </p>

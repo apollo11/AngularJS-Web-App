@@ -4,7 +4,7 @@ app.directive('ticker',function() {
         scope: {
             code: '@'
         },
-        controller: function ( Ticker, $scope) {
+        controller: ['Ticker', '$scope', function (Ticker, $scope) {
 
             $scope.params = {
                 info: 1,
@@ -22,8 +22,8 @@ app.directive('ticker',function() {
             function (err) {
                     console.log(err)
                 })
-        },
-        template: '<p class="jackpot" ng-repeat ="(key, value) in gameData.response"  ng-if="$index < 1">' +
+        }],
+        template: '<p class="jackpot" ng-repeat ="(key, value) in gameData.response track by $index"  ng-if="$index < 1">' +
         '{{value.amount._sign}} {{value.amount.__text}}' + '</p>'
     }
 });
