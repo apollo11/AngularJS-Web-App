@@ -21,8 +21,7 @@
                 </div>
 
                 <div class="game-holder">
-                    <div class="col-md-3 wow animated zoomIn"
-                         ng-repeat=" (key, value) in data.LiveGames | filter:searchText track by $index">
+                    <div class="col-md-3 wow animated zoomIn" dir-paginate="(key, value) in data.LiveGames | itemsPerPage:20  | filter:searchText track by $index" pagination-id="live">
                         <div class="thumb">
                             <div class="hover">
                                 <a ng-click="onclickGameNewWindow(value.field_games_link, value.language,value.game)"
@@ -40,6 +39,11 @@
                             </section>
                         </div>
                     </div>
+                    <div class="clearfix"></div>
+                    <div class="paginate">
+                        <dir-pagination-controls pagination-id="live"></dir-pagination-controls>
+                    </div>
+
                 </div>
             </div>
         </div>

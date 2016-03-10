@@ -7,6 +7,7 @@ var app = angular.module('PlayTech', [
     ,'ngAnimate'
     ,'ngSanitize'
     ,'ngLodash'
+    ,'angularUtils.directives.dirPagination'
 ]);
 
 app.constant('BaseUrl', 'http://playtechcms.orientalgame.com:8081/');

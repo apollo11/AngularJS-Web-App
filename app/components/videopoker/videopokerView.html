@@ -21,7 +21,7 @@
                 </div>
                 <div class="game-holder">
                     <div class="col-md-3 wow animated zoomIn"
-                         ng-repeat=" (key, value) in data.VideoPokerGames | filter:searchText track by $index">
+                         dir-paginate="(key, value) in data.VideoPokerGames | itemsPerPage:20  | filter:searchText track by $index" pagination-id="video">
                         <div class="thumb">
                             <div class="hover">
                                 <a class="play-btn wow animated flipInY"
@@ -38,6 +38,10 @@
                                 <p class="game-category">{{value.game_category}}</p>
                             </section>
                         </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="paginate">
+                        <dir-pagination-controls pagination-id="video"></dir-pagination-controls>
                     </div>
                 </div>
             </div>

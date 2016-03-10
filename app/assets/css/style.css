@@ -159,4 +159,5 @@ body{ font-family: Calibri;}
 @font-face { font-family: Calibri; src: local("Calibri"), url("../fonts/Calibri.ttf") format("truetype"); font-weight: normal; font-style: normal;}
 .custom-width.animated.fadeIn.ng-binding p { padding: 20px 70px;}
 .custom-width.animated.fadeIn.ng-binding.pagecontent { min-height: 550px;}
+.paginate {margin-left: 300px;}
 

@@ -5,7 +5,7 @@ app.controller('ScratchCardController', ['$scope','ScratchCard','$window',  func
     $scope.getScratchGames = ScratchCard.query();
     $scope.getScratchGames.$promise.then(function(data) {
         $scope.data = {};
-        $scope.data.ScratchGame = data;
+        $scope.data.ScratchCard = data;
     });
 
     $scope.onclickGameNewWindow = function (url, lang, file, title) {
