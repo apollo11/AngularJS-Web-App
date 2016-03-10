@@ -2,7 +2,7 @@
     <div class="banner">
         <uib-carousel interval="3000" no-wrap="noWrapSlides">
             <uib-slide ng-repeat="(key, value ) in data.banner track by $index">
-                <img class="animated fadeOut" ng-src="{{value.image_path}}/{{value.banner_image.filename}}"/>
+                <img ng-src="{{value.image_path}}/{{value.banner_image.filename}}"/>
             </uib-slide>
         </uib-carousel>
     </div>
