@@ -151,7 +151,7 @@ a.login-link:hover + .login-form{ display: block; position: absolute; top: 34px;
 .forgot{ display: block; margin: 15px 0px !important;}
 .forgot:hover{ text-decoration: none !important; }
 
-.faqs-list{ margin: 0; padding: 0; margin-left: 12px; margin-bottom: 10px; }
+.faqs-list{ margin: 0; padding: 0; margin-left: 84px; margin-bottom: 10px; }
 
 .master_container{ background: url('../images/master_container_bg.png') top center no-repeat;}
 
