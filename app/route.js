@@ -93,7 +93,7 @@ app.config(['$stateProvider'
             })
 
             .state('scratchgames', {
-                url: '/scratch',
+                url: '/scratchgames',
                 parent: 'root',
                 views: {
                     '@': {
@@ -225,6 +225,15 @@ app.config(['$stateProvider'
                     '@': {
                         templateUrl: 'components/footer/aboutView.html',
                         controller: 'FooterController'
+                    }
+                }
+            })
+            .state('test', {
+                url: '/test',
+                parent: 'root',
+                views: {
+                    '@': {
+                        templateUrl: 'components/test/test.html'
                     }
                 }
             })
