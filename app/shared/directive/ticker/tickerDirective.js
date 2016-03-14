@@ -17,13 +17,22 @@ app.directive('ticker',function() {
                 $scope.gameData = {};
                 if(!_.isUndefined(resp.request)){
                     $scope.gameData.response =resp.request.gamedata;
-                    }
+                    _.forEach( $scope.gameData.response, function(value, key) {
+                       if(!_.isUndefined(value.amount)){
+                           $scope.amountTo = parseFloat(value.amount.__text);
+                           $scope.amountFrom = parseFloat(value.amount.__text) * .50;
+                           console.log($scope.amountFrom);
+                           console.log($scope.amountTo);
+                       }
+                    });
+                 }
             },
             function (err) {
                     console.log(err)
                 })
         }],
         template: '<p class="jackpot" ng-repeat ="(key, value) in gameData.response track by $index"  ng-if="$index < 1">' +
-        '{{value.amount._sign}} {{value.amount.__text}}' + '</p>'
+        '￥' + '<span count-to="{{amountTo}}" value="{{amountFrom}}" duration="120"></span>'+
+        '</p>'
     }
 });

@@ -27,9 +27,9 @@
             <a href="#" class="login-link">LOGIN</a>
 
             <div ui-view="login" class="login-form"></div>
-            <a href="#" data-toggle="modal" data-target="#support" class="customer_service">Customer Service</a>
+            <a ng-href="cs" data-toggle="modal" data-target="#support" class="customer_service">Customer Service</a>
             <!--<a href="#" class="lang">CHI</a>-->
-            <a href="#" class="lang">ENG</a>
+            <!--<a href="#" class="lang">ENG</a>-->
         </div>
         <div class="banner">
             <div class="flexslider">
@@ -80,6 +80,7 @@
 
 <!-- Directive -->
 <script src="shared/directive/ticker/tickerDirective.js"></script>
+<script src="shared/directive/ticker/testticker.js"></script>
 <script src="shared/directive/featured/featuredDirective.js"></script>
 
 <!-- controller -->
@@ -102,14 +103,15 @@
 <script src="bower_components/angular-resource/angular-resource.js"></script>
 <script src="bower_components/angular-animate/angular-animate.js"></script>
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<!--<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>-->
 <script src="bower_components/angular-touch/angular-touch.js"></script>
 <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
 <script src="bower_components/abdmob/x2js/xml2json.js"></script>
 <script src="bower_components/ng-lodash/build/ng-lodash.js"></script>
 <script src="bower_components/angularUtils-pagination/dirPagination.js"></script>
-
+<script src="bower_components/angular-count-to/build/angular-count-to.min.js"></script>
 <script defer src="assets/js/jquery.flexslider.js"></script>
+<script src="assets/js/jquery.easing.js"></script>
 <script>
   $(document).ready(function() {
     $(".login-link").click(function(){
@@ -118,16 +120,18 @@
         }else{
           $(".login-form").addClass("show");
         }
-    });  
+    });
+
     $('.flexslider').flexslider({
         animation: "fade",
         start: function(slider){
           //$('body').removeClass('loading');
         }
-    });         
-  })
+    });
+
+  });
 </script>
-<script src="assets/js/jquery.easing.js"></script>
+
 </body>
 </html>
 
