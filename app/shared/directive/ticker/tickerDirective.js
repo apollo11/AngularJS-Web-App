@@ -20,7 +20,7 @@ app.directive('ticker',function() {
                     _.forEach( $scope.gameData.response, function(value, key) {
                        if(!_.isUndefined(value.amount)){
                            $scope.amountTo = parseFloat(value.amount.__text);
-                           $scope.amountFrom = parseFloat(value.amount.__text) * .10;
+                           $scope.amountFrom = parseFloat(value.amount.__text) * .50;
                            console.log($scope.amountFrom);
                            console.log($scope.amountTo);
                        }
