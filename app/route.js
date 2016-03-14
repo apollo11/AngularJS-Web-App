@@ -230,12 +230,6 @@ app.config(['$stateProvider'
             })
             .state('test', {
                 url: '/test',
-                parent: 'root',
-                views: {
-                    '@': {
-                        templateUrl: 'components/test/test.html'
-                    }
-                }
+                templateUrl: 'components/test/test.html'
             })
-
     }]);
