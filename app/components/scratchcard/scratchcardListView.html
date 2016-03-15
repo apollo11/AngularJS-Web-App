@@ -1,6 +1,6 @@
 <div ng-controller="ScratchCardController">
     <featured-banner type="scratchcard"></featured-banner>
-    <div class="mcholder">
+    <div class="mcholder1">
         <div class="container">
             <div class="custom-width">
                 <div class="panel-og">
@@ -21,28 +21,18 @@
                 </div>
 
                 <div class="game-holder">
-                    <div class="col-md-3 wow animated zoomIn"
-                         dir-paginate="(key, value) in data.ScratchCard | itemsPerPage:20  | filter:searchText track by $index" pagination-id="scratchc">
-                        <div class="thumb">
-                            <div class="hover">
-                                <a class="play-btn wow animated flipInY"
-                                   ng-click="onclickGameNewWindow(value.field_games_link, value.language,value.game)">
-                                    <p>PLAY NOW</p>
-                                </a>
-                            </div>
-                            <img class="animated fadeIn"
-                                 ng-src="{{value.image_path}}/{{value.thumbnail_image.filename}}"/>
-                            <section>
-                                <p class="jackpot"><span class="count"><ticker code="{{value.game}}"></ticker></span>
-                                </p>
-                                <p class="game-type">{{value.node_title}}</p>
-                                <p class="game-category">{{value.game_category}}</p>
-                            </section>
-                        </div>
-                    </div>
+                    <ul class="gamelist">
+                        <li dir-paginate="(key, value) in data.ScratchCard | itemsPerPage:20  | filter:searchText track by $index"
+                            pagination-id="scratchList">
+                            <a ng-click="onclickGameNewWindow(value.field_games_link, value.language,value.game)"
+                               data-toggle="modal" data-target="#myModal">{{value.node_title}}</a>
+                            <br/>
+                            <span>{{value.game_category}}</span>
+                        </li>
+                    </ul>
                     <div class="clearfix"></div>
                     <div class="paginate">
-                        <dir-pagination-controls pagination-id="scratchc"></dir-pagination-controls>
+                        <dir-pagination-controls pagination-id="scratchList"></dir-pagination-controls>
                     </div>
                 </div>
             </div>

@@ -60,11 +60,12 @@ app.config(['$stateProvider'
                     }
                 }
             })
-            .state('redirect', {
-                url: '/games',
+            .state('gamesList', {
+                url: '/games-list',
+                parent: 'root',
                 views: {
                     '@': {
-                        templateUrl: 'components/games/gamesView.html',
+                        templateUrl: 'components/games/gamesListView.html',
                         controller: 'GamesController'
                     }
                 }
@@ -80,6 +81,16 @@ app.config(['$stateProvider'
                     }
                 }
             })
+            .state('arcadeList', {
+                url: '/arcade-list',
+                parent: 'root',
+                views: {
+                    '@': {
+                        templateUrl: 'components/arcadegames/arcadegamesListView.html',
+                        controller: 'ArcadeController'
+                    }
+                }
+            })
 
             .state('scratchcard', {
                 url: '/scratchcard',
@@ -87,6 +98,16 @@ app.config(['$stateProvider'
                 views: {
                     '@': {
                         templateUrl: 'components/scratchcard/scratchcardView.html',
+                        controller: 'ScratchCardController'
+                    }
+                }
+            })
+            .state('scratchcardList', {
+                url: '/scratchcard-list',
+                parent: 'root',
+                views: {
+                    '@': {
+                        templateUrl: 'components/scratchcard/scratchcardListView.html',
                         controller: 'ScratchCardController'
                     }
                 }
@@ -114,6 +135,17 @@ app.config(['$stateProvider'
                 }
             })
 
+            .state('slotmachineList', {
+                url: '/slotmachine-list',
+                parent: 'root',
+                views: {
+                    '@': {
+                        templateUrl: 'components/slotmachine/slotmachineListView.html',
+                        controller: 'SlotMachineController'
+                    }
+                }
+            })
+
             .state('tablecard', {
                 url: '/tablecard',
                 parent: 'root',
@@ -136,6 +168,17 @@ app.config(['$stateProvider'
                 }
             })
 
+            .state('tableList', {
+                url: '/table-list',
+                parent: 'root',
+                views: {
+                    '@': {
+                        templateUrl: 'components/tablegames/tablegamesListView.html',
+                        controller: 'TableGamesController'
+                    }
+                }
+            })
+
             .state('videopoker', {
                 url: '/videopoker',
                 parent: 'root',
@@ -147,12 +190,33 @@ app.config(['$stateProvider'
                 }
             })
 
+            .state('videopoker.list', {
+                url: '/videopoker-list',
+                parent: 'root',
+                views: {
+                    '@': {
+                        templateUrl: 'components/videopoker/videopokerListView.html',
+                        controller: 'VideoPokerController'
+                    }
+                }
+            })
+
             .state('live', {
                 url: '/live',
                 parent: 'root',
                 views: {
                     '@': {
                         templateUrl: 'components/livegames/livegamesView.html',
+                        controller: 'LiveController'
+                    }
+                }
+            })
+            .state('live.list', {
+                url: '/live-list',
+                parent: 'root',
+                views: {
+                    '@': {
+                        templateUrl: 'components/livegames/livegamesListView.html',
                         controller: 'LiveController'
                     }
                 }

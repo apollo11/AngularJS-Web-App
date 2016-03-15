@@ -1,0 +1,39 @@
+<div ng-controller="LiveController">
+    <featured-banner type="live"></featured-banner>
+    <div class="mcholder1">
+        <div class="container">
+            <div class="custom-width">
+                <div class="panel-og">
+                    <div class="col-md-3">
+                        <p>{{title}}</p>
+                    </div>
+                    <div class="col-md-6 col-md-offset-3">
+                        <div class="row">
+                            <a ui-sref="live" class="thumbnails-icon"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span></a>
+                            <a ui-sref="live.list" class="list-icon"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a>
+                            <div class="right-inner-addon">
+                                <i class="glyphicon glyphicon-search"></i>
+                                <input type="search" class="form-control" placeholder="Game search"
+                                       ng-model="searchText"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-holder">
+                    <ul class="gamelist">
+                        <li dir-paginate="(key, value) in data.LiveGames | itemsPerPage:20  | filter:searchText track by $index" pagination-id="liveList">
+                            <a ng-click="onclickGameNewWindow(value.field_games_link, value.language,value.game)"
+                               data-toggle="modal" data-target="#myModal">{{value.node_title}}</a>
+                            <br/>
+                            <span>{{value.game_category}}</span>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                    <div class="paginate">
+                        <dir-pagination-controls pagination-id="liveList"></dir-pagination-controls>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- /.container -->
+</div>

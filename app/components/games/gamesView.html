@@ -9,8 +9,8 @@
                     </div>
                     <div class="col-md-6 col-md-offset-3">
                         <div class="row">
-                            <!--<a href="#" class="thumbnails-icon"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span></a>-->
-                            <!--<a href="#" class="list-icon"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a>-->
+                            <a ui-sref="games" class="thumbnails-icon"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span></a>
+                            <a ui-sref="gamesList" class="list-icon"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a>
                             <div class="right-inner-addon ">
                                 <i class="glyphicon glyphicon-search"></i>
                                 <input type="search" class="form-control" placeholder="Game search"
@@ -20,7 +20,9 @@
                     </div>
                 </div>
                 <div class="game-holder">
-                    <div class="col-md-3 wow animated zoomIn" dir-paginate="(key, value) in data.allGames | itemsPerPage:20  | filter:searchText track by $index" pagination-id="paginate">
+                    <div class="col-md-3 wow animated zoomIn"
+                         dir-paginate="(key, value) in data.allGames | itemsPerPage:20  | filter:searchText track by $index"
+                         pagination-id="paginate">
                         <div class="thumb">
                             <div class="hover">
                                 <a class="play-btn wow animated flipInY"

@@ -42,8 +42,8 @@ a.list-icon{ color: #ffffff; /*background: #d1cfc8;*/ background: -webkit-linear
 a.list-icon:hover, a.list-icon span:hover{ color: #d1cfc8; /*background: #949187;*/}
 a.thumbnails-icon{ /*color: #d1cfc8;*/ color: #ffffff; /*background: #adaaa0;*/background: -webkit-linear-gradient(90deg, #000000 0%, #000000 50%, #1A1A1A 51%, #1A1A1A 100%); background: linear-gradient(0deg, #000000 0%, #000000 50%, #1A1A1A 51%, #1A1A1A 100%); /* w3c */ border-left: 1px solid #757575; line-height: 52px;}
 a.thumbnails-icon:hover, a.thumbnails-icon span:hover{ color: #bfbdb6; /*background: #bfbdb6;*/}
-.right-inner-addon { position: relative; top: 11px; width: 96%;}
-.right-inner-addon input { padding-right: 30px; width: 460px !important;}
+.right-inner-addon { position: relative; top: 11px; width: 75%;}
+.right-inner-addon input { padding-right: 30px; width: 355px !important;}
 .right-inner-addon i { position: absolute; right: 0px; padding: 10px 12px; pointer-events: none; top: -3px;}
 
 .thumb{ height: 254px; margin:0 auto; border: 3px solid rgb(255, 255, 255); border-radius: 10px;

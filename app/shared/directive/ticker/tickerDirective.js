@@ -32,7 +32,7 @@ app.directive('ticker',function() {
                 })
         }],
         template: '<p class="jackpot" ng-repeat ="(key, value) in gameData.response track by $index"  ng-if="$index < 1">' +
-        '￥' + '<span count-to="{{amountTo}}" value="{{amountFrom}}" duration="120"></span>'+
+        '￥' + '<span count-to="{{amountTo}}" value="{{amountFrom}}" duration="60"></span>'+
         '</p>'
     }
 });
