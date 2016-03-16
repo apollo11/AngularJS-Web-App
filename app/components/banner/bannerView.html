@@ -5,15 +5,21 @@
                 <!--<img ng-src="{{value.image_path}}/{{value.banner_image.filename}}"/>-->
             <!--</uib-slide>-->
         <!--</uib-carousel>-->
+            <!--<div class="flexslider">-->
+                <!--<ul class="slides">-->
+                    <!--<li ng-repeat="(key, value ) in data.banner track by $index" >-->
+                        <!--<img ng-src="{{imageUrl + value.banner_image.filename}}"/>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
         <div class="banner">
-            <div class="flexslider">
-                <ul class="slides">
-                    <li ng-repeat="(key, value ) in data.banner track by $index" >
-                        <img ng-src="{{value.image_path}}/{{value.banner_image.filename}}"/>
-                    </li>
-                </ul>
-            </div>
-         </div>
+        <ul rn-carousel class="image" rn-carousel-transition="zoom" >
+            <li ng-repeat="(key, value ) in data.banner track by $index">
+                <div class="layer"><img ng-src="{{imageUrl + value.banner_image.filename}}"/>
+                </div>
+            </li>
+        </ul>
+        </div>
 
         <!--<div class='csslider1 autoplay '>-->
             <!--<input name="cs_anchor1" id='cs_slide1_0' type="radio" class='cs_anchor slide' >-->

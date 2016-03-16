@@ -24,13 +24,12 @@
                          dir-paginate="(key, value) in data.TableGames | itemsPerPage:20  | filter:searchText track by $index" pagination-id="tableg">
                         <div class="thumb">
                             <div class="hover">
-                                <a class="play-btn wow animated flipInY"
-                                   ng-click="onclickGameNewWindow(value.field_games_link, value.language,value.game)">
+                                <a class="play-btn wow animated flipInY" ng-click="onclickGameNewWindow(value.field_games_link, value.language,value.game)">
                                     <p>PLAY NOW</p>
                                 </a>
                             </div>
                             <img class="animated fadeIn"
-                                 ng-src="{{value.image_path}}/{{value.thumbnail_image.filename}}"/>
+                                 ng-src="{{imageUrl + value.thumbnail_image.filename}}"/>
                             <section>
                                 <p class="jackpot"><span class="count"><ticker code="{{value.game}}"></ticker></span>
                                 </p>

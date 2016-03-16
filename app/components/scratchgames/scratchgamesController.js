@@ -1,8 +1,9 @@
 'use strict';
 app.controller('ScratchGamesController',
-    ['$scope','ScratchGames','$window', function($scope, ScratchGames, $window) {
+    ['$scope','ScratchGames','$window','imageUrl', function($scope, ScratchGames, $window, imageUrl) {
 
     $scope.title = 'Scratch Games';
+    $scope.imageUrl = imageUrl;
     $scope.getScratchGames = ScratchGames.query();
     $scope.getScratchGames.$promise.then(function(data) {
         $scope.data = {};

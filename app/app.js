@@ -8,6 +8,7 @@ var app = angular.module('PlayTech', [
     ,'ngLodash'
     ,'angularUtils.directives.dirPagination'
     ,'countTo'
+    ,'angular-carousel'
 ]);
 
 app.constant('BaseUrl', 'http://playtechcms.orientalgame.com:8081/');

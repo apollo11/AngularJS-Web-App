@@ -1,8 +1,9 @@
 'use strict';
 
-app.controller('TableGamesController', ['$scope','Table','$window', function($scope, Table, $window) {
+app.controller('TableGamesController', ['$scope','Table','$window','imageUrl', function($scope, Table, $window, imageUrl) {
 
     $scope.title = 'Table Games';
+    $scope.imageUrl = imageUrl;
     $scope.getTableGames = Table.query();
     $scope.getTableGames.$promise.then(function(data) {
         $scope.data = {};

@@ -1,8 +1,9 @@
 'use strict';
 
-app.controller('LiveController', ['$scope','Live','$window', function($scope, Live, $window) {
+app.controller('LiveController', ['$scope','Live','$window','imageUrl', function($scope, Live, $window, imageUrl) {
 
     $scope.title = 'Live Games';
+    $scope.imageUrl = imageUrl;
     $scope.getLiveGames = Live.query();
     $scope.getLiveGames.$promise.then(function(data) {
         $scope.data = {};

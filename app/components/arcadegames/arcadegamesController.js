@@ -1,8 +1,8 @@
 'use strict';
-app.controller('ArcadeController', ['$scope','Arcade', '$window',  function($scope, Arcade, $window) {
+app.controller('ArcadeController', ['$scope','Arcade', '$window','imageUrl',  function($scope, Arcade, $window, imageUrl) {
 
     $scope.title = 'Arcade Games';
-
+    $scope.imageUrl = imageUrl;
     $scope.getArcade = Arcade.query();
     $scope.getArcade.$promise.then(function(data) {
         $scope.data = {};

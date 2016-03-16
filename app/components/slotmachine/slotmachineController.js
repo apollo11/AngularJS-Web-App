@@ -1,7 +1,8 @@
 'use strict';
-app.controller('SlotMachineController', ['$scope','SlotMachine','$window', function($scope, SlotMachine, $window) {
+app.controller('SlotMachineController', ['$scope','SlotMachine','$window','imageUrl', function($scope, SlotMachine, $window, imageUrl) {
 
     $scope.title = 'Slot Machine';
+    $scope.imageUrl = imageUrl;
     $scope.getAllSlotGames = SlotMachine.query();
     $scope.getAllSlotGames.$promise.then(function(data) {
         $scope.data = {};

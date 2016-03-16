@@ -23,8 +23,7 @@
                     <ul class="gamelist">
                         <li dir-paginate="(key, value) in data.allSlotGames | itemsPerPage:20  | filter:searchText track by $index"
                             pagination-id="slotList">
-                            <a ng-click="onclickGameNewWindow(value.field_games_link, value.language,value.game)"
-                               data-toggle="modal" data-target="#myModal">{{value.node_title}}</a>
+                            <a ng-click="onclickGameNewWindow(value.field_games_link, value.language,value.game)">{{value.node_title}}</a>
                             <br/>
                             <span>{{value.game_category}}</span>
                         </li>
