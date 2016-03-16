@@ -4,53 +4,41 @@
     <meta charset="UTF-8">
     <base href="/">
     <title>Playtech</title>
-    <link href="bower_components/angular-carousel/dist/angular-carousel.css">
+    <link rel="icon" type="image/png" href="/assets/images/favicon.ico" />
     <link href="/bower_components/animate.css/animate.css" rel="stylesheet" type="text/css"/>
     <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css"/>
     <link href="/assets/css/style.css" rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" href="assets/css/flexslider.css" type="text/css" media="screen" />
 
     <!-- Script -->
     <script type="text/javascript" src="http://cache.download.banner.greenjade88.com/integrationjs.php"></script>
     <script type="text/javascript" src="login.js"></script>
 </head>
 <body>
-  <div class="top-container">   
-    <div class="slim-header">
-        <div class="container">
-            <!-- Logo -->
-            <span ui-view="logo"></span>
+    <div class="top-container">
+        <div class="slim-header">
+            <div class="container">
+                <!-- Logo -->
+                <span ui-view="logo"></span>
 
-            <!-- Login -->
-            <a href="#" class="login-link">LOGIN</a>
+                <!-- Login -->
+                <a href="#" class="login-link">LOGIN</a>
 
-            <div ui-view="login" class="login-form"></div>
-            <a ng-href="cs" data-toggle="modal" data-target="#support" class="customer_service">Customer Service</a>
-            <!--<a href="#" class="lang">CHI</a>-->
-            <!--<a href="#" class="lang">ENG</a>-->
-        </div>
-        <div class="banner">
-            <div class="flexslider">
-                <ul class="slides">
-                    <li><img src="assets/images/banner/slide1.png" /></li>
-                    <li><img src="assets/images/banner/slide2.png" /></li>
-                    <li><img src="assets/images/banner/slide3.png" /></li>
-                    <li><img src="assets/images/banner/slide4.png" /></li>
-                </ul>
+                <div ui-view="login" class="login-form"></div>
+                <a ng-href="cs" data-toggle="modal" data-target="#support" class="customer_service">Customer Service</a>
+                <!--<a href="#" class="lang">CHI</a>-->
+                <!--<a href="#" class="lang">ENG</a>-->
             </div>
+
+            <!-- Banner -->
+            <div ui-view="banner" class="banner"></div>
         </div>
-        <!-- Banner -->
-        <!--<div ui-view="banner" class="banner"></div>-->
-    </div>
-</div><!-- End Top Cotainer-->
+    </div><!-- End Top Cotainer-->
 
-<div ui-view="menu"></div>
+    <div ui-view="menu"></div>
 
-<div id="main" class="master_container">
-
+    <div id="main" class="master_container">
         <div ui-view></div>
     </div>
-</div>
 
 <div ui-view="footer"></div>
 
@@ -100,34 +88,24 @@
 <script src="bower_components/angular-resource/angular-resource.js"></script>
 <script src="bower_components/angular-animate/angular-animate.js"></script>
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="bower_components/angular-touch/angular-touch.js"></script>
-<script src="bower_components/angular-carousel/dist/angular-carousel.min.js"></script>
 <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
 <script src="bower_components/abdmob/x2js/xml2json.js"></script>
 <script src="bower_components/ng-lodash/build/ng-lodash.js"></script>
 <script src="bower_components/angularUtils-pagination/dirPagination.js"></script>
 <script src="bower_components/angular-count-to/build/angular-count-to.min.js"></script>
-<script defer src="assets/js/jquery.flexslider.js"></script>
-<script src="assets/js/jquery.easing.js"></script>
 <script>
-  $(document).ready(function() {
-    $(".login-link").click(function(){
-        if($(".login-form").hasClass("show")){
-          $(".login-form").removeClass("show");
-        }else{
-          $(".login-form").addClass("show");
-        }
+    $(document).ready(function () {
+        $(".login-link").click(function () {
+            if ($(".login-form").hasClass("show")) {
+                $(".login-form").removeClass("show");
+            } else {
+                $(".login-form").addClass("show");
+            }
+        });
     });
-
-    $('.flexslider').flexslider({
-        animation: "fade",
-        start: function(slider){
-          //$('body').removeClass('loading');
-        }
-    });
-
-  });
 </script>
 
 </body>

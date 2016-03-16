@@ -115,13 +115,13 @@ a:hover .customerIcon, .customerIcon { background-position: 0px -332px;}
 .mcholder{ background: url('../images/main-container-bg.png') repeat-x bottom left;  }
 
 ul.nav li a span{ width: 34px; height: 40px; display: inline-block; position: absolute; }
-.left{ left: -34.5px; background: url('../images/left-side-black.png'); top: -1px;}
-.right{ right: -34.5px; background: url('../images/right-side-black.png'); top: -1px;}
-li.active a span.left{ left: -34.5px; background: url('../images/left-side.png'); top: -1px;}
-li.active a span.right{right: -34.5px; background: url('../images/right-side.png'); top: -1px;}
+.leftNav{ left: -34.5px; background: url('../images/left-side-black.png'); top: -1px;}
+.rightNav{ right: -34.5px; background: url('../images/right-side-black.png'); top: -1px;}
+li.active a span.leftNav{ left: -34.5px; background: url('../images/left-side.png'); top: -1px;}
+li.active a span.rightNav{right: -34.5px; background: url('../images/right-side.png'); top: -1px;}
 .nav-tabs > li > a {border-radius: 0px; border-top: 1px solid #ffffff;}
-.nav-tabs > li > a:hover span.left { left: -34.5px; background: url('../images/left-side.png'); top: -1px;}
-.nav-tabs > li > a:hover span.right{right: -34.5px; background: url('../images/right-side.png'); top: -1px;}
+.nav-tabs > li > a:hover span.leftNav { left: -34.5px; background: url('../images/left-side.png'); top: -1px;}
+.nav-tabs > li > a:hover span.rightNav{right: -34.5px; background: url('../images/right-side.png'); top: -1px;}
 .nav-tabs > li > a:hover{ background-color: #ffffff; }
 .nav > li > a:hover, .nav > li > a:focus { text-decoration: none; background-color: #ffffff;}
 .nav-tabs > li > a:hover { border-color: #ffffff !important; color: #424242;}
@@ -160,4 +160,3 @@ body{ font-family: Calibri;}
 .custom-width.animated.fadeIn.ng-binding p { padding: 20px 70px;}
 .custom-width.animated.fadeIn.ng-binding.pagecontent { min-height: 550px;}
 .paginate {margin-left: 300px;}
-
