@@ -130,7 +130,7 @@ li.active a span.rightNav{right: -34.5px; background: url('../images/right-side.
 .nav li.active a{ color: #424242; }
 
 .slim-header{ min-height: 35px; background:#000000; }
-.slim-header a { color: #ffffff; line-height: 35px; display: inline-block; float: right;}
+.slim-header a { color: #ffffff; line-height: 35px; display: inline-block; float: right; cursor:pointer;}
 .customer_service{ border-left: 1px dotted #b8b8b8; border-right: 1px dotted #b8b8b8; padding: 0px 15px; margin-left: 10px;}
 .login-link{ font: bold 16px/1 Calibri; padding: 0px 25px;}
 .lang {padding: 0px 10px;}
