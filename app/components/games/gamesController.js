@@ -3,6 +3,7 @@ app.controller('GamesController', ['$scope','Games', '$window','imageUrl', funct
 
     $scope.title = 'All Games';
     $scope.imageUrl = imageUrl;
+    $scope.currentPage =1;
     $scope.getAllGames = Games.query();
     $scope.getAllGames.$promise.then(function(data) {
         $scope.data = {};

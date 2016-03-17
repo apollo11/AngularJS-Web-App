@@ -21,7 +21,7 @@
                 </div>
 
                 <div class="game-holder">
-                    <div class="col-md-3  wow animated zoomIn" dir-paginate="(key, value) in data.arcade | itemsPerPage:20  | filter:searchText track by $index" pagination-id="arcade">
+                    <div class="col-md-3  wow animated zoomIn" dir-paginate="(key, value) in data.arcade | itemsPerPage:20  | filter:searchText as results track by $index" pagination-id="arcade">
                         <div class="thumb">
                             <div class="hover">
                                 <a class="play-btn wow animated flipInY"
@@ -39,8 +39,9 @@
                         </div>
                     </div>
                     <div class="clearfix"></div>
-                    <div class="paginate">
-                        <dir-pagination-controls pagination-id="arcade"></dir-pagination-controls>
+                    <pre ng-show="results.length == 0"><h1>Empty Results...</h1></pre>
+                    <div ng-hide="results.length < 20" class="paginate">
+                        <dir-pagination-controls pagination-id="arcade" template-url="bower_components/angularUtils-pagination/dirPagination.tpl.html"></dir-pagination-controls>
                     </div>
                 </div>
             </div>
