@@ -25,7 +25,7 @@ header img{ }
 .banner{ height: 553px; /*border-top:7px solid #000;*/ position: relative; z-index: 10; background: url('../images/banner-bg-img.jpg') top center no-repeat, #000000; background-size:100% 100%;}
 .banner img{ margin:0 auto; display: block; max-width: 1342px; width: 1342px; max-height: 553px; height: 553px;}
 
-.featured-section{ height: 175px; /*background: #f58821;*/ border-top: 6px solid #ffffff; padding: 5px; padding-top: 10px;}
+.featured-section{ height: 175px; border-top: 6px solid #ffffff; padding: 5px; padding-top: 10px; cursor:pointer; width: 973px;  margin-left: auto; margin-right: auto;}
 .ftd-container{ width: 965px; margin:0 auto; background:rgba(255, 255, 255, 1); padding: 4px; /*border-radius: 10px;*/ position: relative; z-index: 15; box-shadow: 0px 0px 5px #959595;}
 .ftd-container img{ display: block; margin:0 auto; /*border-radius: 10px;*/}
 .ftd-container a { position: absolute; font: 17px/1 Calibri; left: 0; top: 22px; padding: 9px 23px; background: #dd2429; color: #ffffff; pointer-events: none; cursor: default;}
@@ -166,4 +166,4 @@ body{ font-family: Calibri;}
 .carousel-inner .active.left, .carousel-inner .active.right { left: 0 !important; opacity: 0 !important; z-index: 1 !important;}
 .carousel-inner .next.left, .carousel-inner .prev.right { opacity: 1 !important;}
 .carousel-control { z-index: 2 !important;}
-.featured-section.ng-scope a, a.bannerLink {cursor: pointer;}
+a.bannerLink {cursor: pointer;}
