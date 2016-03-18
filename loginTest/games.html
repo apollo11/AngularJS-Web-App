@@ -29,20 +29,18 @@
         }
     </style>
     <script type="text/javascript" src="http://cache.download.banner.greenjade88.com/integrationjs.php"></script>
-    <script type="text/javascript">
-        iapiSetCallout('Login', calloutLogin);
-
-        function login(realMode) {
-            iapiLogin(document.getElementById("loginform").username.value, document.getElementById("loginform").password.value, realMode, "en");
+    <script>
+        iapiSetCallout('Logout', calloutLogout);
+        function logout(allSessions, realMode) {
+            iapiLogout(allSessions, realMode);
         }
 
-        function calloutLogin(response) {
+        function calloutLogout(response) {
             if (response.errorCode) {
-                alert("" + response.playerMessage +" Error Code  " + response.errorCode);
+                alert("Logout failed, " + response.errorCode);
             }
             else {
-                alert("Login OK, you will be redirected to play console");
-                window.location = "games.html";
+                delete_cookie();
             }
         }
     </script>
@@ -64,13 +62,13 @@
 <!--</div>-->
 
 
-<form id="loginform">
-    Username: <input type="text" name="username" class="input-small" placeholder="Username">
-    Password: <input type="password" name="password" class="input-small" placeholder="password">
-</form>
-<input type="submit" value="Login" onclick="login(1)" class="btn">
-<!--<button onclick="logout(1,1)" class="btn">Logout</button>-->
-<br /><br />
+<!--<form id="loginform">-->
+    <!--Username: <input type="text" name="username" class="input-small" placeholder="Username">-->
+    <!--Password: <input type="password" name="password" class="input-small" placeholder="password">-->
+<!--</form>-->
+<!--<input type="submit" value="Login" onclick="login(1)" class="btn">-->
+
+<button onclick="logout(1,1)" class="btn">Logout</button>
 
 <div class="img"><a href="http://cache.download.banner.greenjade88.com/casinoclient.html?language=EN&game=gts50"
                     onclick="window.open(this.href, 'mywin','width=800,height=600,toolbar=0,resizable=0,location=no'); return false;"">
