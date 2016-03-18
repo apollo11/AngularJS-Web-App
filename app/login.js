@@ -14,10 +14,11 @@ function logout(allSessions, realMode) {
 
 function calloutLogin(response) {
     if (response.errorCode) {
-        alert("Login failed, " + response.errorText);
+        alert("" + response.playerMessage +" Error Code  " + response.errorCode);
     }
     else {
-        window.location = "http://playtech.orientalgame.com:8080/";
+        alert("Login OK, you will be redirected to play console");
+        window.location = "http://playtech.orientalgame.com/";
     }
 }
 
