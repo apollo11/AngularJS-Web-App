@@ -1,5 +1,5 @@
 'use strict';
-app.controller('ArcadeController', ['$scope','Arcade', '$window','imageUrl',  function($scope, Arcade, $window, imageUrl) {
+app.controller('ArcadeController', ['$scope','Arcade', '$window','imageUrl','$cookies',  function($scope, Arcade, $window, imageUrl, $cookies) {
 
     $scope.title = 'Arcade Games';
     $scope.imageUrl = imageUrl;
@@ -11,6 +11,19 @@ app.controller('ArcadeController', ['$scope','Arcade', '$window','imageUrl',  fu
 
     $scope.onclickGameNewWindow = function (url, lang, file, title) {
         $window.open(url+'?' + 'language='+ lang +'&game='+file, title, 'width=800, height=600');
-    }
+    };
+
+    $scope.onclickNewWindowDemo = function (code, title) {
+        $window.open('http://cache.download.banner.greenjade88.com/flash/37/launchcasino.html?mode=offline&affiliates=1&language=EN&game='+code, title, 'width=800, height=600');
+    };
+
+    $scope.retrieveCookie = $cookies.get('username');
+    $scope.emptyCookie = function () {
+        return   _.isEmpty($scope.retrieveCookie);
+    };
+    $scope.notEmptyCookie = function () {
+        return !_.isEmpty($scope.retrieveCookie);
+    };
+
 
 }]);

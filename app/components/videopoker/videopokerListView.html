@@ -22,8 +22,14 @@
                 <div class="game-holder">
                     <ul class="gamelist">
                         <li dir-paginate="(key, value) in data.VideoPokerGames | itemsPerPage:20  | filter:searchText track by $index" pagination-id="videoList">
-                            <a ng-click="onclickGameNewWindow(value.field_games_link, value.language,value.game)"
-                               data-toggle="modal" data-target="#myModal">{{value.node_title}}</a>
+                             <span ng-if="emptyCookie()">
+                                <a ng-click="onclickNewWindowDemo(value.game, value.node_title)">
+                                    {{value.node_title}}
+                                </a>
+                            </span>
+                             <span ng-if="notEmptyCookie()">
+                            <a ng-click="onclickGameNewWindow(value.field_games_link, value.language,value.game)">{{value.node_title}}</a>
+                            </span>
                             <br/>
                             <span>{{value.game_category}}</span>
                         </li>
