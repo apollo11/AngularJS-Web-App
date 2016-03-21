@@ -38,7 +38,7 @@
     <button type="submit" class="btn btn-login" onclick="login(1)">LOGIN</button>
   </form>
   </div>
-  <div ng-show="notEmptyCookie()">{{retrieveCookie}}<button onclick="logout(1,1)" class="btn">Logout</button>
+  <div ng-show="notEmptyCookie()">{{retrieveCookie}}<button ng-click="removeCookie()" class="btn">Logout</button>
   </div>
 </div>
 

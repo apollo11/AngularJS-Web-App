@@ -13,6 +13,9 @@ app.controller('LoginController', ['$scope','$cookies', function($scope, $cookie
         return !_.isEmpty($scope.retrieveCookie);
     };
 
-    $scope.removeCookie = $cookies.remove('username');
+    $scope.removeCookie = function () {
+        $cookies.remove('username');
+        location.reload();
+    }
 
 }]);

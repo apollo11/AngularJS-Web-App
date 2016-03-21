@@ -25,13 +25,14 @@
                          pagination-id="paginate" current-page="currentPage">
                         <div class="thumb">
                             <div class="hover">
-                                <a ng-if="emptyCookie()" class="play-btn wow animated flipInY" data-toggle="modal" data-target="#myModal"><p>LOGIN</p></a>
-                                <a ng-show="notEmptyCookie()" class="play-btn wow animated flipInY"
-                                   ng-click="onclickGameNewWindow(value.field_games_link, value.language,value.game)"
-                                   data-toggle="modal" data-target="#myModal"
-                                >
-                                    <p>PLAY NOW</p>
-                                </a>
+                                <span ng-if="emptyCookie()"><a class="play-btn wow animated flipInY" data-toggle="modal" data-target="#myModal"><p>LOGIN</p></a></span>
+                                <span ng-if="notEmptyCookie()">
+                                    <a ng- class="play-btn wow animated flipInY"
+                                       ng-click="onclickGameNewWindow(value.field_games_link, value.language,value.game)"
+                                       data-toggle="modal" data-target="#myModal">
+                                        <p>PLAY NOW</p>
+                                    </a>
+                                </span>
                             </div>
                             <img class="animated fadeIn" ng-src="{{imageUrl + value.thumbnail_image.filename }}"/>
                             <section>
