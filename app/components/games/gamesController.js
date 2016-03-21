@@ -1,5 +1,5 @@
 'use strict';
-app.controller('GamesController', ['$scope','Games', '$window','imageUrl', function($scope, Games, $window, imageUrl) {
+app.controller('GamesController', ['$scope','Games', '$window','imageUrl','$cookies', function($scope, Games, $window, imageUrl, $cookies) {
 
     $scope.title = 'All Games';
     $scope.imageUrl = imageUrl;
@@ -14,5 +14,13 @@ app.controller('GamesController', ['$scope','Games', '$window','imageUrl', funct
     $scope.onclickGameNewWindow = function (url, lang, file, title) {
         $window.open(url+'?' + 'language='+ lang +'&game='+file, title, 'width=800, height=600');
     }
+
+    $scope.retrieveCookie = $cookies.get('username');
+    $scope.emptyCookie = function () {
+        return   _.isEmpty($scope.retrieveCookie);
+    };
+    $scope.notEmptyCookie = function () {
+        return !_.isEmpty($scope.retrieveCookie);
+    };
 
 }]);

@@ -23,20 +23,25 @@
 <div class="support-section">-->
     <!--<img src="assets/images/am-icon.png"><span>| Customer Service</span>--><!--<a href="#" class="open-btn">OPEN ACCOUNT</a>-->
 <!--</div>-->
+<div ng-controller="LoginController">
+  <div ng-if="emptyCookie()">
+  <form class="form-inline" id="loginform">
+    <label class="form-title">Login</label>
+    <div class="form-group">
+      <label for="exampleInputName2">Username</label>
+      <input type="text" class="form-control" id="exampleInputName2" placeholder="Enter username" name="username" ng-model="user.name">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail2">Password</label>
+      <input type="password" class="form-control" id="exampleInputEmail2" placeholder="Enter password" name="password" ng-model="user.password">
+    </div>
+    <button type="submit" class="btn btn-login" onclick="login(1)">LOGIN</button>
+  </form>
+  </div>
+  <div ng-show="notEmptyCookie()">{{retrieveCookie}}<button onclick="logout(1,1)" class="btn">Logout</button>
+  </div>
+</div>
 
-<form class="form-inline" id="loginform">
-  <label class="form-title">Login</label>   
-  <div class="form-group">
-    <label for="exampleInputName2">Username</label>
-    <input type="text" class="form-control" id="exampleInputName2" placeholder="Enter username" name="username">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputEmail2">Password</label>
-    <input type="password" class="form-control" id="exampleInputEmail2" placeholder="Enter password" name="password">
-  </div>
-  <button type="submit" class="btn btn-login" onclick="login(1)">LOGIN</button>
- <!--  <label class="forgot">Forgot Password?</label>     -->
-</form>
 
 
     <!--<p><a href="#">Register NOW!</a> Forgot username or password?</p>-->

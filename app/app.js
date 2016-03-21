@@ -9,6 +9,7 @@ var app = angular.module('PlayTech', [
     ,'angularUtils.directives.dirPagination'
     ,'countTo'
     ,'ui.bootstrap'
+    ,'ngCookies'
 ]);
 
 app.constant('BaseUrl', 'http://playtechcms.orientalgame.com:8081/');

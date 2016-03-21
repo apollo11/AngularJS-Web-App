@@ -13,12 +13,15 @@ function logout(allSessions, realMode) {
 }
 
 function calloutLogin(response) {
+
     if (response.errorCode) {
         alert("" + response.playerMessage +" Error Code  " + response.errorCode);
     }
     else {
+        var username = _.escape(document.getElementById("loginform").username.value.toUpperCase());
+        document.cookie = "username="+ username;
         alert("Login OK, you will be redirected to play console");
-        window.location = "http://playtech.orientalgame.com/";
+        location.reload();
     }
 }
 
@@ -28,5 +31,6 @@ function calloutLogout(response) {
     }
     else {
         delete_cookie();
+        location.reload();
     }
 }
