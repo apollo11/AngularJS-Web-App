@@ -26,7 +26,10 @@
                     <ul class="gamelist">
                         <li dir-paginate="(key, value) in data.allGames | itemsPerPage:20  | filter:searchText as results track by $index"
                             pagination-id="gamesList">
+                            <span ng-if="emptyCookie()"><a class="play-btn wow animated flipInY" data-toggle="modal" data-target="#myModal"><p>LOGIN</p></a></span>
+                             <span ng-if="notEmptyCookie()">
                             <a ng-click="onclickGameNewWindow(value.field_games_link, value.language,value.game)">{{value.node_title}}</a>
+                            </span>
                             <br/>
                             <span>{{value.game_category}}</span>
                         </li>
@@ -41,4 +44,5 @@
             </div>
         </div>
     </div><!-- /.container -->
+    <login-modal modal="myModal"></login-modal>
 </div>
