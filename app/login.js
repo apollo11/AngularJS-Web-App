@@ -18,8 +18,6 @@ function calloutLogin(response) {
         //alert("" + response.playerMessage +" Error Code  " + response.errorCode);
         // Display a warning toast, with no title
         toastr.error( response.playerMessage + "Error Code" + response.errorCode);
-        // Display an info toast with no title
-        toastr.info('Are you the 6 fingered man?')
     }
     else {
         var username = _.escape(document.getElementById("loginform").username.value.toUpperCase());
