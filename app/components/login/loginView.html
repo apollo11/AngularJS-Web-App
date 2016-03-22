@@ -1,16 +1,16 @@
 <div ng-controller="LoginController">
   <div ng-if="emptyCookie()">
-  <form class="form-inline" id="loginform">
+  <form name="myform" novalidate class="form-inline" id="loginform">
     <label class="form-title">Login</label>
     <div class="form-group">
-      <label for="exampleInputName2">Username</label>
-      <input type="text" class="form-control" id="exampleInputName2" placeholder="Enter username" name="username" ng-model="user.name">
+      <label for="username">Username</label>
+      <input type="text" class="form-control" id="username" placeholder="Enter username" name="username" ng-model="user.name" required />
     </div>
     <div class="form-group">
-      <label for="exampleInputEmail2">Password</label>
-      <input type="password" class="form-control" id="exampleInputEmail2" placeholder="Enter password" name="password" ng-model="user.password">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" placeholder="Enter password" name="password" ng-model="user.password" required />
     </div>
-    <button type="submit" class="btn btn-login" onclick="login(1)">LOGIN</button>
+    <button ng-disabled="myform.$invalid" type="submit" class="btn btn-login" onclick="login(1)">LOGIN</button>
   </form>
   </div>
   <div ng-show="notEmptyCookie()"><label>Hi {{retrieveCookie}}!

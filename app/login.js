@@ -15,7 +15,7 @@ function logout(allSessions, realMode) {
 function calloutLogin(response) {
     toastr.options.closeButton = true;
     if (response.errorCode) {
-        toastr.error( response.playerMessage + "Error Code" + response.errorCode);
+        toastr.error( response.playerMessage + "Error Code: " + response.errorCode);
     }
     else {
         var username = _.escape(document.getElementById("loginform").username.value.toUpperCase());
