@@ -25,5 +25,4 @@ app.controller('ArcadeController', ['$scope','Arcade', '$window','imageUrl','$co
         return !_.isEmpty($scope.retrieveCookie);
     };
 
-
 }]);

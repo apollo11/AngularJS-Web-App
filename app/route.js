@@ -51,7 +51,7 @@ app.config(['$stateProvider'
             })
 
             .state('games', {
-                url: '/',
+                url: '/allgames',
                 parent: 'root',
                 views: {
                     '@': {
@@ -72,7 +72,7 @@ app.config(['$stateProvider'
             })
 
             .state('arcade', {
-                url: '/arcade',
+                url: '/',
                 parent: 'root',
                 views: {
                     '@': {
