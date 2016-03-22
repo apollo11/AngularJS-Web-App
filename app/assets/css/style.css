@@ -65,7 +65,7 @@ box-shadow: 0px 0px 10px #8B8B8B; margin-bottom: 30px;}
 footer{ margin-top: 5px; font:14px/1 Calibri; background: #000000; height: 260px; border-top: 3px solid #b8b8b8;}
 .mostfooter p{ font:14px/1.5 Calibri; color: #ffffff; text-align: center; margin-top:20px;}
 .subfooter p{ text-align: center; margin:0;}
-.subfooter p a{ color:#424242; /*margin:0px 10px;*/}
+.subfooter p a{ color:#424242; cursor:pointer;}
 .subfooter{ /*background: #b8b8b8;*/ /*padding: 15px 0px;*/background: -webkit-linear-gradient(90deg, #b8b8b8 0%, #b8b8b8 51%, #c7c7c7 52%, #c7c7c7 100%); background: linear-gradient(0deg, #b8b8b8 0%, #b8b8b8 51%, #c7c7c7 52%, #c7c7c7 100%); /* w3c */}
 
 .close-btn{ /*margin-right: -25px;*/ float: right; font-size: 12px; line-height: 1; color: #ffffff !important; text-shadow: 0 1px 0 #ffffff;  opacity: 1;  filter: alpha(opacity=20); margin-top: -20px !important; letter-spacing: 1px;}
