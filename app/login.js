@@ -23,7 +23,7 @@ function calloutLogin(response) {
         var username = _.escape(document.getElementById("loginform").username.value.toUpperCase());
         document.cookie = "username="+ username;
         // Display a success toast, with a title
-        toastr.success('Have fun storming the castle!', 'Miracle Max Says');
+        toastr.success('Your are now logged in!');
         //alert("Login OK, you will be redirected to play console");
         location.reload();
     }
@@ -34,8 +34,8 @@ function calloutLogout(response) {
         toastr.error("Logout failed, " + response.errorCode);
     }
     else {
-        delete_cookie();
         toastr.success('You are now logged out!');
+        delete_cookie();
         location.reload();
     }
 }
