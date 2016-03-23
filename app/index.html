@@ -26,13 +26,13 @@
                     <div ng-show="emptyCookie()">
                         <a href="#" class="login-link">LOGIN</a>
                     </div>
+                    <a ng-href="cs" class="customer_service">Customer Service</a>
                     <div ng-show="notEmptyCookie()">
                         <a class="customer_service">{{retrieveCookie}} </a> | <a href="#" class="login-link"> LOGOUT</a>
                     </div>
                 </div>
                 <div ui-view="login" class="login-form"></div>
 
-                <a ng-href="cs" data-toggle="modal" data-target="#support" class="customer_service">Customer Service</a>
                 <!--<a href="#" class="lang">CHI</a>-->
                 <!--<a href="#" class="lang">ENG</a>-->
             </div>
