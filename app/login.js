@@ -24,7 +24,8 @@ function calloutLogin(response) {
         location.reload();
         var usernameCookie = document.cookie;
 
-        validateCookie(usernameCookie);
+        if(!_.isUndefined(usernameCookie)) return;
+        document.getElementsByClassName('login-link').style.display = "none";
     }
 }
 
@@ -39,10 +40,4 @@ function calloutLogout(response) {
         delete_cookie();
         location.reload();
     }
-}
-
-function validateCookie(cookie) {
-    if(!_.isUndefined(cookie)) return;
-        var anchorLogin = document.getElementsByClassName('login-link').text;
-        anchorLogin.innerHTML = "LOGOUT";
 }
