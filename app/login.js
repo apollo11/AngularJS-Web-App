@@ -21,7 +21,7 @@ function calloutLogin(response) {
         toastr.success('Login successful, you will be redirected to play console!');
         var username = _.escape(document.getElementById("loginform").username.value.toUpperCase());
         document.cookie = "username="+ username;
-        window.location.reload();
+        window.location.href('http://5starplayer.com/');
     }
 }
 
@@ -34,6 +34,6 @@ function calloutLogout(response) {
     else {
         toastr.success('You are now logged out!');
         delete_cookie();
-        window.location.reload();
+        window.location.href('http://5starplayer.com/');
     }
 }
