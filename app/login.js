@@ -22,6 +22,7 @@ function calloutLogin(response) {
         var username = _.escape(document.getElementById("loginform").username.value.toUpperCase());
         document.cookie = "username="+ username;
         location.reload();
+        console.log(document.cookie);
     }
 }
 
