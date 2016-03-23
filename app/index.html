@@ -23,10 +23,10 @@
                 <span ui-view="logo"></span>
 
                 <div ng-controller="ToggleController">
-                    <div ng-if="emptyCookie()">
+                    <div ng-show="emptyCookie()">
                         <a href="#" class="login-link">LOGIN</a>
                     </div>
-                    <div ng-if="notEmptyCookie()">
+                    <div ng-show="notEmptyCookie()">
                         <a href="#" class="login-link">LOGOUT</a>
                     </div>
                 </div>
