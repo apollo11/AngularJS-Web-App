@@ -43,5 +43,6 @@ function calloutLogout(response) {
 
 function validateCookie(cookie) {
     if(!_.isUndefined(cookie)) return;
-        document.getElementsByClassName('login-link').text = 'LOGOUT';
+        var anchorLogin = document.getElementsByClassName('login-link').text;
+        anchorLogin.innerHTML = "LOGOUT";
 }
