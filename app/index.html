@@ -22,7 +22,14 @@
                 <!-- Logo -->
                 <span ui-view="logo"></span>
 
-                <a href="#" class="login-link">LOGIN</a>
+                <div ng-controller="ToggleController">
+                    <div ng-if="emptyCookie()">
+                        <a href="#" class="login-link">LOGIN</a>
+                    </div>
+                    <div ng-if="notEmptyCookie()">
+                        <a href="#" class="login-link">LOGOUT</a>
+                    </div>
+                </div>
                 <div ui-view="login" class="login-form"></div>
 
                 <a ng-href="cs" data-toggle="modal" data-target="#support" class="customer_service">Customer Service</a>
@@ -84,6 +91,7 @@
 <script src="components/videopoker/videopokerController.js"></script>
 <script src="components/footer/footerController.js"></script>
 <script src="components/login/loginController.js"></script>
+<script src="components/login/loginToggleController.js"></script>
 
 <!-- Components -->
 <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
