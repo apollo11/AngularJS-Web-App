@@ -18,9 +18,9 @@ function calloutLogin(response) {
         toastr.error( response.playerMessage + "Error Code: " + response.errorCode);
     }
     else {
+        toastr.success('Login successful, you will be redirected to play console!');
         var username = _.escape(document.getElementById("loginform").username.value.toUpperCase());
         document.cookie = "username="+ username;
-        toastr.success('Login successful, you will be redirected to play console!');
         location.reload();
     }
 }
