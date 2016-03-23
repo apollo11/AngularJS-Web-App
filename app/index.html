@@ -18,18 +18,13 @@
     <div class="top-container">
         <div class="slim-header">
             <div class="container">
+
                 <!-- Logo -->
                 <span ui-view="logo"></span>
-                <div ng-controller="LoginToggleController">
-                    <div ng-if="emptyCookie()">
-                        <a href="#" class="login-link">LOGIN</a>
-                    </div>
-                    <div ng-if="notEmptyCookie()">
-                            <a ng-click="removeCookie()"  onclick="logout(1,1)" class="btn">LOGOUT</a>
-                     </div>
-                 </div>
 
+                <a href="#" class="login-link">LOGIN</a>
                 <div ui-view="login" class="login-form"></div>
+
                 <a ng-href="cs" data-toggle="modal" data-target="#support" class="customer_service">Customer Service</a>
                 <!--<a href="#" class="lang">CHI</a>-->
                 <!--<a href="#" class="lang">ENG</a>-->
@@ -89,7 +84,6 @@
 <script src="components/videopoker/videopokerController.js"></script>
 <script src="components/footer/footerController.js"></script>
 <script src="components/login/loginController.js"></script>
-<script src="components/login/loginToggleController.js"></script>
 
 <!-- Components -->
 <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
