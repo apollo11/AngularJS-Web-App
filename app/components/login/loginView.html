@@ -13,7 +13,10 @@
     <button ng-disabled="myform.$invalid" type="submit" class="btn btn-login" onclick="login(1)">LOGIN</button>
   </form>
   </div>
-  <div ng-show="notEmptyCookie()"><label><a ng-click="removeCookie()"  onclick="logout(1,1)" class="btn">Are you sure you want to logout?</a>
+
+  <div ng-show="notEmptyCookie()"><label>
+    <p style="color:white;">Are you sure you want to logout?</p>
+    <a ng-click="removeCookie()"  onclick="logout(1,1)" class="login-link">Yes</a> |  <a href="#" class="login-link"> No</a>
   </label>
   </div>
 

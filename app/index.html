@@ -27,7 +27,7 @@
                         <a href="#" class="login-link">LOGIN</a>
                     </div>
                     <div ng-show="notEmptyCookie()">
-                        <a href="#" class="login-link">{{retrieveCookie}} | LOGOUT</a>
+                       <strong style="color:white">{{retrieveCookie}}</strong> | <a href="#" class="login-link"> LOGOUT</a>
                     </div>
                 </div>
                 <div ui-view="login" class="login-form"></div>
