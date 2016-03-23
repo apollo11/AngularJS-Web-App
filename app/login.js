@@ -22,10 +22,6 @@ function calloutLogin(response) {
         var username = _.escape(document.getElementById("loginform").username.value.toUpperCase());
         document.cookie = "username="+ username;
         location.reload();
-        var usernameCookie = document.cookie;
-
-        if(!_.isUndefined(usernameCookie)) return;
-        document.getElementsByClassName('login-link').style.display = "none";
     }
 }
 
