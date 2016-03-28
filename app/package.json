@@ -1,0 +1,19 @@
+{
+  "name": "ptapp",
+  "version": "0.0.0",
+  "description": "Web Application for Playtech ",
+  "main": "app.js",
+  "dependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-uglify": "~1.0.0"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-uglify": "~1.0.1"
+  },
+  "scripts": {
+    "test": "\"echo \\\"Error: no test specified\\\" && exit 1\""
+  },
+  "author": "Apollo Malapote",
+  "license": "MID"
+}
