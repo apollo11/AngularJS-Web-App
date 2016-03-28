@@ -17,6 +17,7 @@ app.controller('BannerController', ['$scope','Banner','imageUrl', '$window','$co
         $window.open(url+'?' + 'language='+ lang +'&game='+file, title, 'width=800, height=600');
     };
 
+    $scope.retrieveCookie = $cookies.get('username');
     $scope.emptyCookie = function () {
         return   _.isEmpty($scope.retrieveCookie);
     };

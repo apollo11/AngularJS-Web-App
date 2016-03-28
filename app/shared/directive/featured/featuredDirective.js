@@ -23,6 +23,7 @@ app.directive('featuredBanner', [ function() {
                 $window.open('http://cache.download.banner.greenjade88.com/flash/37/launchcasino.html?mode=offline&affiliates=1&language=EN&game='+code, title, 'width=800, height=600');
             };
 
+            $scope.retrieveCookie = $cookies.get('username');
             $scope.emptyCookie = function () {
                 return   _.isEmpty($scope.retrieveCookie);
             };
