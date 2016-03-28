@@ -32,17 +32,21 @@ app.directive('featuredBanner', [ function() {
 
         }],
         template:'<div class="featured-section" ng-repeat="(key, value ) in data.menu track by $index" ng-hide="value.path !== menuType">'+
-                    '<a ng-if="notEmptyCookie()" ng-click="onclickGameNewWindow(value.game_link, value.language, value.game_code)">' +
+             '<span ng-if="notEmptyCookie()">' +
+                '<a ng-click="onclickGameNewWindow(value.game_link, value.language, value.game_code)">' +
                         '<div class="ftd-container">'+
                         '<img class="animated fadeIn" ng-src="{{imageUrl + value.featured_banner.filename}}" />'+
                         '</div>'+
-                    '</a>'+
-                    '<a ng-if="emptyCookie()" ng-click="onclickNewWindowDemo(value.game_code, value.title)">' +
+                '</a>'+
+            '</span>'+
+            '<span ng-if="emptyCookie()">'+
+                '<a  ng-click="onclickNewWindowDemo(value.game_code, value.title)">' +
                         '<div class="ftd-container">'+
                         '<img class="animated fadeIn" ng-src="{{imageUrl + value.featured_banner.filename}}" />'+
                         '</div>'+
-                    '</a>'+
-                 '</div>',
+                '</a>'+
+             '</span>'+
+             '</div>',
         link: function (scope, elem, attrs) {
                 scope.menuType =  scope.type;
         }

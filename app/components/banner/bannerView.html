@@ -2,12 +2,16 @@
     <div class="banner">
         <uib-carousel interval="3000" no-wrap="noWrapSlides">
             <uib-slide ng-repeat="(key, value ) in data.banner track by $index">
-                    <a ng-if="emptyCookie()" class="bannerLink" ng-click="onclickNewWindowDemo(value.game_code, value.title)">
+                <span ng-if="emptyCookie()">
+                    <a class="bannerLink" ng-click="onclickNewWindowDemo(value.game_code, value.title)">
                         <img ng-src="{{imageUrl + value.banner_image.filename}}"/>
                     </a>
-                    <a ng-if="notEmptyCookie()" class="bannerLink" ng-click="onclickGameNewWindow(value.game_link, value.language, value.game_code)">
+                </span>
+                <span ng-if="notEmptyCookie()">
+                    <a  class="bannerLink" ng-click="onclickGameNewWindow(value.game_link, value.language, value.game_code)">
                         <img ng-src="{{imageUrl + value.banner_image.filename}}"/>
                     </a>
+                </span>
             </uib-slide>
         </uib-carousel>
     </div>
