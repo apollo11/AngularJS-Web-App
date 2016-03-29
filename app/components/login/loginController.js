@@ -15,7 +15,6 @@ app.controller('LoginController', ['$scope','$cookies','$window', function($scop
 
     $scope.removeCookie = function () {
         $cookies.remove('username');
-        $window.close();
     }
 
 }]);
