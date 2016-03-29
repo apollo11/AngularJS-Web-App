@@ -33,7 +33,7 @@ function calloutLogout(response) {
     }
     else {
         toastr.success('You are now logged out!');
-        delete_cookie();
+        //delete_cookie();
         window.location =  document.location.href ;
     }
 }
