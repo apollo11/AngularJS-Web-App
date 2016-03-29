@@ -1,6 +1,6 @@
 <div ng-controller="BannerController">
     <div class="banner">
-        <uib-carousel>
+        <uib-carousel interval="3000">
             <uib-slide ng-repeat="(key, value ) in data.banner track by $index">
                 <span ng-if="emptyCookie()">
                     <a class="bannerLink" ng-click="onclickNewWindowDemo(value.game_code, value.title)">
