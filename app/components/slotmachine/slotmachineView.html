@@ -9,20 +9,26 @@
                     </div>
                     <div class="col-md-6 col-md-offset-3">
                         <div class="row">
-                            <a  ui-sref="slotmachine" class="thumbnails-icon"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span></a>
-                            <a  ui-sref="slotmachineList" class="list-icon"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a>
+                            <a ng-click="page='thumb'" class="thumbnails-icon"><span
+                                    class="glyphicon glyphicon-th-large" aria-hidden="true"></span></a>
+                            <a ng-click="page='list'" class="list-icon"><span class="glyphicon glyphicon-menu-hamburger"
+                                                                              aria-hidden="true"></span></a>
                             <div class="right-inner-addon ">
                                 <i class="glyphicon glyphicon-search"></i>
-                                <input type="search" class="form-control" placeholder="Game search" ng-model="searchText"/>
+                                <input type="search" class="form-control" placeholder="Game search"
+                                       ng-model="searchText"/>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="game-holder">
-                    <div class="col-md-3 wow animated zoomIn"
-                         dir-paginate="(key, value) in data.allSlotGames | itemsPerPage:20  | filter:searchText as results track by $index" pagination-id="slot">
-                        <div class="thumb">
-                            <div class="hover">
+                <div ng-switch on="page">
+                    <div ng-switch-when="thumb">
+                        <div class="game-holder">
+                            <div class="col-md-3 wow animated zoomIn"
+                                 dir-paginate="(key, value) in data.allSlotGames | itemsPerPage:20  | filter:searchText as results track by $index"
+                                 pagination-id="slot">
+                                <div class="thumb">
+                                    <div class="hover">
                                 <span ng-if="emptyCookie()">
                                     <a ng- class="play-btn wow animated flipInY"
                                        ng-click="onclickNewWindowDemo(value.game, value.node_title)">
@@ -35,20 +41,86 @@
                                         <p>PLAY NOW</p>
                                     </a>
                                 </span>
+                                    </div>
+                                    <img class="animated fadeIn"
+                                         ng-src="{{value.image_path}}/{{value.thumbnail_image.filename}}"/>
+                                    <section>
+                                        <p class="jackpot"><span class="count"><ticker
+                                                code="{{value.game}}"></ticker></span>
+                                        </p>
+                                        <p class="game-type">{{value.node_title}}</p>
+                                        <p class="game-category">{{value.game_category}}</p>
+                                    </section>
+                                </div>
                             </div>
-                            <img class="animated fadeIn"
-                                 ng-src="{{value.image_path}}/{{value.thumbnail_image.filename}}"/>
-                            <section>
-                                <p class="jackpot"><span class="count"><ticker code="{{value.game}}"></ticker></span>
-                                </p>
-                                <p class="game-type">{{value.node_title}}</p>
-                                <p class="game-category">{{value.game_category}}</p>
-                            </section>
+                            <div class="clearfix"></div>
+                            <pre ng-show="results.length == 0"><h1>Empty Results...</h1></pre>
+                            <dir-pagination-controls pagination-id="slot" auto-hide="true"
+                                                     template-url="bower_components/angularUtils-pagination/dirPagination.tpl.html"></dir-pagination-controls>
                         </div>
                     </div>
-                    <div class="clearfix"></div>
-                    <pre ng-show="results.length == 0"><h1>Empty Results...</h1></pre>
-                        <dir-pagination-controls pagination-id="slot" auto-hide="true" template-url="bower_components/angularUtils-pagination/dirPagination.tpl.html"></dir-pagination-controls>
+                    <div ng-switch-when="list">
+                        <div class="game-holder">
+                            <ul class="gamelist">
+                                <li dir-paginate="(key, value) in data.allSlotGames | itemsPerPage:20  | filter:searchText as results track by $index"
+                                    pagination-id="slotList">
+                            <span ng-if="emptyCookie()">
+                                <a ng-click="onclickNewWindowDemo(value.game, value.node_title)">
+                                    {{value.node_title}}
+                                </a>
+                            </span>
+                             <span ng-if="notEmptyCookie()">
+                            <a ng-click="onclickGameNewWindow(value.field_games_link, value.language,value.game)">{{value.node_title}}</a>
+                            </span>                            <br/>
+                                    <span>{{value.game_category}}</span>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                            <pre ng-show="results.length == 0"><h1>Empty Results...</h1></pre>
+                            <div ng-hide="results.length < 20" class="paginate">
+                                <dir-pagination-controls pagination-id="slotList" auto-hide="true" template-url="bower_components/angularUtils-pagination/dirPagination.tpl.html"></dir-pagination-controls>
+                            </div>
+                        </div>
+                        </div>
+                    <div ng-switch-default>
+                        <div class="game-holder">
+                            <div class="col-md-3 wow animated zoomIn"
+                                 dir-paginate="(key, value) in data.allSlotGames | itemsPerPage:20  | filter:searchText as results track by $index"
+                                 pagination-id="slot">
+                                <div class="thumb">
+                                    <div class="hover">
+                                <span ng-if="emptyCookie()">
+                                    <a ng- class="play-btn wow animated flipInY"
+                                       ng-click="onclickNewWindowDemo(value.game, value.node_title)">
+                                        <p>DEMO</p>
+                                    </a>
+                                </span>
+                                <span ng-if="notEmptyCookie()">
+                                    <a ng- class="play-btn wow animated flipInY"
+                                       ng-click="onclickGameNewWindow(value.field_games_link, value.language,value.game)">
+                                        <p>PLAY NOW</p>
+                                    </a>
+                                </span>
+                                    </div>
+                                    <img class="animated fadeIn"
+                                         ng-src="{{value.image_path}}/{{value.thumbnail_image.filename}}"/>
+                                    <section>
+                                        <p class="jackpot"><span class="count"><ticker
+                                                code="{{value.game}}"></ticker></span>
+                                        </p>
+                                        <p class="game-type">{{value.node_title}}</p>
+                                        <p class="game-category">{{value.game_category}}</p>
+                                    </section>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <pre ng-show="results.length == 0"><h1>Empty Results...</h1></pre>
+                            <dir-pagination-controls pagination-id="slot" auto-hide="true"
+                                                     template-url="bower_components/angularUtils-pagination/dirPagination.tpl.html"></dir-pagination-controls>
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
         </div>
