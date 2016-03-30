@@ -1,7 +1,7 @@
 'use strict';
 
-app.controller('TableGamesController', ['$scope','Table','$window','imageUrl','$cookies',
-    function($scope, Table, $window, imageUrl, $cookies) {
+app.controller('TableGamesController', ['$scope','Table','$window','imageUrl','$cookies','usSpinnerService',
+    function($scope, Table, $window, imageUrl, $cookies, usSpinnerService) {
 
     $scope.title = 'Table Games';
     $scope.imageUrl = imageUrl;
@@ -9,6 +9,10 @@ app.controller('TableGamesController', ['$scope','Table','$window','imageUrl','$
     $scope.getTableGames.$promise.then(function(data) {
         $scope.data = {};
         $scope.data.TableGames = data;
+        usSpinnerService.stop('spinner-1');
+    }, function (error) {
+        usSpinnerService.stop('spinner-1');
+        return error;
     });
 
     $scope.onclickGameNewWindow = function (url, lang, file, title) {

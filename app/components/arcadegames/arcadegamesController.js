@@ -1,5 +1,5 @@
 'use strict';
-app.controller('ArcadeController', ['$scope','Arcade', '$window','imageUrl','$cookies',  function($scope, Arcade, $window, imageUrl, $cookies) {
+app.controller('ArcadeController', ['$scope','Arcade', '$window','imageUrl','$cookies','usSpinnerService',  function($scope, Arcade, $window, imageUrl, $cookies, usSpinnerService) {
 
     $scope.title = 'Arcade Games';
     $scope.imageUrl = imageUrl;
@@ -7,6 +7,10 @@ app.controller('ArcadeController', ['$scope','Arcade', '$window','imageUrl','$co
     $scope.getArcade.$promise.then(function(data) {
         $scope.data = {};
         $scope.data.arcade = data;
+        usSpinnerService.stop('spinner-1');
+    }, function (error) {
+        usSpinnerService.stop('spinner-1');
+        return error;
     });
 
     $scope.onclickGameNewWindow = function (url, lang, file, title) {
