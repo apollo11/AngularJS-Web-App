@@ -25,7 +25,7 @@
                     <div ng-switch-when="thumb">
                         <div class="game-holder">
                             <div class="col-md-3 wow animated zoomIn"
-                                 ng-repeat="(key, value) in data.allGames | limitTo: numLimit | filter:searchText as results track by $index">
+                                 ng-repeat="(key, value) in data.allGames | filter:searchText as results track by $index">
                                 <div class="thumb">
                                     <div class="hover">
                                 <span ng-if="emptyCookie()">
@@ -57,16 +57,12 @@
                             </div>
                             <div class="clearfix"></div>
                             <pre ng-show="results.length == 0"><h1>Empty Results...</h1></pre>
-                            <div class="showMore">
-                                <a href ng-hide="results.length === data.allGames.length || results.length == 0 "
-                                   ng-click="numLimit=numLimit + 20">show more...</a>
-                            </div>
                         </div>
                     </div>
                     <div ng-switch-when="list">
                         <div class="game-holder">
                             <ul class="gamelist">
-                                <li ng-repeat="(key, value) in data.allGames | limitTo: numLimit | filter:searchText as results track by $index">
+                                <li ng-repeat="(key, value) in data.allGames | filter:searchText as results track by $index">
                             <span ng-if="emptyCookie()">
                                 <a ng-click="onclickNewWindowDemo(value.game, value.node_title)">
                                     {{value.node_title}}
@@ -81,16 +77,12 @@
                             </ul>
                             <div class="clearfix"></div>
                             <pre ng-show="results.length == 0"><h1>Empty Results...</h1></pre>
-                            <div class="showMore">
-                                <a href ng-hide="results.length === data.allGames.length || results.length == 0 "
-                                   ng-click="numLimit=numLimit + 20">show more...</a>
-                            </div>
                         </div>
                     </div>
                     <div ng-switch-default>
                         <div class="game-holder">
                             <div class="col-md-3 wow animated zoomIn"
-                                 ng-repeat="(key, value) in data.allGames | limitTo: numLimit | filter:searchText as results track by $index">
+                                 ng-repeat="(key, value) in data.allGames | filter:searchText as results track by $index">
                                 <div class="thumb">
                                     <div class="hover">
                                 <span ng-if="emptyCookie()">
@@ -123,10 +115,6 @@
                         </div>
                         <div class="clearfix"></div>
                         <pre ng-show="results.length == 0"><h1>Empty Results...</h1></pre>
-                        <div class="showMore">
-                            <a href ng-hide="results.length === data.allGames.length || results.length == 0 "
-                               ng-click="numLimit=numLimit + 20">show more...</a>
-                        </div>
                     </div>
                 </div>
             </div>

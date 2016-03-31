@@ -15,7 +15,6 @@ app.controller('GamesController', ['$scope','Games', '$window','imageUrl','$cook
         usSpinnerService.stop('spinner-1');
         return error;
     });
-    $scope.numLimit = 32;
 
     $scope.onclickGameNewWindow = function (url, lang, file, title) {
         $window.open(url+'?' + 'language='+ lang +'&game='+file, title, 'width=800, height=600');
