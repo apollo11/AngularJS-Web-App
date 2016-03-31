@@ -4,19 +4,20 @@
         <div class="container">
             <div class="custom-width">
                 <div class="panel-og">
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-xs-6">
                         <p>{{title}}</p>
+                        <div class="right-inner-addon mobile">
+                            <i class="glyphicon glyphicon-search"></i>
+                            <input type="search" class="form-control" placeholder="Game search" />
+                        </div>                          
                     </div>
-                    <div class="col-md-6 col-md-offset-3">
+                    <div class="col-md-6 col-md-offset-3 col-xs-6">
                         <div class="row">
-                            <a ng-click="page='thumb'" class="thumbnails-icon"><span
-                                    class="glyphicon glyphicon-th-large" aria-hidden="true"></span></a>
-                            <a ng-click="page='list'" class="list-icon"><span class="glyphicon glyphicon-menu-hamburger"
-                                                                              aria-hidden="true"></span></a>
-                            <div class="right-inner-addon ">
+                            <a ng-click="page='thumb'" class="thumbnails-icon"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span></a>
+                            <a ng-click="page='list'" class="list-icon"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a>
+                            <div class="right-inner-addon desktop">
                                 <i class="glyphicon glyphicon-search"></i>
-                                <input type="search" class="form-control" placeholder="Game search"
-                                       ng-model="searchText"/>
+                                <input type="search" class="form-control" placeholder="Game search" ng-model="searchText"/>
                             </div>
                         </div>
                     </div>
@@ -24,7 +25,7 @@
                 <div ng-switch on="page">
                     <div ng-switch-when="thumb">
                         <div class="game-holder">
-                            <div class="col-md-3 wow animated zoomIn"
+                            <div class="col-md-3 col-xs-10 wow animated zoomIn"
                                  ng-repeat="(key, value) in data.TableGames | filter:searchText as results track by $index">
                                 <div class="thumb">
                                     <div class="hover">
@@ -78,7 +79,7 @@
                     </div>
                     <div ng-switch-default>
                         <div class="game-holder">
-                            <div class="col-md-3 wow animated zoomIn"
+                            <div class="col-md-3 col-xs-10 wow animated zoomIn"
                                  ng-repeat="(key, value) in data.TableGames | filter:searchText as results track by $index">
                                 <div class="thumb">
                                     <div class="hover">
