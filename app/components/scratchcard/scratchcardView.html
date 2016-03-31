@@ -59,7 +59,7 @@
                     <div ng-switch-when="list">
                         <div class="game-holder">
                             <ul class="gamelist">
-                                <li ng-repeat="(key, value) in data.ScratchCard | itemsPerPage:20  | filter:searchText as results track by $index">
+                                <li ng-repeat="(key, value) in data.ScratchCard | filter:searchText as results track by $index">
                             <span ng-if="emptyCookie()">
                                 <a ng-click="onclickNewWindowDemo(value.game, value.node_title)">
                                     {{value.node_title}}
@@ -74,8 +74,6 @@
                             </ul>
                             <div class="clearfix"></div>
                             <pre ng-show="results.length == 0"><h1>Empty Results...</h1></pre>
-                            <dir-pagination-controls pagination-id="scratchList" auto-hide="true"
-                                                     template-url="bower_components/angularUtils-pagination/dirPagination.tpl.html"></dir-pagination-controls>
                         </div>
                     </div>
                     <div ng-switch-default>
