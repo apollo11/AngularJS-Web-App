@@ -1,6 +1,13 @@
 'use strict';
-app.controller('SlotMachineController', ['$scope','SlotMachine','$window','imageUrl','$cookies','usSpinnerService'
-    , function($scope, SlotMachine, $window, imageUrl, $cookies, usSpinnerService) {
+app.controller('SlotMachineController',
+    [
+        '$scope'
+        ,'SlotMachine'
+        ,'$window'
+        ,'imageUrl'
+        ,'$cookies'
+        ,'usSpinnerService'
+            , function($scope, SlotMachine, $window, imageUrl, $cookies, usSpinnerService) {
 
     $scope.title = 'Slot Machine';
     $scope.imageUrl = imageUrl;

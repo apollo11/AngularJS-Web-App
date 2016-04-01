@@ -1,6 +1,13 @@
 'use strict';
-app.controller('GamesController', ['$scope','Games', '$window','imageUrl','$cookies','usSpinnerService',
-    function($scope, Games, $window, imageUrl, $cookies, usSpinnerService) {
+app.controller('GamesController',
+    [
+        '$scope'
+        ,'Games'
+        ,'$window'
+        ,'imageUrl'
+        ,'$cookies'
+        ,'usSpinnerService'
+            , function($scope, Games, $window, imageUrl, $cookies, usSpinnerService) {
 
     $scope.title = 'All Games';
     $scope.imageUrl = imageUrl;

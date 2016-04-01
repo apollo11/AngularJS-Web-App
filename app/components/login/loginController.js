@@ -1,5 +1,9 @@
 'use strict';
-app.controller('LoginController', ['$scope','$cookies','$window', function($scope, $cookies, $window) {
+app.controller('LoginController',
+    [
+        '$scope'
+        ,'$cookies'
+            , function($scope, $cookies) {
     $scope.title = 'This is a banner';
 
     //$scope.saveCookies = function(username) {

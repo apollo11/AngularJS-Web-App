@@ -1,5 +1,13 @@
 'use strict';
-app.controller('ArcadeController', ['$scope','Arcade', '$window','imageUrl','$cookies','usSpinnerService',  function($scope, Arcade, $window, imageUrl, $cookies, usSpinnerService) {
+app.controller('ArcadeController',
+    [
+       '$scope'
+      ,'Arcade'
+      ,'$window'
+      ,'imageUrl'
+      ,'$cookies'
+      ,'usSpinnerService'
+        , function($scope, Arcade, $window, imageUrl, $cookies, usSpinnerService) {
 
     $scope.title = 'Arcade Games';
     $scope.imageUrl = imageUrl;

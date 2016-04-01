@@ -1,7 +1,14 @@
 'use strict';
 
-app.controller('TableGamesController', ['$scope','Table','$window','imageUrl','$cookies','usSpinnerService',
-    function($scope, Table, $window, imageUrl, $cookies, usSpinnerService) {
+app.controller('TableGamesController',
+    [
+        '$scope'
+        ,'Table'
+        ,'$window'
+        ,'imageUrl'
+        ,'$cookies'
+        ,'usSpinnerService'
+            , function($scope, Table, $window, imageUrl, $cookies, usSpinnerService) {
 
     $scope.title = 'Table Games';
     $scope.imageUrl = imageUrl;

@@ -1,7 +1,14 @@
 'use strict';
 
-app.controller('LiveController', ['$scope','Live','$window','imageUrl','$cookies','usSpinnerService',
-    function($scope, Live, $window, imageUrl, $cookies, usSpinnerService) {
+app.controller('LiveController',
+    [
+        '$scope'
+        ,'Live'
+        ,'$window'
+        ,'imageUrl'
+        ,'$cookies'
+        ,'usSpinnerService'
+            , function($scope, Live, $window, imageUrl, $cookies, usSpinnerService) {
 
     $scope.title = 'Live Games';
     $scope.imageUrl = imageUrl;
