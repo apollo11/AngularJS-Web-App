@@ -9,7 +9,7 @@ app.controller('SlotMachineController',
         ,'usSpinnerService'
             , function($scope, SlotMachine, $window, imageUrl, $cookies, usSpinnerService) {
 
-    $scope.title = 'Slot Machine';
+    $scope.title = 'Slot Games';
     $scope.imageUrl = imageUrl;
     $scope.getAllSlotGames = SlotMachine.query();
     $scope.getAllSlotGames.$promise.then(function(data) {
