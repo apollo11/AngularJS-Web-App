@@ -2,6 +2,8 @@
 <html lang="en" ng-app="PlayTech">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">  
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
     <base href="/">
     <title>Playtech</title>
     <link rel="icon" type="image/png" href="/assets/images/ogicon.ico" />
@@ -14,13 +16,16 @@
     <script type="text/javascript" src="http://cache.download.banner.greenjade88.com/integrationjs.php"></script>
     <script type="text/javascript" src="login.js"></script>
 </head>
-<body>
+<body onload="calculateHeight()">
     <div class="top-container">
+    <div class="container logo-holder">
+        <!-- Logo -->
+        <span ui-view="logo"></span>
+    </div>          
         <div class="slim-header">
             <div class="container">
+                <img src="assets/images/og-logo-white.png" alt="logo" class="white-logo2" />
 
-                <!-- Logo -->
-                <span ui-view="logo"></span>
 
                 <div ng-controller="ToggleController">
                     <div ng-show="emptyCookie()">
@@ -44,7 +49,7 @@
 
     <div ui-view="menu"></div>
 
-    <div id="main" class="master_container">
+    <div id="main" class="master_container">        
         <div ui-view></div>
     </div>
 
@@ -54,6 +59,7 @@
 <script src="build/output.min.js"></script>
 <script>
     $(document).ready(function () {
+
         $(".login-link").click(function () {
             if ($(".login-form").hasClass("show")) {
                 $(".login-form").removeClass("show");
@@ -61,9 +67,135 @@
                 $(".login-form").addClass("show");
             }
         });
+       
     });
-</script>
 
+
+</script>
+<script>
+    /* A debounced resize handler that fires ONLY when the width changes */
+    var wB = screen.width;
+    function resizeWidthOnly(a,b) { 
+      var c = [window.innerWidth];
+      //alert(c);
+      return onresize = function() {
+
+        var d = window.innerWidth,
+            e = c.length;
+        c.push(d);
+        if(c[e]!==c[e-1]){
+          clearTimeout(b);
+          b = setTimeout(a, 250);
+          
+        } 
+      }, a;
+      
+    }
+
+    /* use this (below) instead of window.addEventListener('resize', foo); to call functions   */
+
+    resizeWidthOnly(function() {
+    var kk = window.innerWidth;
+     //alert(wB);
+     //alert("WIDTH: " + kk);
+        if(kk == 320){
+            if($(".col-xs-10").hasClass("col-xs-offset-1")){
+              $(".col-xs-10").removeClass("col-xs-offset-1");
+              $(".col-xs-10").removeClass("col-xs-offset-2");
+            }else{
+              $(".col-xs-10").addClass("col-xs-offset-1");
+              $(".col-xs-10").removeClass("col-xs-offset-2");
+            }
+        }else if(kk < 480 && kk != 320){
+            if($(".col-xs-10").hasClass("col-xs-offset-2")){
+              $(".col-xs-10").removeClass("col-xs-offset-2");
+              $(".col-xs-10").removeClass("col-xs-offset-1");
+            }else{
+              $(".col-xs-10").addClass("col-xs-offset-2");
+              $(".col-xs-10").removeClass("col-xs-offset-1");
+            }
+        }else if(kk == 480){
+            if($(".col-xs-10").hasClass("col-xs-offset-2")){
+              $(".col-xs-10").removeClass("col-xs-offset-2");
+              $(".col-xs-10").removeClass("col-xs-offset-1");
+            }else{
+              $(".col-xs-10").removeClass("col-xs-offset-2");
+              $(".col-xs-10").removeClass("col-xs-offset-1");
+            }
+        }else if(kk == 667){
+            if($(".col-xs-10").hasClass("col-xs-offset-2")){
+              $(".col-xs-10").removeClass("col-xs-offset-2");
+              $(".col-xs-10").addClass("col-xs-offset-1");
+            }               
+        }
+    });
+  
+    var wB = screen.width;
+    function calculateHeight(){ 
+        if(wB == 320){
+            if($(".col-xs-10").hasClass("col-xs-offset-1")){
+              $(".col-xs-10").removeClass("col-xs-offset-1");
+            }else{
+              $(".col-xs-10").addClass("col-xs-offset-1");
+            }
+        }else if(wB >= 350 && wB <= 375){
+            if($(".col-xs-10").hasClass("col-xs-offset-2")){
+              $(".col-xs-10").removeClass("col-xs-offset-2");
+            }else{
+              $(".col-xs-10").addClass("col-xs-offset-2");
+            }
+        } 
+    }
+
+</script>
+<script type="text/javascript">
+    $(document).scroll(function() {
+        var sW = screen.width;
+        if(sW <= 980){
+
+        }else{
+            if( $(this).scrollTop() >= 100 ) {
+                $(".white-logo2").css({display:'inline-block', transition:'all 2s ease-in 2s'});
+                $(".white-logo").css({display:'none', transition:'all 2s ease-out 2s'});
+            }else{
+                $(".white-logo2").css({display:'none', transition:'all 2s ease-out 2s'});
+                $(".white-logo").css({display:'block', transition:'all 2s ease-in 2s'});
+            }               
+        }
+
+    });
+    // $(function() {
+    //     var offset1 = $(".left_banner").offset();
+    //     var offset2 = $(".right_banner").offset();
+    //     var topPadding = 15;
+    //     $(window).scroll(function() {
+    //         if ($(window).scrollTop() > offset1.top) {
+
+    //             $(".left_banner").stop().animate({
+    //                 marginTop: $(window).scrollTop() - offset1.top + topPadding
+    //             },{
+    //                 duration: 0,
+    //                 easing: "easing",
+    //                 complete: "callback"
+    //             });
+    //             $(".right_banner").stop().animate({
+    //                 marginTop: $(window).scrollTop() - offset2.top + topPadding
+    //             },{
+    //                 duration: 0,
+    //                 easing: "easing",
+    //                 complete: "callback"
+    //             });                    
+    //         } else {
+    //             $(".left_banner").stop().animate({
+    //                 marginTop: 0
+    //             });
+    //             $(".right_banner").stop().animate({
+    //                 marginTop: 0
+    //             });
+    //         };
+    //     });
+    // });    
+</script>      
 </body>
 </html>
 
