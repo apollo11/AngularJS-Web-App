@@ -169,7 +169,7 @@
 
 	body{ font-family: Calibri;}
 	@font-face { font-family: Calibri; src: local("Calibri"), url("../fonts/Calibri.ttf") format("truetype"); font-weight: normal; font-style: normal;} 
-	.left_banner { float: left; position: absolute; left:- -20%;}
+	.left_banner { float: left; position: absolute; left: -20%;}
 	.right_banner { float: right; position: absolute; right: -20%;}
 	.animatedbanner{ position: relative; display: none; }
 
@@ -795,7 +795,7 @@
 	.play-btn p{ margin:0; background: #00a308; padding: 18px; text-align: center;}
 	.play-btn { width:125px; display: none; /*position: absolute;*/ font: bold 18px/1 Calibri; color: #ffffff; border: 2px solid rgba(255,255,255,1); border-radius: 5px; /*top: 60px; left: 37px;*/ box-shadow: 0px 0px 67px #ADADAD; margin-top:58px !important; margin: 0 auto;}
 	.play-btn:hover{color: #ffffff; text-decoration: none;}
-	.hover { display: none; height: 173px; position: absolute; background: rgba(0,0,0,0.8); width: 201px; border-radius: 5px; top: 7px; left: 20px; z-index: 50;}
+	.hover { display: none; height: 173px; position: absolute; background: rgba(0,0,0,0.8); width: 201px; border-radius: 5px; top: 7px; left: 20px; z-index: 50; cursor:pointer;}
 
 	footer{ margin-top: 5px; font:14px/1 Calibri; background: #000000; height: 260px; border-top: 3px solid #b8b8b8;}
 	.mostfooter p{ font:14px/1.5 Calibri; color: #ffffff; text-align: center; margin-top:20px;}
@@ -911,3 +911,4 @@
 
 a:focus, a:active, a:hover{ outline: none !important; }
 .carousel-indicators li { display: inline-block; width: 10px; height: 10px; margin: 1px 6px; text-indent: -999px; border: 1px solid #ffffff; border-radius: 10px; cursor: pointer; background-color: #000; background-color: rgba(0, 0, 0, 0);}
+.featured-section .newWindow, a.bannerLink {cursor:pointer}

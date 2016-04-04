@@ -33,21 +33,19 @@ app.directive('featuredBanner', [ function() {
 
         }],
         template:'<div class="featured-section" ng-repeat="(key, value ) in data.menu track by $index" ng-hide="value.path !== menuType">'+
-             '<span ng-if="notEmptyCookie()">' +
-                '<a ng-click="onclickGameNewWindow(value.game_link, value.language, value.game_code)">' +
-                        '<div class="ftd-container">'+
-                        '<img class="animated fadeIn" ng-src="{{imageUrl + value.featured_banner.filename}}" />'+
-                        '</div>'+
-                '</a>'+
-            '</span>'+
-            '<span ng-if="emptyCookie()">'+
-                '<a  ng-click="onclickNewWindowDemo(value.game_code, value.title)">' +
-                        '<div class="ftd-container">'+
-                        '<img class="animated fadeIn" ng-src="{{imageUrl + value.featured_banner.filename}}" />'+
-                        '</div>'+
-                '</a>'+
-             '</span>'+
-             '</div>',
+                '<div ng-if="notEmptyCookie()" class="newWindow" ng-click="onclickGameNewWindow(value.game_link, value.language, value.game_code)">' +
+                    '<div class="ftd-container">'+
+                    '<img class="animated fadeIn" ng-src="{{imageUrl + value.featured_banner.filename}}" />'+
+                    '<a href="#">Featured Game</a>' +
+                 '</div>'+
+                '</div>'+
+                '<div ng-if="emptyCookie()" class="newWindow"  ng-click="onclickNewWindowDemo(value.game_code, value.title)">' +
+                    '<div class="ftd-container">'+
+                    '<img class="animated fadeIn" ng-src="{{imageUrl + value.featured_banner.filename}}" />'+
+                    '<a href="#">Featured Game</a>' +
+                 '</div>'+
+                '</div>'+
+            '</div>',
         link: function (scope, elem, attrs) {
                 scope.menuType =  scope.type;
         }
