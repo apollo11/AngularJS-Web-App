@@ -916,4 +916,7 @@ a:focus, a:active, a:hover{ outline: none !important; }
 .featured-section .newWindow, a.bannerLink, a.thumbnails-icon, a.list-icon {cursor:pointer}
 .close{ text-shadow: none; opacity: 1;}
 .slim-header a { color: #ffffff; line-height: 35px; display: inline-block; float: right;}
-label a { line-height: 27px !important; margin-left: -8px; margin-right: 19px;}
+.logoutState a { line-height: 27px !important; margin-left: -8px; margin-right: 19px;}
+.logoutState p { padding: 10px 15px;}
+.logoutState{ float: right;}
+.logoutState p{ color: #ffffff;}
