@@ -917,6 +917,6 @@ a:focus, a:active, a:hover{ outline: none !important; }
 .close{ text-shadow: none; opacity: 1;}
 .slim-header a { color: #ffffff; line-height: 35px; display: inline-block; float: right;}
 .logoutState a { line-height: 27px !important; margin-left: -8px; margin-right: 19px;}
-.logoutState p { padding: 10px 15px;}
-.logoutState{ float: right;}
+.logoutState p { padding: 10px 15px; font-weight: normal;}
+.logoutState{ float: right; margin-bottom: 15px;}
 .logoutState p{ color: #ffffff;}
