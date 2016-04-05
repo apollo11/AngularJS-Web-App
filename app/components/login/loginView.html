@@ -14,9 +14,9 @@
   </form>
   </div>
 
-  <div ng-show="notEmptyCookie()"><label>
-    <p style="color:white;">Are you sure you want to logout?</p>
-    <a href="#" class="login-link btn btn-danger"> No</a> | <a ng-click="removeCookie()"  onclick="logout(1,1)" class="login-link btn btn-login">Yes</a>
+  <div ng-show="notEmptyCookie()"><label class="logoutState">
+    <p>Are you sure you want to logout?</p>
+    <a href="#" class="login-link btn btn-danger"> No</a> <a ng-click="removeCookie()"  onclick="logout(1,1)" class="login-link btn btn-login">Yes</a>
   </label>
   </div>
 
