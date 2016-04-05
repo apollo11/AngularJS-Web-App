@@ -1,5 +1,10 @@
 'use strict';
-app.controller('MenuController', ['$scope','Menu','imageUrl', function($scope, Menu, imageUrl) {
+app.controller('MenuController',
+    [
+        '$scope'
+        ,'Menu'
+        ,'imageUrl'
+            , function($scope, Menu, imageUrl) {
 
     $scope.title = 'This is a Menu';
     $scope.imageUrl = imageUrl;

@@ -1,6 +1,11 @@
 'use strict';
 app.controller('ScratchGamesController',
-    ['$scope','ScratchGames','$window','imageUrl', function($scope, ScratchGames, $window, imageUrl) {
+    [
+        '$scope'
+        ,'ScratchGames'
+        ,'$window'
+        ,'imageUrl'
+            , function($scope, ScratchGames, $window, imageUrl) {
 
     $scope.title = 'Scratch Games';
     $scope.imageUrl = imageUrl;

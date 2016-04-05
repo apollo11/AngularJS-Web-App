@@ -1,6 +1,13 @@
 'use strict';
-app.controller('ScratchCardController', ['$scope','ScratchCard','$window','imageUrl','$cookies','usSpinnerService',
-    function($scope, ScratchCard, $window ,imageUrl, $cookies, usSpinnerService) {
+app.controller('ScratchCardController',
+    [
+        '$scope'
+        ,'ScratchCard'
+        ,'$window'
+        ,'imageUrl'
+        ,'$cookies'
+        ,'usSpinnerService'
+            , function($scope, ScratchCard, $window ,imageUrl, $cookies, usSpinnerService) {
 
     $scope.title = 'Scratch Card';
     $scope.imageUrl = imageUrl;
@@ -16,7 +23,7 @@ app.controller('ScratchCardController', ['$scope','ScratchCard','$window','image
 
     $scope.onclickGameNewWindow = function (url, lang, file, title) {
         $window.open(url+'?' + 'language='+ lang +'&game='+file, title, 'width=800, height=600');
-    }
+    };
 
     $scope.onclickGameNewWindow = function (url, lang, file, title) {
         $window.open(url+'?' + 'language='+ lang +'&game='+file, title, 'width=800, height=600');

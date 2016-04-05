@@ -1,5 +1,11 @@
 'use strict';
-app.controller('FooterController', ['$scope','Footer', '$window','imageUrl', function($scope, Footer, $window, imageUrl) {
+app.controller('FooterController',
+    [
+        '$scope'
+        ,'Footer'
+        ,'$window'
+        ,'imageUrl'
+            , function($scope, Footer, $window, imageUrl) {
 
     $scope.title = 'Footer';
     $scope.imageUrl = imageUrl;

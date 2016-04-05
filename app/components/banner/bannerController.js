@@ -1,5 +1,12 @@
 'use strict';
-app.controller('BannerController', ['$scope','Banner','imageUrl', '$window','$cookies', function($scope, Banner, imageUrl, $window, $cookies) {
+app.controller('BannerController',
+    [
+        '$scope'
+        ,'Banner'
+        ,'imageUrl'
+        ,'$window'
+        ,'$cookies'
+            , function($scope, Banner, imageUrl, $window, $cookies) {
 
     $scope.title = 'This is a banner';
     $scope.imageUrl = imageUrl;

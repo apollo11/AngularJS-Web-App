@@ -1,5 +1,10 @@
 'use strict';
-app.controller('LogoController', ['$scope','Logo','imageUrl', function($scope, Logo, imageUrl) {
+app.controller('LogoController',
+    [
+        '$scope'
+        ,'Logo'
+        ,'imageUrl'
+            , function($scope, Logo, imageUrl) {
 
     $scope.title = 'This is a Logo';
     $scope.imageUrl = imageUrl;

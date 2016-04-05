@@ -1,7 +1,3 @@
-
-
-
-
 /* Portrait phones and smaller */
 @media (max-width: 480px) {
 	.top-container{ position: relative; }
@@ -64,19 +60,22 @@
 	box-shadow: 0px 0px 10px #8B8B8B; margin-bottom: 30px;}
 	.thumb img { display: block; margin: 0 auto; border-radius: 5px; margin-top: 4px; width: 100%; height: 172px;}
 	.thumb:hover .play-btn, .thumb:hover .hover{ display: block; }
-	.jackpot { padding: 7px 5px; margin: 0; color: #424242; font: 16px/1 Calibri;}
+	.jackpot { padding: 4px 5px; margin: 0; color: #424242; font: 16px/1 Calibri;}
 	.game-type, .game-category{ margin:0; padding: 0px 10px;}
 	.game-type{ font:bold 16px/1 Calibri; color: #424242;}
 	.game-category{color:#ffba78; font:16px/1 Calibri;}
-	.play-btn p{ margin:0; background: #00a308; padding: 18px;}
-	.play-btn { display: none; position: absolute; font: bold 18px/1 Calibri; color: #ffffff; border: 2px solid rgba(255,255,255,1); border-radius: 5px; top: 60px; left: 37px; box-shadow: 0px 0px 67px #ADADAD;}
+
+	.play-btn p{ margin:0; background: #00a308; padding: 18px; text-align: center;}
+	.play-btn { width:125px; display: none; /*position: absolute;*/ font: bold 18px/1 Calibri; color: #ffffff; border: 2px solid rgba(255,255,255,1); border-radius: 5px; /*top: 60px; left: 37px;*/ box-shadow: 0px 0px 67px #ADADAD; margin-top:58px !important; margin: 0 auto;}
 	.play-btn:hover{color: #ffffff; text-decoration: none;}
-	.hover { display: none; height: 173px; position: absolute; background: rgba(0,0,0,0.8); width: 188px; border-radius: 5px; top: 7px; left: 18px;}
+	.hover { display: none; height: 173px; position: absolute; background: rgba(0,0,0,0.8); width: 188px; border-radius: 5px; top: 7px; left: 18px; z-index: 50;}
+
 
 	footer{ margin-top: 5px; font:12px/1 Calibri; background: #000000; height: 170px; border-top: 3px solid #b8b8b8;}
 	.mostfooter p{ font:14px/1.5 Calibri; color: #ffffff; text-align: center; margin-top:20px;}
 	.subfooter p{ text-align: center; margin:0;}
-	.subfooter p a{ color:#424242; /*margin:0px 10px;*/}
+	.subfooter p a{ color:#424242;}
+
 	.subfooter{ /*background: #b8b8b8;*/ /*padding: 15px 0px;*/background: -webkit-linear-gradient(90deg, #b8b8b8 0%, #b8b8b8 51%, #c7c7c7 52%, #c7c7c7 100%); background: linear-gradient(0deg, #b8b8b8 0%, #b8b8b8 51%, #c7c7c7 52%, #c7c7c7 100%); /* w3c */}
 
 	.close-btn{ /*margin-right: -25px;*/ float: right; font-size: 12px; line-height: 1; color: #ffffff !important; text-shadow: 0 1px 0 #ffffff; /* opacity: 0.2; */ filter: alpha(opacity=20); margin-top: -20px !important; letter-spacing: 1px;}
@@ -105,7 +104,7 @@
 
 	/* LIST STYLE */
 	.gamelist { padding: 0px 15px;}
-	.gamelist li { list-style: none; margin: 10px 15px; width: 280px; float: left;}
+	.gamelist li { list-style: none; margin: 10px 15px; width: 280px; float: left; cursor:pointer;}
 	.gamelist li span { font: 12px/1 Calibri; color: #959595;}
 
 	.csslider1 > .cs_bullets > label > .cs_thumb > img { max-width: none; width: 185px; height: 46px;}
@@ -173,7 +172,8 @@
 
 	body{ font-family: Calibri;}
 	@font-face { font-family: Calibri; src: local("Calibri"), url("../fonts/Calibri.ttf") format("truetype"); font-weight: normal; font-style: normal;} 
-	.left_banner { float: left; position: absolute; left:- -20%;}
+
+	.left_banner { float: left; position: absolute; left: -20%;}
 	.right_banner { float: right; position: absolute; right: -20%;}
 	.animatedbanner{ position: relative; display: none; }
 
@@ -257,14 +257,15 @@
 	box-shadow: 0px 0px 10px #8B8B8B; margin-bottom: 30px;}
 	.thumb img { display: block; margin: 0 auto; border-radius: 5px; margin-top: 4px; width: 100%; height: 172px;}
 	.thumb:hover .play-btn, .thumb:hover .hover{ display: block; }
-	.jackpot { padding: 7px 5px; margin: 0; color: #424242; font: 16px/1 Calibri;}
+	.jackpot { padding: 4px 5px; margin: 0; color: #424242; font: 16px/1 Calibri;}
 	.game-type, .game-category{ margin:0; padding: 0px 10px;}
 	.game-type{ font:bold 16px/1 Calibri; color: #424242;}
 	.game-category{color:#ffba78; font:16px/1 Calibri;}
-	.play-btn p{ margin:0; background: #00a308; padding: 18px;}
-	.play-btn { display: none; position: absolute; font: bold 18px/1 Calibri; color: #ffffff; border: 2px solid rgba(255,255,255,1); border-radius: 5px; top: 60px; left: 37px; box-shadow: 0px 0px 67px #ADADAD;}
+
+	.play-btn p{ margin:0; background: #00a308; padding: 18px; text-align: center;}
+	.play-btn { width:125px; display: none; /*position: absolute;*/ font: bold 18px/1 Calibri; color: #ffffff; border: 2px solid rgba(255,255,255,1); border-radius: 5px; /*top: 60px; left: 37px;*/ box-shadow: 0px 0px 67px #ADADAD; margin-top:58px !important; margin: 0 auto;}
 	.play-btn:hover{color: #ffffff; text-decoration: none;}
-	.hover { display: none; height: 173px; position: absolute; background: rgba(0,0,0,0.8); width: 188px; border-radius: 5px; top: 7px; left: 18px;}
+	.hover { display: none; height: 173px; position: absolute; background: rgba(0,0,0,0.8); width: 188px; border-radius: 5px; top: 7px; left: 18px; z-index: 50;}
 
 	footer{ margin-top: 5px; font:12px/1 Calibri; background: #000000; height: 170px; border-top: 3px solid #b8b8b8;}
 	.mostfooter p{ font:14px/1.5 Calibri; color: #ffffff; text-align: center; margin-top:20px;}
@@ -298,7 +299,7 @@
 
 	/* LIST STYLE */
 	.gamelist { padding: 0px 15px;}
-	.gamelist li { list-style: none; margin: 10px 15px; width: 280px; float: left;}
+	.gamelist li { list-style: none; margin: 10px 15px; width: 280px; float: left; cursor:pointer;}
 	.gamelist li span { font: 12px/1 Calibri; color: #959595;}
 
 	.csslider1 > .cs_bullets > label > .cs_thumb > img { max-width: none; width: 185px; height: 46px;}
@@ -436,15 +437,14 @@
 	box-shadow: 0px 0px 10px #8B8B8B; margin-bottom: 30px;}
 	.thumb img { display: block; margin: 0 auto; border-radius: 5px; margin-top: 4px; width: 100%; height: 172px;}
 	.thumb:hover .play-btn, .thumb:hover .hover{ display: block; }
-	.jackpot { padding: 7px 5px; margin: 0; color: #424242; font: 16px/1 Calibri;}
+	.jackpot { padding: 4px 5px; margin: 0; color: #424242; font: 16px/1 Calibri;}
 	.game-type, .game-category{ margin:0; padding: 0px 10px;}
 	.game-type{ font:bold 16px/1 Calibri; color: #424242;}
 	.game-category{color:#ffba78; font:16px/1 Calibri;}
-	.play-btn p{ margin:0; background: #00a308; padding: 18px;}
-	.play-btn { display: none; position: absolute; font: bold 18px/1 Calibri; color: #ffffff; border: 2px solid rgba(255,255,255,1); border-radius: 5px; top: 60px; left: 37px; box-shadow: 0px 0px 67px #ADADAD;}
+	.play-btn p{ margin:0; background: #00a308; padding: 18px; text-align: center;}
+	.play-btn { width:125px; display: none; /*position: absolute;*/ font: bold 18px/1 Calibri; color: #ffffff; border: 2px solid rgba(255,255,255,1); border-radius: 5px; /*top: 60px; left: 37px;*/ box-shadow: 0px 0px 67px #ADADAD; margin-top:58px !important; margin: 0 auto;}
 	.play-btn:hover{color: #ffffff; text-decoration: none;}
-	.hover { display: none; height: 173px; position: absolute; background: rgba(0,0,0,0.8); width: 203px; border-radius: 5px; top: 7px; left: 18px;}
-
+	.hover { display: none; height: 173px; position: absolute; background: rgba(0,0,0,0.8); width: 203px; border-radius: 5px; top: 7px; left: 18px; z-index: 50;}
 	footer{ margin-top: 5px; font:13px/1 Calibri; background: #000000; height: 170px; border-top: 3px solid #b8b8b8;}
 	.mostfooter p{ font:14px/1.5 Calibri; color: #ffffff; text-align: center; margin-top:20px;}
 	.subfooter p{ text-align: center; margin:0;}
@@ -477,7 +477,7 @@
 
 	/* LIST STYLE */
 	.gamelist { padding: 0px 15px;}
-	.gamelist li { list-style: none; margin: 10px 15px; width: 280px; float: left;}
+	.gamelist li { list-style: none; margin: 10px 15px; width: 280px; float: left; cursor:pointer;}
 	.gamelist li span { font: 12px/1 Calibri; color: #959595;}
 
 	.csslider1 > .cs_bullets > label > .cs_thumb > img { max-width: none; width: 185px; height: 46px;}
@@ -552,6 +552,7 @@
 	.col-xs-10 { width: 239px;}
 	.desktop{ display: block;}
 	.mobile{ display: none; }
+	.carousel-indicators { bottom: 5px;}
 }
 
 /* Landscape tablets and medium desktops */
@@ -616,15 +617,14 @@
 	box-shadow: 0px 0px 10px #8B8B8B; margin-bottom: 30px;}
 	.thumb img { display: block; margin: 0 auto; border-radius: 5px; margin-top: 4px; width: 100%; height: 172px;}
 	.thumb:hover .play-btn, .thumb:hover .hover{ display: block; }
-	.jackpot { padding: 7px 5px; margin: 0; color: #424242; font: 16px/1 Calibri;}
+	.jackpot { padding: 4px 5px; margin: 0; color: #424242; font: 16px/1 Calibri;}
 	.game-type, .game-category{ margin:0; padding: 0px 10px;}
 	.game-type{ font:bold 16px/1 Calibri; color: #424242;}
 	.game-category{color:#ffba78; font:16px/1 Calibri;}
-	.play-btn p{ margin:0; background: #00a308; padding: 18px;}
-	.play-btn { display: none; position: absolute; font: bold 18px/1 Calibri; color: #ffffff; border: 2px solid rgba(255,255,255,1); border-radius: 5px; top: 60px; left: 37px; box-shadow: 0px 0px 67px #ADADAD;}
+	.play-btn p{ margin:0; background: #00a308; padding: 18px; text-align: center;}
+	.play-btn { width:125px; display: none; /*position: absolute;*/ font: bold 18px/1 Calibri; color: #ffffff; border: 2px solid rgba(255,255,255,1); border-radius: 5px; /*top: 60px; left: 37px;*/ box-shadow: 0px 0px 67px #ADADAD; margin-top:58px !important; margin: 0 auto;}
 	.play-btn:hover{color: #ffffff; text-decoration: none;}
-	.hover { display: none; height: 173px; position: absolute; background: rgba(0,0,0,0.8); width: 200px; border-radius: 5px; top: 7px; left: 18px;}
-
+	.hover { display: none; height: 173px; position: absolute; background: rgba(0,0,0,0.8); width: 200px; border-radius: 5px; top: 7px; left: 18px; z-index: 50;}
 	footer{ margin-top: 5px; font:14px/1 Calibri; background: #000000; height: 170px; border-top: 3px solid #b8b8b8;}
 	.mostfooter p{ font:14px/1.5 Calibri; color: #ffffff; text-align: center; margin-top:20px;}
 	.subfooter p{ text-align: center; margin:0;}
@@ -657,7 +657,7 @@
 
 	/* LIST STYLE */
 	.gamelist { padding: 0px 15px;}
-	.gamelist li { list-style: none; margin: 10px 15px; width: 280px; float: left;}
+	.gamelist li { list-style: none; margin: 10px 15px; width: 280px; float: left; cursor:pointer; }
 	.gamelist li span { font: 12px/1 Calibri; color: #959595;}
 
 	.csslider1 > .cs_bullets > label > .cs_thumb > img { max-width: none; width: 185px; height: 46px;}
@@ -790,14 +790,14 @@
 	box-shadow: 0px 0px 10px #8B8B8B; margin-bottom: 30px;}
 	.thumb img { display: block; margin: 0 auto; border-radius: 5px; margin-top: 4px; width: 201px; height: 172px;}
 	.thumb:hover .play-btn, .thumb:hover .hover{ display: block; }
-	.jackpot { padding: 7px 5px; margin: 0; color: #424242; font: 16px/1 Calibri;}
+	.jackpot { padding: 4px 5px; margin: 0; color: #424242; font: 16px/1 Calibri;}
 	.game-type, .game-category{ margin:0; padding: 0px 10px;}
 	.game-type{ font:bold 16px/1 Calibri; color: #424242;}
 	.game-category{color:#ffba78; font:16px/1 Calibri;}
-	.play-btn p{ margin:0; background: #00a308; padding: 18px;}
-	.play-btn { display: none; position: absolute; font: bold 18px/1 Calibri; color: #ffffff; border: 2px solid rgba(255,255,255,1); border-radius: 5px; top: 60px; left: 37px; box-shadow: 0px 0px 67px #ADADAD;}
+	.play-btn p{ margin:0; background: #00a308; padding: 18px; text-align: center;}
+	.play-btn { width:125px; display: none; /*position: absolute;*/ font: bold 18px/1 Calibri; color: #ffffff; border: 2px solid rgba(255,255,255,1); border-radius: 5px; /*top: 60px; left: 37px;*/ box-shadow: 0px 0px 67px #ADADAD; margin-top:58px !important; margin: 0 auto;}
 	.play-btn:hover{color: #ffffff; text-decoration: none;}
-	.hover { display: none; height: 173px; position: absolute; background: rgba(0,0,0,0.8); width: 201px; border-radius: 5px; top: 7px; left: 20px;}
+	.hover { display: none; height: 173px; position: absolute; background: rgba(0,0,0,0.8); width: 201px; border-radius: 5px; top: 7px; left: 20px; z-index: 50; cursor:pointer;}
 
 	footer{ margin-top: 5px; font:14px/1 Calibri; background: #000000; height: 260px; border-top: 3px solid #b8b8b8;}
 	.mostfooter p{ font:14px/1.5 Calibri; color: #ffffff; text-align: center; margin-top:20px;}
@@ -831,14 +831,14 @@
 
 	/* LIST STYLE */
 	.gamelist { padding: 0px 15px;}
-	.gamelist li { list-style: none; margin: 10px 15px; width: 280px; float: left;}
+	.gamelist li { list-style: none; margin: 10px 15px; width: 280px; float: left; cursor:pointer;}
 	.gamelist li span { font: 12px/1 Calibri; color: #959595;}
 
 	.csslider1 > .cs_bullets > label > .cs_thumb > img { max-width: none; width: 185px; height: 46px;}
 	.csslider1 > .cs_bullets > label { margin: 0 6px !important; padding: 5px; border-radius: 50%; background: transparent; box-shadow: inset 0 0 0 5px rgba(255,255,255,0.5) !important;}
 
 	.subfooter span.title { position: relative !important; bottom: -7px;}
-	.subfooter p a { color: #424242; /*margin: 0px 10px;*/ display: inline-block; position: relative; padding: 25px 10px; height: 135px; width: 135px; background: url('../images/ftr-border.png') repeat-y top left;}
+	.subfooter p a { color: #424242; /*margin: 0px 10px;*/ display: inline-block; position: relative; padding: 25px 10px; height: 135px; width: 135px; background: url('../images/ftr-border.png') repeat-y top left; cursor:pointer}
 	.subfooter p a:last-child{ background: url('../images/ftr-border.png') repeat-y top left, url('../images/ftr-border.png') repeat-y top right; }
 	.f-sprite { width: 55px; height: 55px; display: block; margin: 0 auto; background: url('../images/ftrico.png') no-repeat top center;}
 	a:hover .f-sprite{ background: url('../images/ftrico-hover.png') no-repeat top center; transition: background-image 0.5s ease; -moz-transition: background-image 0.5s ease; -webkit-transition:background-image 0.5s ease;} 
@@ -911,11 +911,9 @@
 
 }
 
-/** GENERAL STYLES FOR CAROUSEL **/
-.carousel-inner .item { opacity: 0 !important; -webkit-transition-property: opacity !important; -moz-transition-property: opacity !important; -o-transition-property: opacity !important; transition-property: opacity !important; -webkit-transition-delay: 0.5s !important; /* Safari */ transition-delay: 0.5s !important;}
-.carousel-inner .active {opacity: 1 !important;}
-.carousel-inner .active.left, .carousel-inner .active.right { left: 0 !important; opacity: 0 !important; z-index: 1 !important;}
-.carousel-inner .next.left, .carousel-inner .prev.right { opacity: 1 !important;}
-.carousel-control { z-index: 2 !important;}
-
 a:focus, a:active, a:hover{ outline: none !important; }
+.carousel-indicators li { display: inline-block; width: 10px; height: 10px; margin: 1px 6px; text-indent: -999px; border: 1px solid #ffffff; border-radius: 10px; cursor: pointer; background-color: #000; background-color: rgba(0, 0, 0, 0);}
+.featured-section .newWindow, a.bannerLink, a.thumbnails-icon, a.list-icon {cursor:pointer}
+.close{ text-shadow: none; opacity: 1;}
+.slim-header a { color: #ffffff; line-height: 35px; display: inline-block; float: right;}
+label a { line-height: 27px !important; margin-left: -8px; margin-right: 19px;}

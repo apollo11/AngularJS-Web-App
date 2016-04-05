@@ -45,14 +45,11 @@
                                     <img class="animated fadeIn"
                                          ng-src="{{imageUrl + value.thumbnail_image.filename }}"/>
                                     <section>
-                                        <p class="jackpot"><span class="count"><ticker
-                                                code="{{value.game}}"></ticker></span>
+                                        <p class="jackpot"><span class="count">
+                                            <ticker code="{{value.ticker_code}}"></ticker></span>
                                         </p>
                                         <p class="game-type">{{value.node_title}}</p>
                                         <p class="game-category">{{value.game_category}}</p>
-                                        <p>
-                                            <test-ticker></test-ticker>
-                                        </p>
                                     </section>
                                 </div>
                             </div>
@@ -102,14 +99,10 @@
                                     <img class="animated fadeIn"
                                          ng-src="{{imageUrl + value.thumbnail_image.filename }}"/>
                                     <section>
-                                        <p class="jackpot"><span class="count"><ticker
-                                                code="{{value.game}}"></ticker></span>
+                                        <p class="jackpot"><span class="count"><ticker code="{{value.ticker_code}}"></ticker></span>
                                         </p>
                                         <p class="game-type">{{value.node_title}}</p>
                                         <p class="game-category">{{value.game_category}}</p>
-                                        <p>
-                                            <test-ticker></test-ticker>
-                                        </p>
                                     </section>
                                 </div>
                             </div>
@@ -122,5 +115,4 @@
         </div>
     </div>
 </div><!-- /.container -->
-<span us-spinner spinner-key="spinner-1" spinner-start-active="true" spinner-theme="bigBlue"></span>
 </div>

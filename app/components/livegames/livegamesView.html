@@ -46,7 +46,7 @@
                                          ng-src="{{imageUrl + value.thumbnail_image.filename}}"/>
                                     <section>
                                         <p class="jackpot"><span class="count"><ticker
-                                                code="{{value.game}}"></ticker></span>
+                                                code="{{value.ticker_code}}"></ticker></span>
                                         </p>
                                         <p class="game-type">{{value.node_title}}</p>
                                         <p class="game-category">{{value.game_category}}</p>
@@ -60,8 +60,7 @@
                     <div ng-switch-when="list">
                         <div class="game-holder">
                             <ul class="gamelist">
-                                <li dir-paginate="(key, value) in data.LiveGames | itemsPerPage:20  | filter:searchText as results track by $index"
-                                    pagination-id="liveList">
+                                <li ng-repeat="(key, value) in data.LiveGames | filter:searchText as results track by $index">
                             <span ng-if="emptyCookie()">
                                 <a ng-click="onclickNewWindowDemo(value.game, value.node_title)">
                                     {{value.node_title}}
@@ -76,15 +75,11 @@
                             </ul>
                             <div class="clearfix"></div>
                             <pre ng-show="results.length == 0"><h1>Empty Results...</h1></pre>
-                            <dir-pagination-controls pagination-id="liveList" auto-hide="true"
-                                                     template-url="bower_components/angularUtils-pagination/dirPagination.tpl.html"></dir-pagination-controls>
                         </div>
                     </div>
                     <div ng-switch-default>
                         <div class="game-holder">
-                            <div class="col-md-3 col-xs-10 wow animated zoomIn"
-                                 dir-paginate="(key, value) in data.LiveGames | itemsPerPage:20  | filter:searchText as results track by $index"
-                                 pagination-id="live">
+                            <div class="col-md-3 col-xs-10 wow animated zoomIn" ng-repeat="(key, value) in data.LiveGames | filter:searchText as results track by $index">
                                 <div class="thumb">
                                     <div class="hover">
                                  <span ng-if="emptyCookie()">
@@ -104,7 +99,7 @@
                                          ng-src="{{imageUrl + value.thumbnail_image.filename}}"/>
                                     <section>
                                         <p class="jackpot"><span class="count"><ticker
-                                                code="{{value.game}}"></ticker></span>
+                                                code="{{value.ticker_code}}"></ticker></span>
                                         </p>
                                         <p class="game-type">{{value.node_title}}</p>
                                         <p class="game-category">{{value.game_category}}</p>
@@ -113,17 +108,10 @@
                             </div>
                             <div class="clearfix"></div>
                             <pre ng-show="results.length == 0"><h1>Empty Results...</h1></pre>
-                            <div ng-hide="results.length < 20" class="paginate">
-                                <dir-pagination-controls pagination-id="live" auto-hide="true"
-                                                         template-url="bower_components/angularUtils-pagination/dirPagination.tpl.html"></dir-pagination-controls>
-                            </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
 </div><!-- /.container -->
-<span us-spinner spinner-key="spinner-1" spinner-start-active="true" spinner-theme="bigBlue"></span>
-</div>
