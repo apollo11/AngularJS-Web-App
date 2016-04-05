@@ -79,8 +79,7 @@
                     </div>
                     <div ng-switch-default>
                         <div class="game-holder">
-                            <div class="col-md-3 col-xs-10 wow animated zoomIn"
-                                 ng-repeat="(key, value) in data.LiveGames | filter:searchText as results track by $index">
+                            <div class="col-md-3 col-xs-10 wow animated zoomIn" ng-repeat="(key, value) in data.LiveGames | filter:searchText as results track by $index">
                                 <div class="thumb">
                                     <div class="hover">
                                  <span ng-if="emptyCookie()">
