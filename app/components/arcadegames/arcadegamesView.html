@@ -1,6 +1,6 @@
 <div ng-controller="ArcadeController">
     <featured-banner type="arcade"></featured-banner>
-    <div class="mcholder">
+    <div class="mcholder {{class}}">
         <div class="container">
             <div class="custom-width">
                 <div class="panel-og">
@@ -13,8 +13,8 @@
                     </div>
                     <div class="col-md-6 col-md-offset-3 col-xs-6">
                         <div class="row">
-                            <a ng-click="page='thumb'" class="thumbnails-icon"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span></a>
-                            <a ng-click="page='list'" class="list-icon"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a>
+                            <a ng-click="page='thumb'; class='thumbHolder'" class="thumbnails-icon"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span></a>
+                            <a ng-click="page='list'; class='listHolder'" class="list-icon"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a>
                             <div class="right-inner-addon desktop">
                                 <i class="glyphicon glyphicon-search"></i>
                                 <input type="search" class="form-control" placeholder="Game search" ng-model="searchText"/>
