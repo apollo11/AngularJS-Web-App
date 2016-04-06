@@ -1,6 +1,6 @@
 <div ng-controller="SlotMachineController">
     <featured-banner type="slotmachine"></featured-banner>
-    <div class="mcholder">
+    <div class="mcholder {{class}}">
         <div class="container">
             <div class="custom-width">
                 <div class="panel-og">
@@ -27,6 +27,7 @@
                         <div class="game-holder">
                             <div class="col-md-3 col-xs-10 wow animated zoomIn"
                                  ng-repeat = "(key, value) in data.allSlotGames | filter:searchText as results track by $index">
+
                                 <div class="thumb">
                                     <div class="hover">
                                 <span ng-if="emptyCookie()">
@@ -45,8 +46,10 @@
                                     <img class="animated fadeIn"
                                          ng-src="{{value.image_path}}/{{value.thumbnail_image.filename}}"/>
                                     <section>
-                                        <p class="jackpot"><span class="count"><ticker
-                                                code="{{value.ticker_code}}"></ticker></span>
+                                        <p class="jackpot" ng-if="value.ticker_code !=''">
+                                            <span class="count">
+                                                <ticker code="{{value.ticker_code}}"></ticker>
+                                            </span>
                                         </p>
                                         <p class="game-type">{{value.node_title}}</p>
                                         <p class="game-category">{{value.game_category}}</p>
@@ -98,8 +101,10 @@
                                     <img class="animated fadeIn"
                                          ng-src="{{value.image_path}}/{{value.thumbnail_image.filename}}"/>
                                     <section>
-                                        <p class="jackpot"><span class="count"><ticker
-                                                code="{{value.ticker_code}}"></ticker></span>
+                                        <p class="jackpot" ng-if="value.ticker_code !=''">
+                                            <span  class="count">
+                                                  <ticker code="{{value.ticker_code}}"></ticker>
+                                            </span>
                                         </p>
                                         <p class="game-type">{{value.node_title}}</p>
                                         <p class="game-category">{{value.game_category}}</p>

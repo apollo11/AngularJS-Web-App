@@ -45,8 +45,10 @@
                                     <img class="animated fadeIn"
                                          ng-src="{{imageUrl + value.thumbnail_image.filename}}"/>
                                     <section>
-                                        <p class="jackpot"><span class="count"><ticker
-                                                code="{{value.ticker_code}}"></ticker></span>
+                                        <p class="jackpot" ng-if="value.ticker_code !=''">
+                                            <span class="count">
+                                            <ticker code="{{value.ticker_code}}"></ticker>
+                                        </span>
                                         </p>
                                         <p class="game-type">{{value.node_title}}</p>
                                         <p class="game-category">{{value.game_category}}</p>
@@ -99,8 +101,10 @@
                                     <img class="animated fadeIn"
                                          ng-src="{{imageUrl + value.thumbnail_image.filename}}"/>
                                     <section>
-                                        <p class="jackpot"><span class="count"><ticker
-                                                code="{{value.ticker_code}}"></ticker></span>
+                                        <p class="jackpot" ng-if="value.ticker_code !=''">
+                                            <span class="count">
+                                                <ticker code="{{value.ticker_code}}"></ticker>
+                                            </span>
                                         </p>
                                         <p class="game-type">{{value.node_title}}</p>
                                         <p class="game-category">{{value.game_category}}</p>
