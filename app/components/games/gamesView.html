@@ -50,7 +50,7 @@
                                             <ticker code="{{value.ticker_code}}"></ticker>
                                             </span>
                                         </p>
-                                        <p class="game-type">{{value.node_title}}</p>
+                                        <p class="game-type" ng-bind-html="value.node_title"></p>
                                         <p class="game-category">{{value.game_category}}</p>
                                     </section>
                                 </div>
@@ -106,7 +106,7 @@
                                                 <ticker code="{{value.ticker_code}}"></ticker>
                                             </span>
                                         </p>
-                                        <p class="game-type">{{value.node_title}}</p>
+                                        <p class="game-type" ng-bind-html="value.node_title"></p>
                                         <p class="game-category">{{value.game_category}}</p>
                                     </section>
                                 </div>
