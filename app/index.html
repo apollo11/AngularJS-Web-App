@@ -16,7 +16,7 @@
     <script type="text/javascript" src="http://cache.download.banner.greenjade88.com/integrationjs.php"></script>
     <script type="text/javascript" src="login.js"></script>
 </head>
-<body onload="calculateHeight()">
+<body>
     <div class="top-container">
     <div class="container logo-holder">
         <!-- Logo -->
@@ -24,7 +24,6 @@
     </div>          
         <div class="slim-header">
             <div class="container">
-
                 <div ng-controller="ToggleController">
                     <div ng-show="emptyCookie()">
                         <a href="#" class="login-link">LOGIN</a>
@@ -52,8 +51,7 @@
     </div>
 
 <div ui-view="footer"></div>
-
-    <!-- SCRIPT -->
+  <!-- SCRIPT -->
 <script src="build/output.min.js"></script>
 <script>
     $(document).ready(function () {
@@ -65,87 +63,26 @@
                 $(".login-form").addClass("show");
             }
         });
-       
-    });
-
-
-</script>
-<script>
-    /* A debounced resize handler that fires ONLY when the width changes */
-    var wB = screen.width;
-    function resizeWidthOnly(a,b) { 
-      var c = [window.innerWidth];
-      //alert(c);
-      return onresize = function() {
-
-        var d = window.innerWidth,
-            e = c.length;
-        c.push(d);
-        if(c[e]!==c[e-1]){
-          clearTimeout(b);
-          b = setTimeout(a, 250);
-          
-        } 
-      }, a;
-      
-    }
-
-    /* use this (below) instead of window.addEventListener('resize', foo); to call functions   */
-
-    resizeWidthOnly(function() {
-    var kk = window.innerWidth;
-     //alert(wB);
-     //alert("WIDTH: " + kk);
-        if(kk == 320){
-            if($(".col-xs-10").hasClass("col-xs-offset-1")){
-              $(".col-xs-10").removeClass("col-xs-offset-1");
-              $(".col-xs-10").removeClass("col-xs-offset-2");
-            }else{
-              $(".col-xs-10").addClass("col-xs-offset-1");
-              $(".col-xs-10").removeClass("col-xs-offset-2");
+        $(".btn-danger").click(function () {
+            if ($(".login-form").hasClass("show")) {
+                $(".login-form").removeClass("show");
+            } else {
+                $(".login-form").addClass("show");
             }
-        }else if(kk < 480 && kk != 320){
-            if($(".col-xs-10").hasClass("col-xs-offset-2")){
-              $(".col-xs-10").removeClass("col-xs-offset-2");
-              $(".col-xs-10").removeClass("col-xs-offset-1");
-            }else{
-              $(".col-xs-10").addClass("col-xs-offset-2");
-              $(".col-xs-10").removeClass("col-xs-offset-1");
-            }
-        }else if(kk == 480){
-            if($(".col-xs-10").hasClass("col-xs-offset-2")){
-              $(".col-xs-10").removeClass("col-xs-offset-2");
-              $(".col-xs-10").removeClass("col-xs-offset-1");
-            }else{
-              $(".col-xs-10").removeClass("col-xs-offset-2");
-              $(".col-xs-10").removeClass("col-xs-offset-1");
-            }
-        }else if(kk == 667){
-            if($(".col-xs-10").hasClass("col-xs-offset-2")){
-              $(".col-xs-10").removeClass("col-xs-offset-2");
-              $(".col-xs-10").addClass("col-xs-offset-1");
-            }               
+        }); 
+
+
+        if($(".mcholder").hasClass("listHolder")) {
+            //alert(1);
+        }else{
+            //alert(3);
+            $(".master_container").addClass("thumbHolder");
         }
+
     });
-  
-    var wB = screen.width;
-    function calculateHeight(){ 
-        if(wB == 320){
-            if($(".col-xs-10").hasClass("col-xs-offset-1")){
-              $(".col-xs-10").removeClass("col-xs-offset-1");
-            }else{
-              $(".col-xs-10").addClass("col-xs-offset-1");
-            }
-        }else if(wB >= 350 && wB <= 375){
-            if($(".col-xs-10").hasClass("col-xs-offset-2")){
-              $(".col-xs-10").removeClass("col-xs-offset-2");
-            }else{
-              $(".col-xs-10").addClass("col-xs-offset-2");
-            }
-        } 
-    }
 
 </script>
+
 <script type="text/javascript">
     $(document).scroll(function() {
         var sW = screen.width;
@@ -165,5 +102,3 @@
 </script>      
 </body>
 </html>
-
-
