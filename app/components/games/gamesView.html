@@ -31,7 +31,7 @@
                                     <div class="hover">
                                 <span ng-if="emptyCookie()">
                                     <a ng- class="play-btn wow animated flipInY"
-                                       ng-click="onclickNewWindowDemo(value.game, value.node_title)">
+                                       ng-click="onclickNewWindowDemo(value.game, value.node_title)" >
                                         <p>DEMO</p>
                                     </a>
                                 </span>
@@ -64,12 +64,11 @@
                             <ul class="gamelist">
                                 <li ng-repeat="(key, value) in data.allGames | filter:searchText as results track by $index">
                             <span ng-if="emptyCookie()">
-                                <a ng-click="onclickNewWindowDemo(value.game, value.node_title)">
-                                    {{value.node_title}}
+                                <a ng-click="onclickNewWindowDemo(value.game, value.node_title)" ng-bind-html="value.node_title">
                                 </a>
                             </span>
                              <span ng-if="notEmptyCookie()">
-                            <a ng-click="onclickGameNewWindow(value.field_games_link, value.language,value.game)">{{value.node_title}}</a>
+                            <a ng-click="onclickGameNewWindow(value.field_games_link, value.language,value.game)" ng-bind-html="value.node_title"></a>
                             </span>
                                     <br/>
                                     <span>{{value.game_category}}</span>

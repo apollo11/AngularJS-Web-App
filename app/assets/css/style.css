@@ -564,7 +564,8 @@
 	.mobile{ display: none; }
 	.carousel-indicators { bottom: 5px;}
 
-	.animated.wow.zoomIn { width: 210px; float: left; margin-left: 2.9%;}		
+	.animated.wow.zoomIn { width: 210px; float: left; margin-left: 2.9%;}	
+	p.game-type {white-space:nowrap;overflow:hidden;width:155px;text-overflow: ellipsis;margin-top:5px;}	
 }
 
 /* Landscape tablets and medium desktops */
@@ -750,6 +751,7 @@
 	.mobile{ display: none; }
 
 	.animated.wow.zoomIn { width: 210px; float: left; margin-left: 2.2%;}	
+	p.game-type {white-space:nowrap;overflow:hidden;width:155px;text-overflow: ellipsis;margin-top:5px;}
 }
 
 /* Large desktops and laptops */
