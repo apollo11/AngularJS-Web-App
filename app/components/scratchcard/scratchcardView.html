@@ -25,7 +25,7 @@
                 <div ng-switch on="page">
                     <div ng-switch-when="thumb">
                         <div class="game-holder">
-                            <div class="col-md-3 col-xs-10 wow animated zoomIn"
+                            <div class="wow animated zoomIn"
                                 ng-repeat="(key, value) in data.ScratchCard | filter:searchText as results track by $index">
                                 <div class="thumb">
                                     <div class="hover">
@@ -81,7 +81,7 @@
                     </div>
                     <div ng-switch-default>
                         <div class="game-holder">
-                            <div class="col-md-3 col-xs-10 wow animated zoomIn"
+                            <div class="wow animated zoomIn"
                                  ng-repeat="(key, value) in data.ScratchCard | filter:searchText as results track by $index">
                                 <div class="thumb">
                                     <div class="hover">

@@ -14,7 +14,7 @@
                     <div class="col-md-6 col-md-offset-3 col-xs-6">
                         <div class="row">
                             <a ng-click="page='thumb'; class='thumbHolder'" class="thumbnails-icon"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span></a>
-                            <a ng-click="page='list';  class='listHolder'" class="list-icon"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a>
+                            <a ng-click="page='list'; class='listHolder'" class="list-icon"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a>
                             <div class="right-inner-addon desktop">
                                 <i class="glyphicon glyphicon-search"></i>
                                 <input type="search" class="form-control" placeholder="Game search" ng-model="searchText"/>
@@ -25,7 +25,7 @@
                 <div ng-switch on="page">
                     <div ng-switch-when="thumb">
                         <div class="game-holder">
-                            <div class="col-md-3 col-xs-10 wow animated zoomIn"
+                            <div class="wow animated zoomIn"
                                  ng-repeat = "(key, value) in data.allSlotGames | filter:searchText as results track by $index">
 
                                 <div class="thumb">
@@ -81,7 +81,7 @@
                         </div>
                     <div ng-switch-default>
                         <div class="game-holder">
-                            <div class="col-md-3 col-xs-10 wow animated zoomIn"
+                            <div class="wow animated zoomIn"
                                  ng-repeat="(key, value) in data.allSlotGames | filter:searchText as results track by $index">
                                 <div class="thumb">
                                     <div class="hover">
