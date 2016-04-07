@@ -21,7 +21,7 @@
                 </div>
                 <div class="game-holder">
                     <ul class="gamelist">
-                        <li dir-paginate="(key, value) in data.arcade | itemsPerPage:20  | filter:searchText as results track by $index" pagination-id="arcadeList">
+                        <li ng-repeat="(key, value) in data.arcade filter:searchText as results track by $index" pagination-id="arcadeList">
                             <span ng-if="emptyCookie()">
                             <a ng-click="onclickNewWindowDemo(value.game, value.node_title)">
                                 {{value.node_title}}
