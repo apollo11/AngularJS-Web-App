@@ -920,3 +920,4 @@ a:focus, a:active, a:hover{ outline: none !important; }
 .logoutState p { padding: 10px 15px; font-weight: normal;}
 .logoutState{ float: right; margin-bottom: 15px;}
 .logoutState p{ color: #ffffff;}
+.p.game-type {white-space:nowrap;overflow:hidden;width:200px;text-overflow: ellipsis;}
