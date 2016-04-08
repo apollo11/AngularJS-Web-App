@@ -15,6 +15,9 @@ app.controller('BannerController',
         $scope.data = {};
         $scope.data.banner = data;
     });
+    $scope.bannerIndex = function (index) {
+        return index < 1 ? 'active' : '';
+    };
 
     $scope.onclickNewWindowDemo = function (code, title) {
         $window.open('http://cache.download.banner.greenjade88.com/flash/37/launchcasino.html?mode=offline&affiliates=1&language=EN&game='+code, title, 'width=800, height=600');

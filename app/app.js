@@ -6,9 +6,7 @@ var app = angular.module('PlayTech', [
     ,'ngAnimate'
     ,'ngSanitize'
     ,'ngLodash'
-    ,'angularUtils.directives.dirPagination'
     ,'countTo'
-    ,'ui.bootstrap'
     ,'ngCookies'
     ,'angularSpinner'
 ]);

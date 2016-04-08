@@ -1,8 +1,15 @@
 <div ng-controller="BannerController">
     <div class="banner">
-        <uib-carousel interval="3000">
-            <uib-slide ng-repeat="(key, value ) in data.banner track by $index">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li ng-repeat="(key, value ) in data.banner track by $index" data-target="#myCarousel" data-slide-to="{{$index}}" ng-class="bannerIndex($index)"></li>
+            </ol>
 
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div ng-repeat="(key, value ) in data.banner track by $index" class="item {{$index < 1 ?'active':''}}">
+                    <!--<img ng-src="{{imageUrl + value.banner_image.filename}}"/>-->
                     <a ng-if="emptyCookie()" class="bannerLink" ng-click="onclickNewWindowDemo(value.game_code, value.title)">
                         <img ng-src="{{imageUrl + value.banner_image.filename}}"/>
                     </a>
@@ -10,8 +17,18 @@
                     <a ng-if="notEmptyCookie()" class="bannerLink" ng-click="onclickGameNewWindow(value.game_link, value.language, value.game_code)">
                         <img ng-src="{{imageUrl + value.banner_image.filename}}"/>
                     </a>
+                </div>
+            </div>
 
-            </uib-slide>
-        </uib-carousel>
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
     </div>
 </div>
