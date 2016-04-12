@@ -6,8 +6,7 @@ app.controller('SlotMachineController',
         ,'$window'
         ,'imageUrl'
         ,'$cookies'
-        ,'usSpinnerService'
-            , function($scope, SlotMachine, $window, imageUrl, $cookies, usSpinnerService) {
+        , function($scope, SlotMachine, $window, imageUrl, $cookies) {
 
     $scope.title = 'Slot Games';
     $scope.imageUrl = imageUrl;
@@ -15,9 +14,7 @@ app.controller('SlotMachineController',
     $scope.getAllSlotGames.$promise.then(function(data) {
         $scope.data = {};
         $scope.data.allSlotGames = data;
-        usSpinnerService.stop('spinner-1');
     }, function (error) {
-        usSpinnerService.stop('spinner-1');
         return error;
     });
 

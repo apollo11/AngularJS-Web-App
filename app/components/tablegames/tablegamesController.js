@@ -7,8 +7,7 @@ app.controller('TableGamesController',
         ,'$window'
         ,'imageUrl'
         ,'$cookies'
-        ,'usSpinnerService'
-            , function($scope, Table, $window, imageUrl, $cookies, usSpinnerService) {
+        , function($scope, Table, $window, imageUrl, $cookies) {
 
     $scope.title = 'Table Games';
     $scope.imageUrl = imageUrl;
@@ -16,9 +15,7 @@ app.controller('TableGamesController',
     $scope.getTableGames.$promise.then(function(data) {
         $scope.data = {};
         $scope.data.TableGames = data;
-        usSpinnerService.stop('spinner-1');
     }, function (error) {
-        usSpinnerService.stop('spinner-1');
         return error;
     });
 

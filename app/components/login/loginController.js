@@ -19,6 +19,10 @@ app.controller('LoginController',
 
     $scope.removeCookie = function () {
         $cookies.remove('username');
+    };
+
+    $scope.reloadPage = function() {
+        location.reload();
     }
 
 }]);

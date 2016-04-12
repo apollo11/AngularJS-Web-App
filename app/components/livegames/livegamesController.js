@@ -8,7 +8,7 @@ app.controller('LiveController',
         ,'imageUrl'
         ,'$cookies'
         ,'usSpinnerService'
-            , function($scope, Live, $window, imageUrl, $cookies, usSpinnerService) {
+        , function($scope, Live, $window, imageUrl, $cookies) {
 
     $scope.title = 'Live Games';
     $scope.imageUrl = imageUrl;
@@ -16,9 +16,7 @@ app.controller('LiveController',
     $scope.getLiveGames.$promise.then(function(data) {
         $scope.data = {};
         $scope.data.LiveGames = data;
-        usSpinnerService.stop('spinner-1');
     }, function (error) {
-        usSpinnerService.stop('spinner-1');
         return error;
     });
 

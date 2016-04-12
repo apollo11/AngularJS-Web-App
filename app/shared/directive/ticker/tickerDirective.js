@@ -25,7 +25,7 @@ app.directive('ticker',['Ticker', function(Ticker) {
                             if(!_.isUndefined(value.amount)) {
                                 scope.amountTo = parseFloat(value.amount.__text);
                                 scope.amountFrom = parseFloat(value.amount.__text) * .50;
-                                console.log(scope.amountFrom);
+                                //console.log(scope.amountFrom);
                                 //console.log(scope.amountTo);
                             }else {
                                 scope.amountValue = true;

@@ -6,8 +6,7 @@ app.controller('ArcadeController',
       ,'$window'
       ,'imageUrl'
       ,'$cookies'
-      ,'usSpinnerService'
-        , function($scope, Arcade, $window, imageUrl, $cookies, usSpinnerService) {
+        , function($scope, Arcade, $window, imageUrl, $cookies) {
 
     $scope.title = 'Arcade Games';
     $scope.imageUrl = imageUrl;
@@ -15,9 +14,7 @@ app.controller('ArcadeController',
     $scope.getArcade.$promise.then(function(data) {
         $scope.data = {};
         $scope.data.arcade = data;
-        usSpinnerService.stop('spinner-1');
     }, function (error) {
-        usSpinnerService.stop('spinner-1');
         return error;
     });
 

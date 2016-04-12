@@ -5,7 +5,7 @@ app.controller('ScratchGamesController',
         ,'ScratchGames'
         ,'$window'
         ,'imageUrl'
-            , function($scope, ScratchGames, $window, imageUrl) {
+        , function($scope, ScratchGames, $window, imageUrl) {
 
     $scope.title = 'Scratch Games';
     $scope.imageUrl = imageUrl;

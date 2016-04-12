@@ -1,7 +1,7 @@
 'use strict';
 
 app.controller('VideoPokerController', ['$scope','VideoPoker','$window','imageUrl','$cookies','usSpinnerService',
-    function($scope, VideoPoker, $window, imageUrl, $cookies, usSpinnerService) {
+    function($scope, VideoPoker, $window, imageUrl, $cookies) {
 
     $scope.title = 'Video Poker Games';
     $scope.imageUrl = imageUrl;
@@ -9,9 +9,7 @@ app.controller('VideoPokerController', ['$scope','VideoPoker','$window','imageUr
     $scope.getVideoPokerGames.$promise.then(function(data) {
         $scope.data = {};
         $scope.data.VideoPokerGames = data;
-        usSpinnerService.stop('spinner-1');
     }, function (error) {
-        usSpinnerService.stop('spinner-1');
         return error;
     });
 
