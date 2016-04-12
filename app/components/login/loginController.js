@@ -2,8 +2,9 @@
 app.controller('LoginController',
     [
         '$scope'
-        ,'$cookies'
-            , function($scope, $cookies) {
+        , '$cookies'
+        , '$window'
+        , function($scope, $cookies, $window) {
     $scope.title = 'This is a banner';
 
     //$scope.saveCookies = function(username) {
@@ -21,8 +22,8 @@ app.controller('LoginController',
         $cookies.remove('username');
     };
 
-    $scope.reloadPage = function() {
-        location.reload();
-    }
+    $scope.reloadPage = function () {
+        $window.location.reload();
+    };
 
 }]);
