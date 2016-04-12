@@ -1,7 +1,12 @@
 'use strict';
 
-app.controller('VideoPokerController', ['$scope','VideoPoker','$window','imageUrl','$cookies','usSpinnerService',
-    function($scope, VideoPoker, $window, imageUrl, $cookies) {
+app.controller('VideoPokerController',
+    ['$scope'
+        ,'VideoPoker'
+        ,'$window'
+        ,'imageUrl'
+        ,'$cookies'
+        , function($scope, VideoPoker, $window, imageUrl, $cookies) {
 
     $scope.title = 'Video Poker Games';
     $scope.imageUrl = imageUrl;

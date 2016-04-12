@@ -1,26 +1,26 @@
 <footer ng-cotroller="FooterController">
     <div class="subfooter">
         <p>
-            <a ng-repeat=" (key, value) in data.footer track by $index" data-toggle="modal"
+            <a bindonce ng-repeat=" (key, value) in data.footer track by $index" data-toggle="modal"
                data-target="#{{value.link}}">
-                <span class="{{value.icon}} f-sprite"></span><span class="title">{{value.Title}}</span>
+                <span class="{{value.icon}} f-sprite"></span><span class="title" bo-text="value.Title"></span>
             </a>
         </p>
     </div>
     <div class="mostfooter">
         <p>Copyright © 2016 Oriental Game.<br>All Rights Reserved</p>
     </div>
-    <div ng-repeat=" (key, value) in data.footer track by $index" class="modal fade" id="{{value.link}}" role="dialog">
+    <div bindonce ng-repeat=" (key, value) in data.footer track by $index" class="modal fade" id="{{value.link}}" role="dialog">
         <div class="modal-dialog">
             <button type="button" class="close close-btn" data-dismiss="modal">[close]</button>
-            <img ng-src="{{imageUrl + value.top_banner.filename}}" class="about-pop"/>
+            <img bo-src-i="{{imageUrl + value.top_banner.filename}}" class="about-pop"/>
             <div class="modal-content">
                 <div class="modal-header">
                     <div class="modal-top">
-                        <h3>{{value.Title}}</h3>
+                        <h3 bo-text="value.Title"></h3>
                     </div>
                     <div class="content-holder">
-                        <div ng-bind-html="value.Body"></div>
+                        <div bo-html="value.Body"></div>
                     </div>
                 </div>
             </div>

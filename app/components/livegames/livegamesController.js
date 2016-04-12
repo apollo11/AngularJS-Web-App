@@ -7,7 +7,6 @@ app.controller('LiveController',
         ,'$window'
         ,'imageUrl'
         ,'$cookies'
-        ,'usSpinnerService'
         , function($scope, Live, $window, imageUrl, $cookies) {
 
     $scope.title = 'Live Games';

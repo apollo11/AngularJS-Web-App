@@ -8,6 +8,7 @@ var app = angular.module('PlayTech', [
     ,'ngLodash'
     ,'countTo'
     ,'ngCookies'
+    ,'pasvaz.bindonce'
 ]);
 
 app.constant('BaseUrl', 'http://playtechcms.orientalgame.com:8081/');

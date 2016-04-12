@@ -1,5 +1,5 @@
 <div ng-controller="LogoController">
-    <div ng-repeat=" (key, value ) in data.menu | limitTo:1 track by $index">
-        <img class="white-logo" ng-src="{{imageUrl + value.field_logo.filename}}" />
+    <div bindonce ng-repeat=" (key, value ) in data.menu | limitTo:1 track by $index">
+        <img class="white-logo" bo-src-i="{{imageUrl + value.field_logo.filename}}" />
     </div>
 </div>

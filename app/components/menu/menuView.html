@@ -1,7 +1,7 @@
 <div ng-controller="MenuController">
     <div class="container tab-menu" >
         <ul class="nav nav-tabs">
-                <li ui-sref-active="active" class="animate-repeat" ng-repeat="(key, value ) in data.menu track by $index">
+                <li ui-sref-active="active" class="animate-repeat" bindonce ng-repeat="(key, value ) in data.menu track by $index">
                     <a ui-sref="{{value.path}}" name="menu"><span class="leftNav"></span>{{value.title}}<span class="rightNav"></span></a>
                 </li>
         </ul>

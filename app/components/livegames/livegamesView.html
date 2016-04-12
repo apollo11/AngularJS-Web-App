@@ -26,7 +26,7 @@
                     <div ng-switch-when="thumb">
                         <div class="game-holder">
                             <div class="wow animated zoomIn"
-                                 ng-repeat="(key, value) in data.LiveGames | filter:searchText as results track by $index">
+                                 bindonce ng-repeat="(key, value) in data.LiveGames | filter:searchText as results track by $index">
                                 <div class="thumb">
                                     <div class="hover">
                                  <span ng-if="emptyCookie()">
@@ -43,15 +43,15 @@
                                 </span>
                                     </div>
                                     <img class="animated fadeIn"
-                                         ng-src="{{imageUrl + value.thumbnail_image.filename}}"/>
+                                         bo-src-i="{{imageUrl + value.thumbnail_image.filename}}"/>
                                     <section>
                                         <p class="jackpot" ng-if="value.ticker_code !=''">
                                             <span class="count">
                                                 <ticker code="{{value.ticker_code}}"></ticker>
                                             </span>
                                         </p>
-                                        <p class="game-type" ng-bind-html="value.node_title"></p>
-                                        <p class="game-category">{{value.game_category}}</p>
+                                        <p class="game-type" bo-html="value.node_title"></p>
+                                        <p class="game-category" bo-text="value.game_category"></p>
                                     </section>
                                 </div>
                             </div>
@@ -62,17 +62,17 @@
                     <div ng-switch-when="list">
                         <div class="game-holder">
                             <ul class="gamelist">
-                                <li ng-repeat="(key, value) in data.LiveGames | filter:searchText as results track by $index">
+                                <li bindonce ng-repeat="(key, value) in data.LiveGames | filter:searchText as results track by $index">
                             <span ng-if="emptyCookie()">
-                                <a ng-click="onclickNewWindowDemo(value.game, value.node_title)" ng-bind-html="value.node_title">
+                                <a ng-click="onclickNewWindowDemo(value.game, value.node_title)" bo-html="value.node_title">
                                 </a>
                             </span>
                              <span ng-if="notEmptyCookie()">
-                            <a ng-click="onclickGameNewWindow(value.field_games_link, value.language,value.game)" ng-bind-html="value.node_title">
+                            <a ng-click="onclickGameNewWindow(value.field_games_link, value.language,value.game)" bo-html="value.node_title">
                             </a>
                             </span>
                                     <br/>
-                                    <span>{{value.game_category}}</span>
+                                    <span bo-text="value.game_category"></span>
                                 </li>
                             </ul>
                             <div class="clearfix"></div>
@@ -81,7 +81,7 @@
                     </div>
                     <div ng-switch-default>
                         <div class="game-holder">
-                            <div class="wow animated zoomIn" ng-repeat="(key, value) in data.LiveGames | filter:searchText as results track by $index">
+                            <div class="wow animated zoomIn" bindonce ng-repeat="(key, value) in data.LiveGames | filter:searchText as results track by $index">
                                 <div class="thumb">
                                     <div class="hover">
                                  <span ng-if="emptyCookie()">
@@ -105,8 +105,8 @@
                                                 <ticker code="{{value.ticker_code}}"></ticker>
                                             </span>
                                         </p>
-                                        <p class="game-type" ng-bind-html="value.node_title"></p>
-                                        <p class="game-category">{{value.game_category}}</p>
+                                        <p class="game-type" bo-html="value.node_title"></p>
+                                        <p class="game-category" bo-text="value.game_category"></p>
                                     </section>
                                 </div>
                             </div>
