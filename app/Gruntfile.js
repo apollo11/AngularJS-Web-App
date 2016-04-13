@@ -59,6 +59,7 @@ module.exports = function(grunt) {
                         ,'bower_components/angular-cookies/angular-cookies.js'
                         ,'bower_components/toastr/toastr.js'
                         ,'bower_components/angular-bindonce/bindonce.js'
+                        ,'assets/js/styleDep.js'
                     ]
                 }
             }

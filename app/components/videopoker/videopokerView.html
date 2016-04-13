@@ -50,7 +50,7 @@
                                                 <ticker code="{{value.ticker_code}}"></ticker>
                                             </span>
                                         </p>
-                                        <p class="game-type" bo-html="value.node_title"></p>
+                                        <p class="game-type" ng-bind-html="value.node_title"></p>
                                         <p class="game-category" bo-text="value.game_category"></p>
                                     </section>
                                 </div>
@@ -65,11 +65,11 @@
                                 <li bindonce ng-repeat="(key, value) in data.VideoPokerGames | filter:searchText track by $index"
                                     pagination-id="videoList">
                              <span ng-if="emptyCookie()">
-                                <a ng-click="onclickNewWindowDemo(value.game, value.node_title)" bo-html="value.node_title">
+                                <a ng-click="onclickNewWindowDemo(value.game, value.node_title)" ng-bind-html="value.node_title">
                                 </a>
                             </span>
                              <span ng-if="notEmptyCookie()">
-                            <a ng-click="onclickGameNewWindow(value.field_games_link, value.language,value.game)" bo-html="value.node_title"></a>
+                            <a ng-click="onclickGameNewWindow(value.field_games_link, value.language,value.game)" ng-bind-html="value.node_title"></a>
                             </span>
                                     <br/>
                                     <span bo-text="value.game_category"></span>
@@ -106,7 +106,7 @@
                                                 <ticker code="{{value.ticker_code}}"></ticker>
                                             </span>
                                         </p>
-                                        <p class="game-type" bo-html="value.node_title"></p>
+                                        <p class="game-type" ng-bind-html="value.node_title"></p>
                                         <p class="game-category" bo-text="value.game_category"></p>
                                     </section>
                                 </div>

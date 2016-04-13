@@ -2,11 +2,11 @@
 <html lang="en" ng-app="PlayTech">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">  
-    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <base href="/">
     <title>Playtech</title>
-    <link rel="icon" type="image/png" href="/assets/images/ogicon.ico" />
+    <link rel="icon" type="image/png" href="/assets/images/ogicon.ico"/>
     <link href="bower_components/toastr/toastr.css" rel="stylesheet" type="text/css">
     <link href="bower_components/animate.css/animate.css" rel="stylesheet" type="text/css"/>
     <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css"/>
@@ -17,87 +17,41 @@
     <script type="text/javascript" src="login.js"></script>
 </head>
 <body>
-    <div class="top-container">
+<div class="top-container">
     <div class="container logo-holder">
         <!-- Logo -->
         <span ui-view="logo"></span>
-    </div>          
-        <div class="slim-header">
-            <div class="container">
-                <div ng-controller="ToggleController">
-                    <div ng-show="emptyCookie()">
-                        <a href="#" class="login-link">LOGIN</a>
-                    </div>
-
-                    <div ng-show="notEmptyCookie()">
-                        <a href="#" class="login-link"> LOGOUT</a>
-                        <a class="customer_service">{{retrieveCookie}} </a>
-                    </div>
-                </div>
-                <div ui-view="login" class="login-form"></div>
-
-                <!--<a href="#" class="lang">CHI</a>-->
-                <!--<a href="#" class="lang">ENG</a>-->
-            </div>
-        </div>
-        <!-- Banner -->
-        <div ui-view="banner" class="banner"></div>
-    </div><!-- End Top Cotainer-->
-
-    <div ui-view="menu"></div>
-
-    <div id="main" class="master_container">        
-        <div ui-view></div>
     </div>
+    <div class="slim-header">
+        <div class="container">
+            <div ng-controller="ToggleController">
+                <div ng-show="emptyCookie()">
+                    <a href="#" class="login-link">LOGIN</a>
+                </div>
+
+                <div ng-show="notEmptyCookie()">
+                    <a href="#" class="login-link"> LOGOUT</a>
+                    <a class="customer_service">{{retrieveCookie}} </a>
+                </div>
+            </div>
+            <div ui-view="login" class="login-form"></div>
+
+            <!--<a href="#" class="lang">CHI</a>-->
+            <!--<a href="#" class="lang">ENG</a>-->
+        </div>
+    </div>
+    <!-- Banner -->
+    <div ui-view="banner" class="banner"></div>
+</div><!-- End Top Cotainer-->
+
+<div ui-view="menu"></div>
+
+<div id="main" class="master_container">
+    <div ui-view></div>
+</div>
 
 <div ui-view="footer"></div>
-  <!-- SCRIPT -->
+<!-- SCRIPT -->
 <script src="build/output.min.js"></script>
-<script>
-    $(document).ready(function () {
-
-        $(".login-link").click(function () {
-            if ($(".login-form").hasClass("show")) {
-                $(".login-form").removeClass("show");
-            } else {
-                $(".login-form").addClass("show");
-            }
-        });
-        $(".btn-danger").click(function () {
-            if ($(".login-form").hasClass("show")) {
-                $(".login-form").removeClass("show");
-            } else {
-                $(".login-form").addClass("show");
-            }
-        }); 
-
-
-        if($(".mcholder").hasClass("listHolder")) {
-            //alert(1);
-        }else{
-            //alert(3);
-            $(".master_container").addClass("thumbHolder");
-        }
-
-    });
-
-</script>
-
-<script type="text/javascript">
-    $(document).scroll(function() {
-        var sW = screen.width;
-        if(sW <= 980){
-
-        }else{
-            if( $(this).scrollTop() >= 100 ) {
-                $(".white-logo2").css({display:'inline-block', transition:'all 2s ease-in 2s'});
-                $(".white-logo").css({display:'none', transition:'all 2s ease-out 2s'});
-            }else{
-                $(".white-logo2").css({display:'none', transition:'all 2s ease-out 2s'});
-                $(".white-logo").css({display:'block', transition:'all 2s ease-in 2s'});
-            }               
-        }
-    });
-</script>      
 </body>
 </html>
