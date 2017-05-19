@@ -1,4 +1,4 @@
-# GAME API Integration
+# GAME API PT Integration
   Technology:
       Drupal 7 CMS
       AngularJS 1
